@@ -3,11 +3,12 @@
   <faction.TLhui>泰拉科技集团</faction.TLhui>
   <faction.TLhui.description>木卫二上新兴的科技公司，手握强大的科技力量，人数没有很多，大多数设施和武装由人工智能控制，和联盟的关系有些僵硬，据不可靠消息他们在支持一些非法活动和分裂势力</faction.TLhui.description>
   <faction.TLhui.shortdescription>中立的科技公司，拥有先进技术扶持的强势和人工智能决策的严谨，大多数设施和武装由人工智能控制，和联盟的关系有些僵硬，据不可靠消息他们在支持一些非法活动和分裂势力</faction.TLhui.shortdescription>
-  <faction.HXhui>幻星工业</faction.HXhui>
+  <!--<faction.HXhui>幻星工业</faction.HXhui>
   <faction.HXhui.description>明面上隶属于联盟的科研援助性的工业集团，但考虑到其领导阶层和管理人员却都不属于木卫二联盟，以及联盟所有的人员安插行为都以失败告终。也许暗地里幻星也有着什么其他的秘密……</faction.HXhui.description>
-  <faction.HXhui.shortdescription>明面上隶属于联盟的科研援助性的工业集团，但考虑到其领导阶层和管理人员却都不属于木卫二联盟，以及联盟所有的人员安插行为都以失败告终。也许暗地里幻星也有着什么其他的秘密……</faction.HXhui.shortdescription>
+  <faction.HXhui.shortdescription>明面上隶属于联盟的科研援助性的工业集团，但考虑到其领导阶层和管理人员却都不属于木卫二联盟，以及联盟所有的人员安插行为都以失败告终。也许暗地里幻星也有着什么其他的秘密……</faction.HXhui.shortdescription>-->
   <fabricationheader.TLammoK>任意‖color:gui.orange‖泰拉空弹夹‖end‖</fabricationheader.TLammoK>
   <fabricationheader.1130box>任意‖color:gui.orange‖泰拉空弹药箱‖end‖</fabricationheader.1130box>
+  <fabricationheader.TLammo_mr>任意‖color:gui.orange‖灭刃空弹夹‖end‖</fabricationheader.TLammo_mr>
   <fabricationdescription.1130box>仅限泰拉渊洋本mod弹药箱</fabricationdescription.1130box>
   <fabricationheader.HXammoK>任意‖color:gui.orange‖幻星空弹夹‖end‖</fabricationheader.HXammoK>
   <locationname.TL>泰拉科技常规前哨站</locationname.TL>

@@ -322,11 +322,11 @@
   </Item>
   <Item name="灭刃" description="泰拉工程部研究的特珠武器,可以安装专用的灭刃弹匣。安装后发射的并非是子弹而是细小的刃片,这种特殊的飞刃可以轻易撕开肉体造成大出血" identifier="TL_MR" category="Weapon" cargocontaineridentifier="metalcrate" allowasextracargo="true" tags="mediumitem,weapon,gun,gunsmith,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="secarmcab" secondary="armcab,weaponholder" />
-    <Price baseprice="3500" minleveldifficulty="30">
+    <Price baseprice="5500" minleveldifficulty="30">
       <Price storeidentifier="TLarmory" multiplier="1.2" sold="true" />
     </Price>
     <Fabricate suitablefabricators="fabricator" requiredtime="75" requiresrecipe="true">
-      <RequiredSkill identifier="weapons" level="55" />
+      <RequiredSkill identifier="weapons" level="70" />
       <RequiredItem identifier="physicorium" amount="1" />
       <RequiredItem identifier="titaniumaluminiumalloy" amount="4" />
       <RequiredItem identifier="steel" amount="5" />
