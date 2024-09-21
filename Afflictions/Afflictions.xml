@@ -4,6 +4,7 @@
     <Effect minstrength="0" maxstrength="200" strengthchange="0" resistancefor="damage,poison" minresistance="0" maxresistance="-250" multiplybymaxvitality="true" />
     <icon texture="%ModDir%/Afflictions/bengjie.png" sourcerect="0,0,1024,1024" origin="0,0" />
   </xibao>
+  
   <kill name="你被华强剁了" isbuff="false" identifier="kill" description="撒日朗！" type="kill" limbspecific="false" showinhealthscannerthreshold="1" showiconthreshold="1" showicontoothersthreshold="1" maxstrength="10" affectmachines="false" indicatorlimb="Torso">
     <icon texture="%ModDir%/Afflictions/kill.png" sourcerect="0,0,546,310" origin="0,0" />
     <Effect minstrength="0" maxstrength="10" multiplybymaxvitality="true" strengthchange="-1" minvitalitydecrease="150" maxvitalitydecrease="200" />
@@ -32,6 +33,52 @@
     </Effect>
     <icon texture="Content/UI/MainIconsAtlas.png" sourcerect="0,512,128,128" color="195,136,60,255" origin="0,0" />
   </Affliction>
+<!--纳米侵蚀，逐渐增加并侵蚀到身体内部。
+    早期（侵蚀刚开始少许）：降低身体部分抗性（可自动恢复），注：没有崩解那么狠
+    中期（侵蚀进入骨骼和部分内脏）：无法自己恢复并逐渐降低血量和移动速度，
+    后期（侵蚀完全蔓延至身体内部和外部）：略微增加流血效果，无法移动-->
+    <qinshi name="纳米侵蚀" identifier="nmqs" description="" type="nmqs" limbspecific="false" showinhealthscannerthreshold="1" showiconthreshold="10" showicontoothersthreshold="1" maxstrength="100" healcostmultiplier="8" affectmachines="false" indicatorlimb="Torso">
+    <Effect minstrength="0" maxstrength="30" strengthchange="-0.1" resistancefor="damage,poison" minresistance="0" maxresistance="-0.36"  minvitalitydecrease="0" maxvitalitydecrease="3" minspeedmultiplier="0.5" maxspeedmultiplier="0.1">
+      <StatusEffect target="Character" interval="10" strengthchange="-0.5">
+		  <!--Affliction identifier="nmqs_1" strength="2"/-->
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="30" maxstrength="60" strengthchange="0.5" resistancefor="damage,poison" minresistance="0" maxresistance="-0.7" minvitalitydecrease="2" maxvitalitydecrease="8" minspeedmultiplier="0.5" maxspeedmultiplier="0.1">
+      <StatusEffect target="Character" interval="2" >
+		  <!--Affliction identifier="nmqs_1" strength="2"/-->
+      </StatusEffect>
+    </Effect>
+    <Effect minstrength="60" maxstrength="80"  strengthchange="0.35" minvitalitydecrease="0" maxvitalitydecrease="0.2" minspeedmultiplier="0.1" maxspeedmultiplier="0.0" multiplybymaxvitality="true">
+      <StatusEffect target="Character" interval="1" >
+		  <!--Affliction identifier="nmqs_1" strength="2"/-->
+      </StatusEffect>
+    </Effect>
+		<Effect minstrength="80" maxstrength="100"  strengthchange="0.2" minvitalitydecrease="1" maxvitalitydecrease="2" minspeedmultiplier="0.1" maxspeedmultiplier="0.0" multiplybymaxvitality="true">
+			<StatusEffect target="Character" interval="1" >
+				<!--Affliction identifier="nmqs_1" strength="2"/-->
+			</StatusEffect>
+		</Effect>
+		<Description
+			  textidentifier="afflictiondescription.qinshi.low"
+			  minstrength="0"
+			  maxstrength="30"/>
+		<Description
+			  textidentifier="afflictiondescription.qinshi.m"
+			  minstrength="30"
+			  maxstrength="60"/>
+		<Description
+	          textidentifier="afflictiondescription.qinshi.h"
+	          minstrength="60"
+	          maxstrength="80"/>
+		<Description
+	          textidentifier="afflictiondescription.qinshi.d"
+	          minstrength="80"
+	          maxstrength="100"/>
+		<icon texture="%ModDir%/Afflictions/bengjie.png" sourcerect="0,0,1024,1024" origin="0,0" />
+  </qinshi>
+  
+
+  
   <!--芯片-->
   <Affliction name="攻击增强" identifier="tl_Attackadd" description="" isbuff="true" type="grip" limbspecific="false" indicatorlimb="Head" showiconthreshold="1000" showicontoothersthreshold="40" showinhealthscannerthreshold="20" karmachangeonapplied="0" maxstrength="1" affectmachines="false">
     <Effect minstrength="0" maxstrength="1" strengthchange="-1" resistancefor="stun" minresistance="0.2" maxresistance="0.3">

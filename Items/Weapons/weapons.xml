@@ -320,6 +320,7 @@
     </Quality>
     <SkillRequirementHint identifier="weapons" level="50" />
   </Item>
+  <!--灭刃系列-->
   <Item name="灭刃" description="泰拉工程部研究的特珠武器,可以安装专用的灭刃弹匣。安装后发射的并非是子弹而是细小的刃片,这种特殊的飞刃可以轻易撕开肉体造成大出血" identifier="TL_MR" category="Weapon" cargocontaineridentifier="metalcrate" allowasextracargo="true" tags="mediumitem,weapon,gun,gunsmith,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="secarmcab" secondary="armcab,weaponholder" />
     <Price baseprice="5500" minleveldifficulty="30">
@@ -582,14 +583,14 @@
       <Item identifier="titaniumaluminiumalloy" amount="2" />
       <Item identifier="fpgacircuit" amount="2" />
     </Deconstruct>
-    <Sprite texture="weapons.png" sourcerect="275,0,236,54" depth="0.55" origin="0.5,0.5" />
+    <Sprite texture="weapons.png" sourcerect="259,136,251,82" depth="0.55" origin="0.5,0.5" />
     <Body width="235" height="55" density="25" />
     <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="45,-20" aimpos="59,-5" handle1="-50,-10" handle2="26,10" holdangle="-30">
       <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.8" setvalue="true" />
       <StatusEffect type="OnSecondaryUse" target="Character" SpeedMultiplier="0.38" setvalue="true" />
       <StatusEffect type="OnUse" target="Character" SpeedMultiplier="0.15" setvalue="true" />
     </Holdable>
-    <RangedWeapon reload="0.17" holdtrigger="true" barrelpos="100,23" spread="4" unskilledspread="16" combatPriority="80" drawhudwhenequipped="true" crosshairscale="0.2">
+    <RangedWeapon reload="0.1" holdtrigger="true" barrelpos="100,23" spread="4" unskilledspread="16" combatPriority="80" drawhudwhenequipped="true" crosshairscale="0.2">
       <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
       <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
       <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="1.6,1.6" colormultiplier="255,200,200,200" />
@@ -648,11 +649,11 @@
       <StatusEffect type="OnUse" target="Contained">
         <Use />
       </StatusEffect>
-      <RequiredItems items="TL_ammo" type="Contained" msg="ItemMsgAmmoRequired" />
+      <RequiredItems items="HX_ammo" type="Contained" msg="ItemMsgAmmoRequired" />
       <RequiredSkill identifier="weapons" level="45" />
     </RangedWeapon>
     <ItemContainer capacity="1" maxstacksize="1" hideitems="false" itempos="1,-15" containedstateindicatorslot="0" containedstateindicatorstyle="bullet" containedspritedepth="0.56">
-      <Containable items="TL_ammo" />
+      <Containable items="HX_ammo" />
       <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="256,448,64,64" origin="0.5,0.5" />
       <SlotIcon slotindex="1" texture="Content/UI/StatusMonitorUI.png" sourcerect="320,448,64,64" origin="0.5,0.5" />
       <SubContainer capacity="1" maxstacksize="1">

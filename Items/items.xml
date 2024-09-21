@@ -153,7 +153,7 @@
       <Price storeidentifier="merchantmilitary" multiplier="1.8" />
     </Price>
     <Deconstruct time="10"></Deconstruct>
-    <Sprite name="纳米凝胶" texture="icon.png" depth="0.3" sourcerect="577,412,100,124" origin="0.5,0.5" />
+    <Sprite name="icon.png" texture="icon.png" depth="0.3" sourcerect="577,412,100,124" origin="0.5,0.5" />
     <Body radius="60" width="65" density="50" />
     <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgUsePlasmaCutter" handle1="0,0" pickingtime="5.0" attachable="true" reattachable="false" />
   </Item>
@@ -168,9 +168,28 @@
       <Item identifier="alienblood" amount="1" />
     </Deconstruct>
     <!--等待贴图-->
-    <Sprite name="破坏纳米凝胶" texture="icon.png" depth="0.3" sourcerect="467,411,95,121" origin="0.5,0.5" />
+    <Sprite name="icon.png" texture="icon.png" depth="0.3" sourcerect="467,411,95,121" origin="0.5,0.5" />
     <Body radius="60" width="65" density="50" />
-    <Holdable slots="Any,RightHand,LeftHand" msg="ItemMsgUsePlasmaCutter" handle1="0,0" pickingtime="5.0" attachable="true" reattachable="false" />
+    <Throwable characterusable="false" slots="Any,RightHand,LeftHand" throwforce="3.5" aimpos="35,-10" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="Always" target="This" Condition="-0.04" />
+      <StatusEffect type="OnImpact" target="This" Condition="-20" disabledeltatime="true" />
+      <StatusEffect type="OnFire" target="This" Condition="0.0" setvalue="true" delay="0.5" />
+      <StatusEffect type="OnUse" target="This" Condition="-100" disabledeltatime="true"/>
+      <StatusEffect type="OnBroken" target="This">
+        <Explosion range="80.0" force="18" decal="explosion" decalsize="0.5" penetration="0.1">
+          <Affliction identifier="alcellruin" strength="100" />
+        </Explosion>
+      </StatusEffect>
+      <StatusEffect type="OnBroken" target="This" delay="0.1">
+         <Explosion range="80.0" force="18" decal="explosion" decalsize="0.5" penetration="0.1">
+          <Affliction identifier="lacerations" strength="3" />
+        </Explosion>
+        <Remove />
+      </StatusEffect>
+    </Throwable>
+
+
+    <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
   </Item>
   <!-- 药品 -->
   <REalcellruin name="细胞神经生长因子" identifier="REalcellruin" category="Medical" Tags="smallitem,medical" maxstacksize="18" maxstacksizecharacterinventory="6" useinhealthinterface="true" cargocontaineridentifier="mediccrate" description="昂贵的细胞再生药品，由集团研发部供货，其他商人那里都是假货哦" scale="0.5" impactsoundtag="impact_soft" RequireAimToUse="True">
