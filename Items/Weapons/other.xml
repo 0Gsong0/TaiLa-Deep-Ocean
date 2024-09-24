@@ -158,7 +158,7 @@
       </StatusEffect>
     </Holdable>
   </Item>
-  <Item name="TL崩解弹（敌对）" description="敌对npc用崩解霰弹" identifier="TL13ammo_cr" category="Weapon" hideinmenus="true" maxstacksize="16" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo,TL_shotgunammo,TL_ammo" Scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="TL崩解弹（敌对）" description="敌对npc用崩解霰弹" identifier="TL13ammo_cr_enemy" category="Weapon" hideinmenus="true" maxstacksize="16" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo,TL_shotgunammo,TL_ammo" Scale="0.5" impactsoundtag="impact_metal_light">
     <!--等待贴图-->
     <Sprite texture="weapons.png" sourcerect="0,104,45,20" depth="0.55" origin="0.5,0.5" />
     <Body width="23" height="10" density="30" />
