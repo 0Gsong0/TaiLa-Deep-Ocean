@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Items>
   <!--子弹实体-->
   <!--制式弹夹普通子弹-->
@@ -38,8 +38,8 @@
       <Attack structuredamage="3" targetforce="8" itemdamage="20" penetration="0.1" severlimbsprobability="0.3">
         <Affliction identifier="gunshotwound" strength="24" />
         <Affliction identifier="gunshotwound" strength="10" probability="0.15" />
-        <Affliction identifier="alcellruin" strength="2" />
-        <Affliction identifier="alcellruin" strength="4" probability="0.1" />
+        <Affliction identifier="alcellruin" strength="3" />
+        <Affliction identifier="alcellruin" strength="4" probability="0.3" />
         <Affliction identifier="stun" strength="0.1" probability="0.4" />
         <Affliction identifier="stun" strength="0.2" probability="0.3" />
       </Attack>

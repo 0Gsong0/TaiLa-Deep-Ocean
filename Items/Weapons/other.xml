@@ -158,4 +158,26 @@
       </StatusEffect>
     </Holdable>
   </Item>
+  <Item name="TL崩解弹（敌对）" description="敌对npc用崩解霰弹" identifier="TL13ammo_cr" category="Weapon" hideinmenus="true" maxstacksize="16" maxstacksizecharacterinventory="12" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem,shotgunammo,TL_shotgunammo,TL_ammo" Scale="0.5" impactsoundtag="impact_metal_light">
+    <!--等待贴图-->
+    <Sprite texture="weapons.png" sourcerect="0,104,45,20" depth="0.55" origin="0.5,0.5" />
+    <Body width="23" height="10" density="30" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+    <!--一次发射6发射弹-->
+    <Projectile characterusable="false" maxtargetstohit="1" hitscan="true" hitscancount="6" removeonhit="true" spread="12">
+      <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="150,150,200,200" scalemultiplier="1,0.5" />
+      <Attack structuredamage="1" targetforce="6" itemdamage="15" severlimbsprobability="0.1" penetration="0.2">
+      <!--每颗子弹赋予1崩解，10%概率额外1点-->
+        <Affliction identifier="alcellruin" strength="3" />
+        <Affliction identifier="organdamage" strength="4" />
+        <Affliction identifier="gunshotwound" strength="9" />
+      </Attack>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <ParticleEmitter particle="impactfirearm" particleamount="2" velocitymin="0" velocitymax="0" colormultiplier="150,150,200,130" />
+      </StatusEffect>
+      <StatusEffect type="OnNotContained" target="This" stackable="false" delay="1">
+        <Remove />
+      </StatusEffect>
+    </Projectile>
+  </Item>
 </Items>
