@@ -351,11 +351,12 @@
     <ItemContainer hideitems="true" capacity="1" drawinventory="false" canbeselected="false" ShowConditionInContainedStateIndicator="true" SpawnWithId="kill_tear" removecontaineditemsondeconstruct="true" containedstateindicatorstyle="bullet">
       <Containable items="mr_zd_fs" />
       <StatusEffect type="OnUse" target="This" condition="-1" disabledeltatime="true">
-        <SpawnItem identifiers="mr_zd" spawnposition="ThisInventory" />
+        <SpawnItem identifiers="mr_zd_fs" spawnposition="ThisInventory" />
       </StatusEffect>
     </ItemContainer>
     <Holdable canBeCombined="true" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
-  </Item>  <!--重型反器材-->
+  </Item>
+  <!--重型反器材-->
   <Item name="重型反器材弹匣" identifier="fqc_magazine" maxstacksize="32" maxstacksizecharacterinventory="4" scale="0.5" category="Weapon" health="35" allowasextracargo="true" cargocontaineridentifier="metalcrate" linkable="true" tags="smallitem,fqc_magazine" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="重型反器材" minamount="1" maxamount="1" spawnprobability="1" />
     <PreferredContainer primary="armcab" secondary="secarmcab" />
