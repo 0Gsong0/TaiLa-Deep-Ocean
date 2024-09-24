@@ -73,5 +73,8 @@
     <Sprite texture="%ModDir%/Items/Creatureloot/脑珠.png" depth="0.75" sourcerect="0,0,411,401" origin="0.5,0.5" />
     <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="true" />
     <PreferredContainer primary="storagecab" minamount="0" maxamount="1" spawnprobability="0.001" />
+    <StatusEffect type="OnActive" target="NearbyCharacters" range="15" interval="3" disabledeltatime="true">
+      <Affliction identifier="radiationsickness" amount="5" />
+    </StatusEffect>
   </Item>
 </Items>
