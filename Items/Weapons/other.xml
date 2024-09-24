@@ -167,7 +167,7 @@
     <Projectile characterusable="false" maxtargetstohit="1" hitscan="true" hitscancount="6" removeonhit="true" spread="12">
       <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="150,150,200,200" scalemultiplier="1,0.5" />
       <Attack structuredamage="1" targetforce="6" itemdamage="15" severlimbsprobability="0.1" penetration="0.2">
-      <!--每颗子弹赋予1崩解，10%概率额外1点-->
+      <!--每颗子弹赋予3崩解-->
         <Affliction identifier="alcellruin" strength="3" />
         <Affliction identifier="organdamage" strength="4" />
         <Affliction identifier="gunshotwound" strength="9" />
