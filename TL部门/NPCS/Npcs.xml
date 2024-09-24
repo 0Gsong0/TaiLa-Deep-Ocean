@@ -19,17 +19,18 @@
           <Item identifier="Whitesilk1" equip="true" />
           <Item identifier="bodyarmor" equip="true" />
           <Item identifier="TL13" equip="true">
-            <Item identifier="TL13ammo_cr" />
-            <Item identifier="TL13ammo_cr" />
-            <Item identifier="TL13ammo_cr" />
-            <Item identifier="TL13ammo_cr" />
-            <Item identifier="TL13ammo_cr" />
-            <Item identifier="TL13ammo_cr" />
-            <Item identifier="TL13ammo_cr" />
-            <Item identifier="TL13ammo_cr" />
+            <Item identifier="TL13ammo_cr_enemy" />
+            <Item identifier="TL13ammo_cr_enemy" />
+            <Item identifier="TL13ammo_cr_enemy" />
+            <Item identifier="TL13ammo_cr_enemy" />
+            <Item identifier="TL13ammo_cr_enemy" />
+            <Item identifier="TL13ammo_cr_enemy" />
+            <Item identifier="TL13ammo_cr_enemy" />
+            <Item identifier="TL13ammo_cr_enemy" />
           </Item>
-          <Item identifier="TL13ammo_cr" amount="8" />
-        </ItemSet>
+          <Item identifier="TL13ammo_cr_enemy" amount="8" />
+          <Item identifier="TL13ammo_cr" amount="3" />
+         </ItemSet>
       </npc>
       <!--护卫舰，箭形弹-->
       <npc identifier="THnpc2" job="TLsafe" spawnpointtags="admin" behavior="Patrol" preferredoutpostmoduletypes="adminmodule" healthmultiplier="3">
