@@ -43,7 +43,7 @@
     <Effect minstrength="24" maxstrength="42"  strengthchange="1" minvitalitydecrease="0" maxvitalitydecrease="1" minspeedmultiplier="0.1" maxspeedmultiplier="0.0" multiplybymaxvitality="true"/>
     <Effect minstrength="42" maxstrength="50"  strengthchange="2" minvitalitydecrease="1" maxvitalitydecrease="2" minspeedmultiplier="0.1" maxspeedmultiplier="0.0" multiplybymaxvitality="true"/>
     <Effect minstrength="50" maxstrength="70"  strengthchange="3" minvitalitydecrease="2" maxvitalitydecrease="3" minspeedmultiplier="0.1" maxspeedmultiplier="0.0" multiplybymaxvitality="true"/>
-    <Effect minstrength="100" maxstrength="70"  strengthchange="4" minvitalitydecrease="2" maxvitalitydecrease="3" minspeedmultiplier="0.1" maxspeedmultiplier="0.0" multiplybymaxvitality="true"/>
+    <Effect minstrength="70" maxstrength="100"  strengthchange="4" minvitalitydecrease="2" maxvitalitydecrease="3" minspeedmultiplier="0.1" maxspeedmultiplier="0.0" multiplybymaxvitality="true"/>
     <Description
 	  textidentifier="afflictiondescription.qinshi.low"
 	  minstrength="0"
