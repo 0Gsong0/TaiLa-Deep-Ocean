@@ -7,11 +7,20 @@
     <modulecount flag="CrewModule" count="1" />
     <modulecount flag="MedicalModule" count="1" />
     <npcs>
-      <npc from="outpostnpcs1" identifier="outpostmanagercoalition" faction="coalition" />
-      <npc from="outpostnpcs1" identifier="securitynpccoalition" faction="coalition" />
-      <npc from="outpostnpcs1" identifier="securitynpccoalition" faction="coalition" />
-      <npc from="outpostnpcs1" identifier="securitynpccoalition" faction="coalition" />
-      <npc from="outpostnpcs1" identifier="securitynpccoalition" faction="coalition" />
+      <npc from="THnpc" identifier="THnpc6" faction="TLhui" />
+      <npc from="THnpc" identifier="THnpc6" faction="TLhui" />
+      <npc from="THnpc" identifier="THnpc6" faction="TLhui" />
+      <npc from="THnpc" identifier="THnpc6" faction="TLhui" />
+      <npc from="THnpc" identifier="THnpc6" faction="TLhui" />
+	    <npc from="THnpc" identifier="THnpc3" faction="TLhui" />
+		<npc from="THnpc" identifier="THnpc3" faction="TLhui" />
+		<npc from="THnpc" identifier="THnpc3" faction="TLhui" />
+		<npc from="THnpc" identifier="THnpc3" faction="TLhui" />
+		<npc from="THnpc" identifier="THnpc3" faction="TLhui" />
+		<npc from="THnpc" identifier="THnpc4" faction="TLhui" />
+		<npc from="THnpc" identifier="THnpc4" faction="TLhui" />
+		<npc from="THnpc" identifier="THnpc4" faction="TLhui" />
+		<npc from="THnpc" identifier="THnpc4" faction="TLhui" />
       <npc from="outpostnpcs1" identifier="hrmanager" />
       <npc from="outpostnpcs1" identifier="subupgradenpc" />
       <npc from="outpostnpcs1" identifier="subsalesnpc" />

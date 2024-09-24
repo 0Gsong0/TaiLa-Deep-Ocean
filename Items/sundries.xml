@@ -619,93 +619,92 @@
       </StatusEffect>
     </Holdable>
   </Item>
-	<Item name="高级照明灯" identifier="TLlight1" category="Electrical" Tags="smallitem,light" subcategory="泰拉新科技" scale="0.25">
-		<Sprite texture="light.png" sourcerect="7,778,192,48" depth="0.8" origin="0.5,0.5" />
-		<LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800.0" IsOn="true" powerconsumption="5">
-			<LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
-			<sprite texture="%ModDir%/Items/light.png" sourcerect="507,778,192,48" alpha="1.0" origin="0.5,0.5" />
-		</LightComponent>
-		<ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
-			<GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
-			<RequiredItem items="screwdriver" type="Equipped" />
-			<input name="power" displayname="connection.power" />
-			<input name="toggle" displayname="connection.togglestate" />
-			<input name="set_state" displayname="connection.setstate" />
-			<input name="set_color" displayname="connection.setcolor" />
-		</ConnectionPanel>
-	</Item>
-	<Item name="高级照明灯" identifier="TLlight2" category="Electrical" Tags="smallitem,light" subcategory="泰拉新科技" scale="0.25">
-		<Sprite texture="light.png" sourcerect="198,778,96,48" depth="0.8" origin="0.5,0.5" />
-		<LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800.0" IsOn="true" powerconsumption="5">
-			<LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
-			<sprite texture="%ModDir%/Items/light.png" sourcerect="698,778,96,48" alpha="1.0" origin="0.5,0.5" />
-		</LightComponent>
-		<ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
-			<GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
-			<RequiredItem items="screwdriver" type="Equipped" />
-			<input name="power" displayname="connection.power" />
-			<input name="toggle" displayname="connection.togglestate" />
-			<input name="set_state" displayname="connection.setstate" />
-			<input name="set_color" displayname="connection.setcolor" />
-		</ConnectionPanel>
-	</Item>
-	<Item name="高级照明灯" identifier="TLlight3" category="Electrical" Tags="smallitem,light" subcategory="泰拉新科技" scale="0.25">
-		<Sprite texture="light.png" sourcerect="6,824,288,48" depth="0.8" origin="0.5,0.5" />
-		<LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800.0" IsOn="true" powerconsumption="5">
-			<LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
-			<sprite texture="%ModDir%/Items/light.png" sourcerect="508,824,288,48" alpha="1.0" origin="0.5,0.4" />
-		</LightComponent>
-		<ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
-			<GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
-			<RequiredItem items="screwdriver" type="Equipped" />
-			<input name="power" displayname="connection.power" />
-			<input name="toggle" displayname="connection.togglestate" />
-			<input name="set_state" displayname="connection.setstate" />
-			<input name="set_color" displayname="connection.setcolor" />
-		</ConnectionPanel>
-	</Item>
-	<Item name="高级照明灯长" identifier="TLlight4" category="Electrical" Tags="smallitem,light" subcategory="泰拉新科技" scale="0.25">
-		<Sprite texture="light.png" sourcerect="11,973,541,51" depth="0.8" origin="0.5,0.5" />
-		<LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800.0" IsOn="true" powerconsumption="5">
-			<LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
-			<sprite texture="%ModDir%/Items/light.png" sourcerect="552,972,474,52" alpha="1.0" origin="0.5,0.4" />
-		</LightComponent>
-		<ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
-			<GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
-			<RequiredItem items="screwdriver" type="Equipped" />
-			<input name="power" displayname="connection.power" />
-			<input name="toggle" displayname="connection.togglestate" />
-			<input name="set_state" displayname="connection.setstate" />
-			<input name="set_color" displayname="connection.setcolor" />
-		</ConnectionPanel>
-	</Item>
-	<Item name="报警器" identifier="TLalarmbuzzer" category="Electrical" Tags="smallitem,sound" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="true" GrabWhenSelected="true">
-		<InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="128,127,64,64" origin="0.5,0.5" />
-		<Sprite texture="signalcomp.png" depth="0.8" sourcerect="221,138,42,57" origin="0.5,0.5" />
-		<Body radius="20" density="20" />
-		<Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true">
-			<RequiredItem items="wrench" type="Equipped" />
-		</Holdable>
-		<LightComponent canbeselected="false" lightcolor="255,0,0,100" alphablend="true" castshadows="false" blinkfrequency="2.6" range="20">
-			<Sprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="301,963,42,57" origin="0.5,0.5" alpha="1.0" />
-			<sound file="%ModDir%/ogg/ReactorTemperatureBoostUp.ogg" type="OnActive" range="1000.0" loop="true" volume="0.5" />
-			<StatusEffect type="OnContained" target="This" IsActive="false">
-				<Conditional targetitemcomponent="Holdable" IsActive="eq false" />
-			</StatusEffect>
-		</LightComponent>
-		<ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
-			<GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
-			<RequiredItem items="screwdriver" type="Equipped" />
-			<input name="toggle" displayname="connection.togglestate" />
-			<input name="set_state" displayname="connection.setstate" />
-		</ConnectionPanel>
-	</Item>
-      <Item name="展示柜" identifier="TLartifactholder" category="Alien" Tags="alien,artifactholder,artifactcontainer">
+  <Item name="高级照明灯" identifier="TLlight1" category="Electrical" Tags="smallitem,light" subcategory="泰拉新科技" scale="0.25">
+    <Sprite texture="light.png" sourcerect="7,778,192,48" depth="0.8" origin="0.5,0.5" />
+    <LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800.0" IsOn="true" powerconsumption="5">
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+      <sprite texture="%ModDir%/Items/light.png" sourcerect="507,778,192,48" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power" displayname="connection.power" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+      <input name="set_color" displayname="connection.setcolor" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="高级照明灯" identifier="TLlight2" category="Electrical" Tags="smallitem,light" subcategory="泰拉新科技" scale="0.25">
+    <Sprite texture="light.png" sourcerect="198,778,96,48" depth="0.8" origin="0.5,0.5" />
+    <LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800.0" IsOn="true" powerconsumption="5">
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+      <sprite texture="%ModDir%/Items/light.png" sourcerect="698,778,96,48" alpha="1.0" origin="0.5,0.5" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power" displayname="connection.power" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+      <input name="set_color" displayname="connection.setcolor" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="高级照明灯" identifier="TLlight3" category="Electrical" Tags="smallitem,light" subcategory="泰拉新科技" scale="0.25">
+    <Sprite texture="light.png" sourcerect="6,824,288,48" depth="0.8" origin="0.5,0.5" />
+    <LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800.0" IsOn="true" powerconsumption="5">
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+      <sprite texture="%ModDir%/Items/light.png" sourcerect="508,824,288,48" alpha="1.0" origin="0.5,0.4" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power" displayname="connection.power" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+      <input name="set_color" displayname="connection.setcolor" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="高级照明灯长" identifier="TLlight4" category="Electrical" Tags="smallitem,light" subcategory="泰拉新科技" scale="0.25">
+    <Sprite texture="light.png" sourcerect="11,973,541,51" depth="0.8" origin="0.5,0.5" />
+    <LightComponent lightcolor="1.0,1.0,1.0,0.5" range="800.0" IsOn="true" powerconsumption="5">
+      <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+      <sprite texture="%ModDir%/Items/light.png" sourcerect="552,972,474,52" alpha="1.0" origin="0.5,0.4" />
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="power" displayname="connection.power" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+      <input name="set_color" displayname="connection.setcolor" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="报警器" identifier="TLalarmbuzzer" category="Electrical" Tags="smallitem,sound" maxstacksize="32" maxstacksizecharacterinventory="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" isshootable="true" GrabWhenSelected="true">
+    <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="128,127,64,64" origin="0.5,0.5" />
+    <Sprite texture="signalcomp.png" depth="0.8" sourcerect="221,138,42,57" origin="0.5,0.5" />
+    <Body radius="20" density="20" />
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetachWrench" PickingTime="5.0" aimpos="65,-10" handle1="0,0" attachable="true" aimable="true">
+      <RequiredItem items="wrench" type="Equipped" />
+    </Holdable>
+    <LightComponent canbeselected="false" lightcolor="255,0,0,100" alphablend="true" castshadows="false" blinkfrequency="2.6" range="20">
+      <Sprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="301,963,42,57" origin="0.5,0.5" alpha="1.0" />
+      <sound file="%ModDir%/ogg/ReactorTemperatureBoostUp.ogg" type="OnActive" range="1000.0" loop="true" volume="0.5" />
+      <StatusEffect type="OnContained" target="This" IsActive="false">
+        <Conditional targetitemcomponent="Holdable" IsActive="eq false" />
+      </StatusEffect>
+    </LightComponent>
+    <ConnectionPanel selectkey="Action" canbeselected="true" msg="ItemMsgRewireScrewdriver" hudpriority="10">
+      <GuiFrame relativesize="0.2,0.32" minsize="400,350" maxsize="480,420" anchor="Center" style="ConnectionPanel" />
+      <RequiredItem items="screwdriver" type="Equipped" />
+      <input name="toggle" displayname="connection.togglestate" />
+      <input name="set_state" displayname="connection.setstate" />
+    </ConnectionPanel>
+  </Item>
+  <Item name="展示柜" identifier="TLartifactholder" category="Alien" Tags="alien,artifactholder,artifactcontainer">
     <Sprite texture="Content/Items/Alien/AlienRuins_Items.png" depth="0.8" sourcerect="725,786,260,425" />
     <ItemContainer capacity="1" maxstacksize="1" canbeselected="true" hideitems="false" itempos="130,-180" containedspritedepth="0.81" autointeractwithcontained="true" msg="ItemMsgInteractSelect">
       <GuiFrame relativesize="0.11,0.17" anchor="Center" minsize="140,170" maxsize="280,280" style="ItemUI" />
-      <Containable items="smallitem,mediumitem,ammobox,coilgunammo,depthchargeammo,deepdiving,turretammosource,railgunammo,crate" excludebroken="false">
-      </Containable>
+      <Containable items="smallitem,mediumitem,ammobox,coilgunammo,depthchargeammo,deepdiving,turretammosource,railgunammo,crate" excludebroken="false"></Containable>
     </ItemContainer>
     <LightComponent AllowInGameEditing="false" lightcolor="153,204,255,200" powerconsumption="1" canbeselected="false" range="800.0" IsOn="true" castshadows="false">
       <sprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="1047,1792,255,255" depth="0.025" origin="0.5,0.5" alpha="0.4" />
@@ -724,5 +723,71 @@
     <DecorativeSprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="805,1251,7,153" depth="0.7" offset="-50,0" origin="0.5,0.7" offsetanim="Sine" offsetanimspeed="1.3" />
     <DecorativeSprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="818,1246,19,153" depth="0.9" offset="50,0" origin="0.5,0.7" offsetanim="Sine" offsetanimspeed="0.82" />
     <DecorativeSprite texture="Content/Items/Alien/AlienRuins_Items.png" sourcerect="837,1246,19,153" depth="0.7" offset="-50,0" origin="0.5,0.7" offsetanim="Sine" offsetanimspeed="2.12" />
+  </Item>
+  <Item name="大香肠" identifier="Hamsausage" category="Misc" Tags="smallitem,seed,plantitem" maxstacksize="8" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_soft" spritecolor="215,245,77,255">
+    <!-- TODO: sprite -->
+    <sprite texture="icon.png" sourcerect="260,948,172,50" depth="0.2" origin="0.5,0.5" />
+    <PreferredContainer primary="Hamsausage" amount="1" spawnprobability="0.03" />
+    <Price baseprice="1" canbespecial="false">
+      <Price storeidentifier="merchantoutpost" sold="false" />
+      <Price storeidentifier="merchantcity" sold="false" />
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" sold="false" />
+      <Price storeidentifier="merchantmine" sold="false" />
+      <Price storeidentifier="merchantclown" minavailable="3" maxavailable="5" sold="true">
+        <Reputation faction="clowns" min="50" />
+      </Price>
+    </Price>
+    <Fabricate suitablefabricators="vendingmachine" requiredtime="1" requiredmoney="1" fabricationlimitmin="2" fabricationlimitmax="5" />
+    <Deconstruct time="30">
+      <Item identifier="potassium" mincondition="0.5" />
+      <Item identifier="carbon" mincondition="0.5" />
+    </Deconstruct>
+    <Growable growthspeed="0.076" pickingtime="3" maximumvines="18" maxhealth="375" hardiness="0.15" floodtolerance="0.2" seedrate="0" productrate="0.0056" flowerquantity="4" baseflowerscale="0.60" vinescale="0.25" vinetint="55,152,27,255" flowertint="139,56,87,255">
+      <ProducedItem identifier="banana" probability="1.0" />
+      <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,256,256,256" />
+        <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,256,256,256" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,768,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="128,768,128,128" />
+        <FlowerSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,768,128,128" />
+        <VineSprite type="Stem" sourcerect="640,896,128,128" />
+        <VineSprite type="CrossJunction" sourcerect="512,896,128,128" />
+        <VineSprite type="HorizontalLine" sourcerect="512,768,128,128" />
+        <VineSprite type="VerticalLine" sourcerect="640,768,128,128" />
+        <VineSprite type="TurnTopRight" sourcerect="0,768,128,128" />
+        <VineSprite type="TurnTopLeft" sourcerect="384,768,128,128" />
+        <VineSprite type="TurnBottomLeft" sourcerect="256,768,128,128" />
+        <VineSprite type="TurnBottomRight" sourcerect="128,768,128,128" />
+        <VineSprite type="TSectionTop" sourcerect="128,896,128,128" />
+        <VineSprite type="TSectionLeft" sourcerect="256,896,128,128" />
+        <VineSprite type="TSectionBottom" sourcerect="384,896,128,128" />
+        <VineSprite type="TSectionRight" sourcerect="0,896,128,128" />
+        <VineSprite type="StumpTop" sourcerect="768,768,128,128" />
+        <VineSprite type="StumpLeft" sourcerect="896,768,128,128" />
+        <VineSprite type="StumpBottom" sourcerect="768,896,128,128" />
+        <VineSprite type="StumpRight" sourcerect="896,896,128,128" />
+      </VineSprites>
+    </Growable>
+    <Body radius="15" density="12" />
+    <MeleeWeapon slots="Any,RightHand,LeftHand" aimable="false" aimpos="32, 4" handle1="-5,-5" holdangle="-45" swingamount="0,3" swingspeed="0.5" swingwhenaiming="true" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnSecondaryUse" target="This" Condition="-30.0" />
+      <StatusEffect type="OnSecondaryUse" target="This,Character" disabledeltatime="true">
+        <Conditional Condition="lte 0" />
+        <ReduceAffliction identifier="nausea" amount="5" />
+        <ReduceAffliction identifier="opiatewithdrawal" amount="5" />
+        <Affliction identifier="strengthen" amount="10" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" target="This" Condition="-100.0" disabledeltatime="true" />
+      <StatusEffect type="OnUse" target="Character">
+        <ReduceAffliction identifier="nausea" amount="5" />
+        <ReduceAffliction identifier="opiatewithdrawal" amount="5" />
+        <Affliction identifier="strengthen" amount="10" />
+      </StatusEffect>
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnBroken" target="This">
+        <Remove />
+      </StatusEffect>
+    </MeleeWeapon>
   </Item>
 </Items>

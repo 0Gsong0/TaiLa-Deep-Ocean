@@ -145,8 +145,7 @@
     </Wearable>
   </Item>
   <Item name="纳米凝胶" identifier="nanogel" category="Material" Tags="smallitem" maxstacksize="8" canbepicked="true" description="通过对木卫二遗迹材料的研究，泰拉集团与幻星工业合作制作出了这种珍贵的具有生物性质的纳米材料" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light">
-    <PreferredContainer primary="mineralcab" secondary="storagecab" />
-    <Price baseprice="1800" buyingpricemultiplier="1" minleveldifficulty="20">
+      <Price baseprice="6800" buyingpricemultiplier="1" minleveldifficulty="20">
       <Price storeidentifier="TLarmory" multiplier="1" minavailable="5" sold="true" />
       <Price storeidentifier="merchantcity" multiplier="2.25" />
       <Price storeidentifier="merchantresearch" multiplier="1.6" />

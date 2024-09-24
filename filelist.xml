@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="泰拉渊洋" modversion="1.0.79" corepackage="False" steamworkshopid="3232587498" gameversion="1.5.9.2">
+<contentpackage name="泰拉渊洋" modversion="1.0.81" corepackage="False" steamworkshopid="3232587498" gameversion="1.5.9.2">
   <Structure file="%ModDir%/Outpost/StructurePrefabs.xml" />
   <LocationTypes file="%ModDir%/Outpost/LocationTypes.xml" />
   <OutpostConfig file="%ModDir%/Outpost/OutpostGenerationParameters.xml" />
@@ -59,4 +59,5 @@
   <Submarine file="%ModDir%/Sub/同看雪后山-电梯.sub" />
   <OutpostModule file="%ModDir%/Sub/同看雪后山.sub" />
   <Submarine file="%ModDir%/Sub/测试地.sub" />
+  <Character file="%ModDir%/Characters/四足防卫机器人/四足防卫机器人.xml" />
 </contentpackage>

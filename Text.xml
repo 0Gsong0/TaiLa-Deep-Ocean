@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <infotexts language="Simplified Chinese" nowhitespace="true" translatedname="中文（简体）">
   <faction.TLhui>泰拉科技集团</faction.TLhui>
   <faction.TLhui.description>木卫二上新兴的科技公司，手握强大的科技力量，人数没有很多，大多数设施和武装由人工智能控制，和联盟的关系有些僵硬，据不可靠消息他们在支持一些非法活动和分裂势力</faction.TLhui.description>
@@ -83,8 +83,8 @@
   <afflictioncauseofdeath.kill>被华强劈开了</afflictioncauseofdeath.kill>
   <afflictioncauseofdeathself.kill>被华强砍死惹</afflictioncauseofdeathself.kill>
 <!--侵蚀aff-->
-	<afflictiondescription.qinshi.low>一些细微的金属痕迹逐渐出现在你的身体上，虽然感受没有任何痛觉但是你感觉你的身体有什么不对劲，而变得毫无在意此伤势</afflictiondescription.qinshi.low>
-	<afflictiondescription.qinshi.m>你感觉身体奇痒难耐，该死的，为什么身上会有金属碎屑</afflictiondescription.qinshi.m>
-	<afflictiondescription.qinshi.h>你开始剧烈的吐血，伴随咳嗽出的还有鲜血沾染的金属碎片，你的免疫系统开始了最后的挣扎，走到尽头了吗...</afflictiondescription.qinshi.h>
-	<afflictiondescription.qinshi.d>所有人都已无力回天...静静等待生命的凋亡..."奄奄黄昏后，寂寂人定初"</afflictiondescription.qinshi.d>
+	<afflictiondescription.qinshi.low>一些细微的金属痕迹开始在你的身体上游走，虽然感受没有任何痛觉但是你感觉你的身体有什么不对劲</afflictiondescription.qinshi.low>
+	<afflictiondescription.qinshi.m>你开始感觉身体时不时过电一般，但是细细感受却只剩下麻木</afflictiondescription.qinshi.m>
+	<afflictiondescription.qinshi.h>你的表皮逐渐剥落，且开始剧烈的吐血，伴随咳嗽出的还有沾染着金属色泽的内脏碎块</afflictiondescription.qinshi.h>
+	<afflictiondescription.qinshi.d>你的身体愈发僵硬，血液不间断的从身体内大量的渗出……你已经没有任何感觉，意识也逐渐剥离</afflictiondescription.qinshi.d>
 </infotexts>

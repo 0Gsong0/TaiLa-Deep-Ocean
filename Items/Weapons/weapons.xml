@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Items>
   <!--TL装备-->
   <Item name="TL-13常规型制式霰弹枪" description="泰拉集团的制式装备，使用简单，制造方便，没有战斗经验也能快速上手" identifier="TL13" category="Weapon" cargocontaineridentifier="metalcrate" tags="mediumitem,weapon,gun,gunsmith,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
@@ -109,7 +109,7 @@
       <SubContainer capacity="1" maxstacksize="1">手电
         <Containable items="flashlight,focusingflashlight,Tspreadflashlight" hide="false" itempos="40,2" setactive="true" /></SubContainer>
       <SubContainer capacity="1" maxstacksize="1">倍镜
-        <Containable items="holographic_sight,red_sight,2x_sight,2.5x_sight" hide="false" itempos="-15,13" setactive="true" containedspritedepth="0.45" depth="0.55" /></SubContainer>
+        <Containable items="Tholographic_sight,Tholographic_sight,T2x_sight,T2.5x_sight" hide="false" itempos="-15,13" setactive="true" containedspritedepth="0.45" depth="0.55" /></SubContainer>
       <SubContainer capacity="1" maxstacksize="1">握把
         <Containable items="Tvertical_grip,Tcorner_grip" hide="false" itempos="18,-1.5" setactive="true" containedspritedepth="0.45" depth="0.55" /></SubContainer>
       <SubContainer capacity="1" maxstacksize="1">枪管
@@ -175,9 +175,9 @@
       <StatusEffect type="OnUse" target="Contained">
         <Use />
       </StatusEffect>
-      <StatusEffect type="OnUse" target="This" spread="-1.5" unskilledspread="-8" disabledeltatime="true">
-        <Conditional spread="gte 1.5" />
-      </StatusEffect>
+      <!--StatusEffect type="OnUse" target="This" spread="-1.5" unskilledspread="-8" disabledeltatime="true">
+        <Conditional spread="lte 12" />
+      </StatusEffect-->
       <StatusEffect type="OnUse" target="This" spread="0" unskilledspread="10" setvalue="true" disabledeltatime="true">
         <Conditional spread="lt 1.5" />
       </StatusEffect>
@@ -273,9 +273,9 @@
       <StatusEffect type="OnUse" target="Contained">
         <Use />
       </StatusEffect>
-      <StatusEffect type="OnUse" target="This" spread="-1.5" unskilledspread="-8" disabledeltatime="true">
+      <!--StatusEffect type="OnUse" target="This" spread="-1" unskilledspread="-8" disabledeltatime="true">
         <Conditional spread="gte 1.5" />
-      </StatusEffect>
+      </StatusEffect-->
       <StatusEffect type="OnUse" target="This" spread="0" unskilledspread="8" setvalue="true" disabledeltatime="true">
         <Conditional spread="lt 1.5" />
       </StatusEffect>
@@ -545,7 +545,7 @@
         <Containable items="flashlight,focusingflashlight,Tspreadflashlight" hide="false" itempos="40,1" setactive="true" />
       </SubContainer>
       <SubContainer capacity="1" maxstacksize="1">
-        <Containable items="holographic_sight,red_sight,2x_sight" hide="false" itempos="-7,14" setactive="true" containedspritedepth="0.45" depth="0.55" />
+        <Containable items="Tholographic_sight,Tholographic_sight,T2x_sight" hide="false" itempos="-7,14" setactive="true" containedspritedepth="0.45" depth="0.55" />
       </SubContainer>
       <SubContainer capacity="1" maxstacksize="1">
         <Containable items="Tvertical_grip,Tcorner_grip" hide="false" itempos="26,-1.5" setactive="true" containedspritedepth="0.1" depth="0.1" />
@@ -583,14 +583,14 @@
       <Item identifier="titaniumaluminiumalloy" amount="2" />
       <Item identifier="fpgacircuit" amount="2" />
     </Deconstruct>
-    <Sprite texture="weapons.png" sourcerect="259,136,251,82" depth="0.55" origin="0.5,0.5" />
+    <Sprite texture="weapons.png" sourcerect="1,226,256,91" depth="0.55" origin="0.5,0.5" />
     <Body width="235" height="55" density="25" />
     <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="45,-20" aimpos="59,-5" handle1="-50,-10" handle2="26,10" holdangle="-30">
       <StatusEffect type="OnActive" target="Character" SpeedMultiplier="0.8" setvalue="true" />
       <StatusEffect type="OnSecondaryUse" target="Character" SpeedMultiplier="0.38" setvalue="true" />
       <StatusEffect type="OnUse" target="Character" SpeedMultiplier="0.15" setvalue="true" />
     </Holdable>
-    <RangedWeapon reload="0.1" holdtrigger="true" barrelpos="100,23" spread="4" unskilledspread="16" combatPriority="80" drawhudwhenequipped="true" crosshairscale="0.2">
+    <RangedWeapon reload="0.1" holdtrigger="true" barrelpos="100,18" spread="4" unskilledspread="16" combatPriority="80" drawhudwhenequipped="true" crosshairscale="0.2">
       <Crosshair texture="Content/Items/Weapons/Crosshairs.png" sourcerect="0,256,256,256" />
       <CrosshairPointer texture="Content/Items/Weapons/Crosshairs.png" sourcerect="256,256,256,256" />
       <ParticleEmitter particle="muzzleflash" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="1.6,1.6" colormultiplier="255,200,200,200" />
@@ -619,9 +619,9 @@
       <StatusEffect type="OnUse" target="Contained">
         <Use />
       </StatusEffect>
-      <StatusEffect type="OnUse" target="This" spread="-1.5" unskilledspread="-8" disabledeltatime="true">
-        <Conditional spread="gte 1.5" />
-      </StatusEffect>
+      <!--StatusEffect type="OnUse" target="This" spread="-1.5" unskilledspread="0" disabledeltatime="true">
+        <Conditional spread="lt 10" />
+      </StatusEffect-->
       <StatusEffect type="OnUse" target="This" spread="0" unskilledspread="10" setvalue="true" disabledeltatime="true">
         <Conditional spread="lt 1.5" />
       </StatusEffect>
@@ -662,7 +662,7 @@
     </ItemContainer>
     <aitarget sightrange="2000" soundrange="4000" fadeouttime="5" />
     <Quality>
-      <QualityStat stattype="FirepowerMultiplier" value="0.1" />
+      <QualityStat stattype="FirepowerMultiplier" value="0.05" />
     </Quality>
     <SkillRequirementHint identifier="weapons" level="45" />
   </Item>
@@ -857,8 +857,7 @@
       <Price storeidentifier="merchantmine" sold="false" multiplier="1.25" />
       <Price storeidentifier="merchantarmory" multiplier="0.9" minavailable="3" />
     </Price>
-    <Deconstruct time="10">
-    </Deconstruct>
+    <Deconstruct time="10"></Deconstruct>
     <Fabricate suitablefabricators="moneymaker" requiredtime="15">
       <RequiredSkill identifier="weapons" level="10" />
       <RequiredItem identifier="iron" />
