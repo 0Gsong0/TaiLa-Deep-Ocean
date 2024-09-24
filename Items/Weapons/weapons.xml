@@ -453,7 +453,7 @@
       <StatusEffect type="OnUse" target="Character" SpeedMultiplier="0.5" setvalue="true" />
       <!--半自动-->
       <StatusEffect type="OnUse" target="This" ReloadTimer="1" setvalue="true">
-        <Conditional HasTag="eq mr_used" />
+        <Conditional HasTag="eq mr_fs_used" />
       </StatusEffect>
     </Holdable>
     <RangedWeapon reload="0.6" weapondamagemodifier="1.3" penetration="1.0" holdtrigger="true" barrelpos="120,20" spread="1" unskilledspread="35" combatPriority="85" drawhudwhenequipped="true" crosshairscale="0.2">
@@ -473,13 +473,13 @@
       <RequiredItems items="mr_magazine, mr_magazine_fs" type="Contained" msg="ItemMsgAmmoRequired" />
       <RequiredSkill identifier="weapons" level="55" />
       <!--半自动实现-->
-      <StatusEffect type="OnUse" target="This" Tags="mr_used" setvalue="true" />
-      <StatusEffect type="OnSecondaryUse" target="This" comparison="And" Tags="mr_unused" setvalue="true">
-        <Conditional HasTag="eq mr_used" />
+      <StatusEffect type="OnUse" target="This" Tags="mr_fs_used" setvalue="true" />
+      <StatusEffect type="OnSecondaryUse" target="This" comparison="And" Tags="mr_fs_unused" setvalue="true">
+        <Conditional HasTag="eq mr_fs_used" />
         <Conditional ReloadTimer="lte 0.01" />
       </StatusEffect>
       <StatusEffect type="OnSecondaryUse" target="This" comparison="And" ReloadTimer="0.16" setvalue="true">
-        <Conditional HasTag="eq mr_used" />
+        <Conditional HasTag="eq mr_fs_used" />
         <Conditional ReloadTimer="gt 0.16" />
       </StatusEffect>
     </RangedWeapon>
