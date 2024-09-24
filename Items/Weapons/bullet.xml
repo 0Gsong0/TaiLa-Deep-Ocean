@@ -81,11 +81,11 @@
     </Projectile>
   </Item>
   <!--灭刃的飞刃-->
-  <Item name="" identifier="mr_zd" category="Weapon" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_metal_light" hideinmenus="true" scale="0.5">
+  <Item name="灭刃的飞刃" identifier="mr_zd" category="Weapon" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_metal_light" hideinmenus="true" scale="0.5">
     <Sprite texture="bullet.png" sourcerect="17,21,20,5" depth="0.55" origin="0.5,0.5" />
     <Body width="40" height="14" density="30" />
     <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
-    <Projectile characterusable="false" hitscan="true" removeonhit="true" maxtargetstohit="5">
+    <Projectile characterusable="false" hitscan="true" removeonhit="true" maxtargetstohit="6">
       <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,200,200,175" scalemultiplier="1,0.8" />
       <Attack structuredamage="1" targetforce="1" itemdamage="6" severlimbsprobability="0.9" penetration="0.9">
         <!--10%概率打出双倍伤害，1%几率打出三倍伤害，30%概率打出额外内脏伤害，50%概率打出额外高额流血伤害-->
@@ -99,6 +99,32 @@
         <Affliction identifier="lacerations" strength="52" probability="0.1" />
          <!--额外几率打出流血-->
         <Affliction identifier="bleeding" strength="55" probability="0.5" />
+      </Attack>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="2,2" />
+      </StatusEffect>
+      <StatusEffect type="OnImpact" target="UseTarget">
+        <Conditional entitytype="eq Structure" />
+        <Conditional hastag="eq door" />
+        <ParticleEmitter particle="spark" copyentityangle="true" anglemin="-10" anglemax="10" particleamount="5" velocitymin="-10" velocitymax="-200" scalemin="0.5" scalemax="1" />
+      </StatusEffect>
+    </Projectile>
+  </Item>
+  <Item name="灭刃的辐射飞刃" identifier="mr_zd_fs" category="Weapon" interactthroughwalls="true" cargocontaineridentifier="metalcrate" tags="smallitem" impactsoundtag="impact_metal_light" hideinmenus="true" scale="0.5">
+    <Sprite texture="bullet.png" sourcerect="17,21,20,5" depth="0.55" origin="0.5,0.5" />
+    <Body width="40" height="14" density="30" />
+    <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
+    <Projectile characterusable="false" hitscan="true" hitscancount="2" removeonhit="true" maxtargetstohit="4" spread="3">
+      <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,200,200,175" scalemultiplier="1,0.8" />
+      <Attack structuredamage="1" targetforce="1" itemdamage="6" severlimbsprobability="1.0" penetration="0.9">
+        <!--低概率无法停止的流血-->
+        <Affliction identifier="bleedingnonstop" strength="15" probability="0.5" />
+        <!--高概率严重内脏损伤-->
+        <Affliction identifier="internaldamage" strength="25" probability="0.8" />
+        <!--基础撕裂伤降低-->
+        <Affliction identifier="lacerations" strength="23"/>
+        <!--额外辐射-->
+        <Affliction identifier="radiationsickness" strength="32"/>
       </Attack>
       <StatusEffect type="OnImpact" target="UseTarget">
         <ParticleEmitter particle="impactfirearm" particleamount="1" velocitymin="0" velocitymax="0" scalemultiplier="2,2" />
