@@ -109,7 +109,7 @@
       <SubContainer capacity="1" maxstacksize="1">手电
         <Containable items="flashlight,focusingflashlight,Tspreadflashlight" hide="false" itempos="40,2" setactive="true" /></SubContainer>
       <SubContainer capacity="1" maxstacksize="1">倍镜
-        <Containable items="holographic_sight,red_sight,2x_sight,2.5x_sight" hide="false" itempos="-15,13" setactive="true" containedspritedepth="0.45" depth="0.55" /></SubContainer>
+        <Containable items="Tholographic_sight,Tholographic_sight,T2x_sight,T2.5x_sight" hide="false" itempos="-15,13" setactive="true" containedspritedepth="0.45" depth="0.55" /></SubContainer>
       <SubContainer capacity="1" maxstacksize="1">握把
         <Containable items="Tvertical_grip,Tcorner_grip" hide="false" itempos="18,-1.5" setactive="true" containedspritedepth="0.45" depth="0.55" /></SubContainer>
       <SubContainer capacity="1" maxstacksize="1">枪管
@@ -614,7 +614,7 @@
         <Containable items="flashlight,focusingflashlight,Tspreadflashlight" hide="false" itempos="40,1" setactive="true" />
       </SubContainer>
       <SubContainer capacity="1" maxstacksize="1">
-        <Containable items="holographic_sight,red_sight,2x_sight" hide="false" itempos="-7,14" setactive="true" containedspritedepth="0.45" depth="0.55" />
+        <Containable items="Tholographic_sight,Tholographic_sight,T2x_sight" hide="false" itempos="-7,14" setactive="true" containedspritedepth="0.45" depth="0.55" />
       </SubContainer>
       <SubContainer capacity="1" maxstacksize="1">
         <Containable items="Tvertical_grip,Tcorner_grip" hide="false" itempos="26,-1.5" setactive="true" containedspritedepth="0.1" depth="0.1" />
