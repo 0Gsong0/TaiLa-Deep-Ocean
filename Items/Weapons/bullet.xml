@@ -61,11 +61,11 @@
     <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
     <Projectile characterusable="false" hitscan="true" hitscancount="3" launchimpulse="30.0" removeonhit="true">
       <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,150,150,175" scalemultiplier="1,0.6" />
-      <Attack structuredamage="3" targetforce="8" itemdamage="20" penetration="1.0" severlimbsprobability="0.7">
+      <Attack structuredamage="3" targetforce="8" itemdamage="20" penetration="0.9" severlimbsprobability="0.7">
 		  <!--由于是3段伤害因此实际伤害可能为数值x3-->
-	      <Affliction identifier="gunshotwound" strength="21" />
-		    <Affliction identifier="gunshotwound" strength="18" probability="0.35" />
-		    <Affliction identifier="gunshotwound" strength="43" probability="0.15" />
+	      <Affliction identifier="gunshotwound" strength="18" />
+		    <Affliction identifier="gunshotwound" strength="12" probability="0.25" />
+		    <Affliction identifier="gunshotwound" strength="33" probability="0.1" />
         <Affliction identifier="bleeding" strength="12" />
         <Affliction identifier="stun" strength="0.1" probability="0.4" />
         <Affliction identifier="stun" strength="0.2" probability="0.3" />
@@ -116,7 +116,7 @@
     <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
     <Projectile characterusable="false" hitscan="true" hitscancount="2" removeonhit="true" maxtargetstohit="4" spread="3">
       <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="255,200,200,175" scalemultiplier="1,0.8" />
-      <Attack structuredamage="1" targetforce="1" itemdamage="6" severlimbsprobability="1.0" penetration="0.9">
+      <Attack structuredamage="1" targetforce="1" itemdamage="6" severlimbsprobability="1.0" penetration="0.6">
         <!--低概率无法停止的流血-->
         <Affliction identifier="bleedingnonstop" strength="15" probability="0.5" />
         <!--高概率严重内脏损伤-->
