@@ -12,7 +12,7 @@
       <BalanceStatus percentage="0.25" sellpricemodifier="0.2" color="255,0,0,255" />
     </Store>
   </TLreside>
-  <TLEnergyTowers identifier="TLEnergyTowers" nameidentifiers="alien" commonnessperzone="1: 1, 2: 0.5, 3: 0.3, 4: 0, 5: 0, 6: 0" missiontags="TLEnergyTowersoutpost" hideentitysubcategories="abandonedhuman,abandonedmonster" outpostteam="None" AllowAsBiomeGate="false">
+  <TLEnergyTowers identifier="TLEnergyTowers" nameidentifiers="alien" commonnessperzone="1: 0.6, 2: 0.5, 3: 0.4, 4: 0.2, 5: 0.1, 6: 0" missiontags="TLEnergyTowersoutpost" hideentitysubcategories="abandonedhuman,abandonedmonster" outpostteam="None" AllowAsBiomeGate="false">
     <Symbol texture="%ModDir%/Map/MapAtlasDE.png" sheetelementsize="128,128" sheetindex="0,0" />
     <Portrait texture="%ModDir%/UI/走廊.png" sourcerect="0,0,1128,632" premultiplyalpha="false" />
   </TLEnergyTowers>
@@ -20,7 +20,7 @@
     <Symbol texture="%ModDir%/Map/MapAtlasDE.png" sheetelementsize="128,128" sheetindex="1,0" />
     <Portrait texture="%ModDir%/UI/造船厂.png" sourcerect="0,0,1024,1024" premultiplyalpha="false" />
   </TLshipyard>
-	<TLxue identifier="TLxue" nameidentifiers="alien" commonnessperzone="1: 0, 2: 0, 3: 0.3, 4: 0.4, 5: 0.4, 6: 0" missiontags="TLxueoutpost" hideentitysubcategories="abandonedhuman,abandonedmonster" outpostteam="None" AllowAsBiomeGate="false">
+	<TLxue identifier="TLxue" nameidentifiers="alien" commonnessperzone="1: 0, 2: 0.1, 3: 0.3, 4: 0.4, 5: 0.4, 6: 0" missiontags="TLxueoutpost" hideentitysubcategories="abandonedhuman,abandonedmonster" outpostteam="None" AllowAsBiomeGate="false">
 		<Symbol texture="%ModDir%/Map/MapAtlasDE.png" sheetelementsize="128,128" sheetindex="1,0" />
 		<Portrait texture="%ModDir%/UI/xue.png" sourcerect="0,0,1024,1024" premultiplyalpha="false" />
 	</TLxue>

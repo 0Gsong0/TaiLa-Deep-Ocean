@@ -13,13 +13,12 @@
       <TriggerAction target1tag="TLnpc1" target2tag="player" applytotarget2="triggerer_player" radius="200" waitforinteraction="true" />
       <ConversationAction text="你好，我是泰拉集团战斗部门负责人吸管，我这里有一些琐事处理不过来，如果你愿意帮忙那可太好了，当然报酬少不了你的...（由于处于测试阶段，所以可以从吸管获取所有任务，包含终结任务和反派等）" targettag="triggerer_player" eventsprite="TL">
         <Option text="我们很荣幸帮忙">
-          <ConversationAction text="非常好，我会担任你们的远程指挥官，请保持连线畅通" targettag="triggerer_player" />
+          <ConversationAction text="非常好，我会担任你们的远程指挥官，请保持连线畅通（由于在测试阶段，会接取所有任务，清理垃圾除外）" targettag="triggerer_player" />
           <MissionAction missionidentifier="hunting" />
           <MissionAction missiontag="TLhaidao" />
           <MissionAction missionidentifier="TLceshiji" />
           <MissionAction missionidentifier="TLhunting" />
           <MissionAction missionidentifier="mudraptors" />
-          <MissionAction missionidentifier="TLattack1" />
           <MissionAction missionidentifier="TLrescue1" />
           <!--联盟-->
           <MissionAction missionidentifier="TLhaidao3" />

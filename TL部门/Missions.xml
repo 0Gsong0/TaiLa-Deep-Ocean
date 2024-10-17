@@ -37,7 +37,7 @@
     <Icon texture="%ModDir%/TL部门/Sprite/zhuguang.png" sourcerect="0,0,1024,1024" />
     <message header="感谢你们又碾死了一些臭虫" text="烛光中求生的勇士，你值得敬爱" />
   </MonsterMission>
-  <PirateMission name="放弃船，或者放弃希望(新型锤头鲨护卫舰）" type="Pirate" identifier="TLhaidao" tags="TLhaidao" difficulty="4" commonness="100" reward="25000" description="万分火急，有一艘护卫舰运载着集团的大杀器，选择了叛逃，千万不要让这个东西落入联盟手中，我不管你们用何种方式，务必把所有人杀光">
+  <PirateMission name="放弃船，或者放弃希望(退役锤头鲨级护卫舰）" type="Pirate" identifier="TLhaidao" tags="TLhaidao" difficulty="4" commonness="100" reward="25000" description="万分火急，有一艘护卫舰运载着集团的大杀器，选择了叛逃，千万不要让这个东西落入联盟手中，我不管你们用何种方式，把他们留在海底！">
     <Reputation identifier="coalition" amount="-5" />
     <Reputation identifier="TLhui" amount="6" />
     <SubmarineTypes>
@@ -154,8 +154,7 @@
     <LocationType identifier="TLEnergyTowers" />
     <LocationTypeChange from="TLEnergyTowers" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
     <Characters>
-      <Character identifier="HuskPro" min="35" max="37" />
-      <Character identifier="HuskPro" min="35" max="37" />
+      <Character identifier="HuskPro" min="45" max="55" />
       <Character identifier="THnpc1" from="THnpc" asfaraspossible="true" requirerescue="false" />
       <Character identifier="THnpc1" from="THnpc" asfaraspossible="true" requirerescue="false" />
     </Characters>
@@ -163,7 +162,7 @@
     <Metadata identifier="waytoascension" value="8" />
     <message header="任务成功" text="成功引爆能源塔，是时候离开了，除非你们还想再深入" />
   </AbandonedOutpostMission>
-	<AbandonedOutpostMission name="造船厂（任务空）" description=" " identifier="TLshipyard" tags="TLshipyard" type="OutpostDestroy" achievementidentifier="huskcultrescuesubra" reward="0" difficulty="4" commonness="100" allowretry="true" targetitem="reactor" unhideentitysubcategories="abandonedmonster">
+	<AbandonedOutpostMission name="造船厂（废案）" description=" " identifier="TLshipyard" tags="TLshipyard" type="OutpostDestroy" achievementidentifier="huskcultrescuesubra" reward="0" difficulty="4" commonness="100" allowretry="true" targetitem="reactor" unhideentitysubcategories="abandonedmonster">
     <Reputation identifier="TLhui" amount="0" />
     <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,256,256,256" color="214,50,48" />
     <LocationType identifier="TLshipyard" />
@@ -217,7 +216,7 @@
 山河虽美心难静，
 空对银装泪自流。" />
   </AbandonedOutpostMission>
-  <AbandonedOutpostMission name="风雪消霁" description="想体验和集团正面交锋吗？他们在木卫二横行霸道惯了吗，是时候消消他们的焰气了" identifier="TLAbandonedOutpostMission1" tags="abandonedoutpost" achievementidentifier="abandonedoutpostdestroyhumans" type="OutpostDestroy" reward="5000" difficulty="4" commonness="100" allowretry="true" targetitem="reactor" unhideentitysubcategories="abandonedhuman" maxleveldifficulty="65">
+  <AbandonedOutpostMission name="风雪消霁" description="想体验和集团正面交锋吗？他们在木卫二横行霸道惯了吗，是时候消消他们的焰气了！让他们知道我联盟不是吃素的！" identifier="TLAbandonedOutpostMission1" tags="abandonedoutpost" achievementidentifier="abandonedoutpostdestroyhumans" type="OutpostDestroy" reward="5000" difficulty="4" commonness="110" allowretry="true" targetitem="reactor" unhideentitysubcategories="abandonedhuman" maxleveldifficulty="65">
     <Reputation identifier="TLhui" amount="-20" />
     <Reputation identifier="coalition" amount="50" />
     <Icon texture="%ModDir%/TL部门/Sprite/feng.png" sourcerect="0,0,1024,1024" />
@@ -250,7 +249,7 @@
       <Character requirekill="true" moduleflags="banditleader" identifier="TLnpc1" from="TLnpc" asfaraspossible="true" multiplayeronly="true" />
     </Characters>
     <TriggerEvent state="0" delay="5" eventidentifier="heartofgold" campaignonly="true" />
-    <message header="岁寒过后终见暖，人生如斯自有情。" text="风雪消霁天地清，
+    <message header="岁寒过后终见暖，人生如斯自有情..." text="风雪消霁天地清，
 梅花点点映寒冰。
 遥望山川银装褪，
 心随冬去盼春明。" />
