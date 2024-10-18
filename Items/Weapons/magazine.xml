@@ -477,7 +477,7 @@
     <Upgrade gameversion="0.10.0.0" scale="0.5" />
   </Item>
   <!--幻星步枪通用弹匣-->
-  <Item name="幻星步枪通用弹匣" identifier="HX_magazine_normal" description="用于适配幻星系列步枪的通用弹匣。考虑到幻星系列的步枪的子弹消耗问题，弹容量要比一般的弹匣略高一点" category="Weapon" health="60" maxstacksize="32" maxstacksizecharacterinventory="4" cargocontaineridentifier="metalcrate" tags="smallitem,HX_ammo,HX_magazine" Scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="幻星步枪通用弹匣" identifier="HX_magazine_normal" description="用于适配幻星系列步枪的通用弹匣。考虑到幻星系列的步枪的子弹消耗问题，弹容量要比一般的弹匣略高一点" category="Weapon" health="84" maxstacksize="32" maxstacksizecharacterinventory="4" cargocontaineridentifier="metalcrate" tags="smallitem,HX_ammo,HX_magazine" Scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="wreckarmcab" minamount="0" maxamount="3" spawnprobability="0.1" />
     <PreferredContainer primary="wreckstoragecab" minamount="0" maxamount="3" spawnprobability="0.1" />
     <PreferredContainer primary="weaponholder" spawnprobability="0.1" />
