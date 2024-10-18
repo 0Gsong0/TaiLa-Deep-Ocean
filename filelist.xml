@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="泰拉渊洋" modversion="1.0.82" corepackage="False" steamworkshopid="3232587498" gameversion="1.5.9.2">
+<contentpackage name="泰拉渊洋" modversion="1.0.83" corepackage="False" steamworkshopid="3232587498" gameversion="1.5.9.2">
   <Structure file="%ModDir%/Outpost/StructurePrefabs.xml" />
   <LocationTypes file="%ModDir%/Outpost/LocationTypes.xml" />
   <OutpostConfig file="%ModDir%/Outpost/OutpostGenerationParameters.xml" />
@@ -52,7 +52,6 @@
   <Submarine file="%ModDir%/Sub/失联研究所.sub" />
   <OutpostModule file="%ModDir%/Sub/泰拉造船厂.sub" />
   <OutpostModule file="%ModDir%/Sub/造船厂入口.sub" />
-  <OutpostModule file="%ModDir%/Sub/能源采集塔.sub" />
   <EnemySubmarine file="%ModDir%/Sub/失联研究所.sub" />
   <BeaconStation file="%ModDir%/Sub/失联研究所.sub" />
   <OutpostModule file="%ModDir%/Sub/能源塔走廊.sub" />
@@ -62,4 +61,5 @@
   <Submarine file="%ModDir%/Sub/测试地.sub" />
   <Character file="%ModDir%/Characters/四足防卫机器人/四足防卫机器人.xml" />
   <Wreck file="%ModDir%/Sub/失联医疗舰.sub" />
+  <OutpostModule file="%ModDir%/Sub/能源采集塔.sub" />
 </contentpackage>
