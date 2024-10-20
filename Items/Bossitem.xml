@@ -218,7 +218,7 @@
     <Sprite name="前锋跳帮" texture="%ModDir%/Characters/日蚀前锋/日蚀前锋.png" sourcerect="3280,3760,1012,996" depth="0.55" origin="0.5,0.5" />
     <Body width="300" height="300" density="40" />
     <Holdable slots="RightHand+LeftHand" holdpos="0,-50" handle1="-10,0" handle2="10,0" aimable="false" msg="ItemMsgPickUpSelect" />
-    <Projectile characterusable="false" launchimpulse="300" maxtargetstohit="3" damagedoors="true">
+    <Projectile characterusable="false" launchimpulse="300" maxtargetstohit="2" damagedoors="true">
       <Attack structuredamage="400" itemdamage="100" severlimbsprobability="5" penetration="0.6" targetforce="1000">
         <Affliction identifier="explosiondamage" strength="450" />
         <Affliction identifier="bleeding" strength="200" />
@@ -232,7 +232,7 @@
         <sound file="Content/Items/Weapons/ExplosionSmall2.ogg" selectionmode="Random" range="50000" />
         <sound file="Content/Items/Weapons/ExplosionSmall3.ogg" selectionmode="Random" range="50000" />
         <ParticleEmitter particle="shrapnel" copyentityangle="true" anglemin="0" anglemax="360" particleamount="50" velocitymin="100" velocitymax="2000" scalemin="1.0" scalemax="1.0" />
-        <SpawnCharacter speciesname="毒脓迅猛龙" count="2" />
+        <SpawnCharacter speciesname="毒脓迅猛龙" count="1" />
       </StatusEffect>
       <!-- Trigger explosions on contained items -->
       <!-- Remove the item after exploding -->

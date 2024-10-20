@@ -31,7 +31,7 @@
       </Attack>
       <!--持有的时候右键可以短暂格挡飞弹-->
       <StatusEffect type="OnSecondaryUse" target="Character" SpeedMultiplier="1.25" setvalue="true">
-        <Affliction identifier="IchorClawBlock" amount="2" />
+		  <!--Affliction identifier="IchorClawBlock" amount="2" /-->
       </StatusEffect>
       <StatusEffect type="OnSecondaryUse" target="this" comparison="And" setvalue="true" reload="0.1" aimpos="35,-5" holdangle="-10" swingforce="6,-3">
         <!--武器耐久大于40-->

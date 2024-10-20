@@ -37,11 +37,11 @@
     <Icon texture="%ModDir%/TL部门/Sprite/zhuguang.png" sourcerect="0,0,1024,1024" />
     <message header="感谢你们又碾死了一些臭虫" text="烛光中求生的勇士，你值得敬爱" />
   </MonsterMission>
-  <PirateMission name="放弃船，或者放弃希望(退役锤头鲨级护卫舰）" type="Pirate" identifier="TLhaidao" tags="TLhaidao" difficulty="4" commonness="100" reward="25000" description="万分火急，有一艘护卫舰运载着集团的大杀器，选择了叛逃，千万不要让这个东西落入联盟手中，我不管你们用何种方式，把他们留在海底！">
+  <PirateMission name="放弃船，或者放弃希望(叛逃锤头鲨级护卫舰）" type="Pirate" identifier="TLhaidao" tags="TLhaidao" difficulty="4" commonness="100" reward="25000" description="万分火急，有一艘护卫舰运载着集团的大杀器，选择了叛逃，千万不要让这个东西落入联盟手中，我不管你们用何种方式，把他们留在海底！">
     <Reputation identifier="coalition" amount="-5" />
     <Reputation identifier="TLhui" amount="6" />
     <SubmarineTypes>
-      <Submarine path="%ModDir%/Sub/泰拉科技 “锤头煞”级护卫舰（测试版3.0）.sub" faction="separatists" preferreddifficulty="70" alternatereward="10000" />
+      <Submarine path="%ModDir%/Sub/泰拉叛逃护卫舰.sub" faction="separatists" preferreddifficulty="70" alternatereward="10000" />
     </SubmarineTypes>
     <Characters>
       <Character typeidentifier="separatistcaptain" minamount="1" maxamount="1" />
@@ -154,7 +154,7 @@
     <LocationType identifier="TLEnergyTowers" />
     <LocationTypeChange from="TLEnergyTowers" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
     <Characters>
-      <Character identifier="HuskPro" min="45" max="55" />
+      <Character identifier="HuskPro" min="30" max="45" />
       <Character identifier="THnpc1" from="THnpc" asfaraspossible="true" requirerescue="false" />
       <Character identifier="THnpc1" from="THnpc" asfaraspossible="true" requirerescue="false" />
     </Characters>
