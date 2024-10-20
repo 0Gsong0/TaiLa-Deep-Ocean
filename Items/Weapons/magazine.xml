@@ -30,8 +30,8 @@
       <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="150,150,200,200" scalemultiplier="1,0.5" />
       <Attack structuredamage="15" targetforce="4" itemdamage="15" severlimbsprobability="0.3">
         <Affliction identifier="stun" strength="0.3" />
-        <Affliction identifier="bleeding" strength="10" />
-        <Affliction identifier="gunshotwound" strength="12" />
+        <Affliction identifier="bleeding" strength="7" />
+        <Affliction identifier="gunshotwound" strength="8" />
         <!--Affliction identifier="lacerations" strength="18" /-->
       </Attack>
       <StatusEffect type="OnImpact" target="UseTarget">
@@ -74,9 +74,9 @@
       <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="150,150,200,200" scalemultiplier="1,0.5" />
       <Attack structuredamage="1" targetforce="1" itemdamage="15" severlimbsprobability="0.85" penetration="0.8">
         <Affliction identifier="bleeding" strength="3" />
-        <Affliction identifier="lacerations" strength="12" />
+        <Affliction identifier="lacerations" strength="10" />
         <!--每个弹丸都有5%概率打出双倍撕裂伤-->
-        <Affliction identifier="lacerations" strength="12" probability="0.05" />
+        <Affliction identifier="lacerations" strength="10" probability="0.05" />
         <Affliction identifier="gunshotwound" strength="3" />
       </Attack>
       <StatusEffect type="OnImpact" target="UseTarget">
@@ -111,12 +111,12 @@
     <Body width="23" height="10" density="30" />
     <Pickable slots="Any" msg="ItemMsgPickUpSelect" />
     <!--一次发射6发射弹-->
-    <Projectile characterusable="false" maxtargetstohit="1" hitscan="true" hitscancount="6" removeonhit="true" spread="12">
+    <Projectile characterusable="false" maxtargetstohit="1" hitscan="true" hitscancount="6" removeonhit="true" spread="15">
       <ParticleEmitter particle="tracerfirearm" particleamount="1" velocitymin="0" velocitymax="0" colormultiplier="150,150,200,200" scalemultiplier="1,0.5" />
       <Attack structuredamage="1" targetforce="6" itemdamage="15" severlimbsprobability="0.1" penetration="0.1">
-      <!--每颗子弹赋予1崩解，10%概率额外1点-->
-        <Affliction identifier="alcellruin" strength="1" />
-        <Affliction identifier="alcellruin" strength="1" probability="0.1"/>
+      <!--每颗子弹赋予0.5崩解，3%概率额外1点-->
+        <Affliction identifier="alcellruin" strength="0.5" />
+        <Affliction identifier="alcellruin" strength="1" probability="0.03"/>
         <!--赋予易伤效果-->
         <Affliction identifier="organdamage" strength="4" />
         <Affliction identifier="gunshotwound" strength="9" />
