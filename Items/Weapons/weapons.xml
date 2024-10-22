@@ -81,7 +81,7 @@
     <Sprite texture="weapons.png" sourcerect="257,319,254,64" depth="0.55" origin="0.5,0.5" />
     <Body width="180" height="30" density="25" />
     <Holdable slots="Any,RightHand+LeftHand" holdpos="80,-20" holdangle="-35" controlpose="true" aimpos="85,5" handle1="-15,-7" handle2="-15,-7" msg="ItemMsgPickUpSelect" />
-    <RangedWeapon weapondamagemodifier="1.4" barrelpos="83,0" spread="8" unskilledspread="3" combatPriority="80" reload="0.4" drawhudwhenequipped="true" crosshairscale="0.6">
+    <RangedWeapon weapondamagemodifier="1.2" barrelpos="83,0" spread="8" unskilledspread="3" combatPriority="80" reload="0.4" drawhudwhenequipped="true" crosshairscale="0.6">
       <StatusEffect type="OnUse" target="This" Condition="-300" />
       <StatusEffect type="NotInWater" target="This" Condition="5" />
       <StatusEffect type="InWater" target="This" Condition="150" />
@@ -321,7 +321,7 @@
     <SkillRequirementHint identifier="weapons" level="50" />
   </Item>
   <!--灭刃系列-->
-  <Item name="灭刃" description="泰拉工程部研究的特珠武器,可以安装专用的灭刃弹匣。安装后发射的并非是子弹而是细小的刃片,这种特殊的飞刃可以轻易撕开肉体造成大出血" identifier="TL_MR" category="Weapon" cargocontaineridentifier="metalcrate" allowasextracargo="true" tags="mediumitem,weapon,gun,gunsmith,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
+  <Item name="灭刃" description="泰拉工程部研究的特珠武器,除了泰拉的弹匣以外还可以安装专用的灭刃弹匣。安装后发射的并非是子弹而是细小的刃片,这种特殊的飞刃可以轻易撕开肉体造成大出血" identifier="TL_MR" category="Weapon" cargocontaineridentifier="metalcrate" allowasextracargo="true" tags="mediumitem,weapon,gun,gunsmith,mountableweapon" Scale="0.5" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="secarmcab" secondary="armcab,weaponholder" />
     <Price baseprice="5500" minleveldifficulty="30">
       <Price storeidentifier="TLarmory" multiplier="1.2" sold="true" />
