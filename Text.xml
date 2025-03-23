@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="Simplified Chinese" nowhitespace="true" translatedname="中文（简体）">
+  <Override>
+    <deconstructor.unknownitemsoutput>随机物品</deconstructor.unknownitemsoutput>
+  </Override>
+  <faction.TLhui>泰拉科技集团</faction.TLhui>
+  <faction.TLhui.description>木卫二上新兴的科技公司，手握强大的科技力量，人数没有很多，大多数设施和武装由人工智能控制，和联盟的关系有些僵硬，据不可靠消息他们在支持一些非法活动和分裂势力</faction.TLhui.description>
+  <faction.TLhui.shortdescription>中立的科技公司，拥有先进技术扶持的强势和人工智能决策的严谨，大多数设施和武装由人工智能控制，和联盟的关系有些僵硬，据不可靠消息他们在支持一些非法活动和分裂势力</faction.TLhui.shortdescription>
+  <!--<faction.HXhui>幻星工业</faction.HXhui>
+  <faction.HXhui.description>明面上隶属于联盟的科研援助性的工业集团，但考虑到其领导阶层和管理人员却都不属于木卫二联盟，以及联盟所有的人员安插行为都以失败告终。也许暗地里幻星也有着什么其他的秘密……</faction.HXhui.description>
+  <faction.HXhui.shortdescription>明面上隶属于联盟的科研援助性的工业集团，但考虑到其领导阶层和管理人员却都不属于木卫二联盟，以及联盟所有的人员安插行为都以失败告终。也许暗地里幻星也有着什么其他的秘密……</faction.HXhui.shortdescription>-->
+  <displayname.Mademore_TL>[itemname] （批量制造）</displayname.Mademore_TL>
+  <displayname.ChongZhu_TL>[itemname] （重铸升级）</displayname.ChongZhu_TL>
+  <displayname.printcheap_TL>[itemname] （廉价打印）</displayname.printcheap_TL>
+  <displayname.Xiufu_TL>[itemname] （修复）</displayname.Xiufu_TL>
+  <fabricationheader.TLammoK>任意‖color:gui.orange‖泰拉空弹夹‖end‖</fabricationheader.TLammoK>
+  <fabricationheader.1130box>任意‖color:gui.orange‖泰拉空弹药箱‖end‖</fabricationheader.1130box>
+  <fabricationheader.TLammo_mr>任意‖color:gui.orange‖灭刃空弹夹‖end‖</fabricationheader.TLammo_mr>
+  <fabricationdescription.1130box>仅限泰拉渊洋本mod弹药箱</fabricationdescription.1130box>
+  <fabricationheader.HXammoK>任意‖color:gui.orange‖幻星空弹夹‖end‖</fabricationheader.HXammoK>
+  <locationname.TL>泰拉科技常规前哨站</locationname.TL>
+  <locationnameformat.TL>泰拉科技常规站点--[name]分部</locationnameformat.TL>
+  <locationname.TLEnergyTowers>泰拉科技能源塔</locationname.TLEnergyTowers>
+  <locationnameformat.TLEnergyTowers>泰拉科技遗弃设施</locationnameformat.TLEnergyTowers>
+  <locationname.TLshipyard>泰拉科技造船厂(未完成，无法进入）
+公司旗下的泰拉造船厂位于战略要地，拥有先进的设施和设备，集设计、研发、制造和维护于一体，堪称现代海洋工程的典范。
+该造船厂专注于建造各类高性能舰艇，其产品以其火力、耐用性、速度和极强的科技含量而备受赞誉，广泛应用于军事、科研和商业领域。
+致力于开发尖端的海洋技术，如隐形材料、水下通信系统和自动化控制。</locationname.TLshipyard>
+  <locationnameformat.TLshipyard>泰拉科技遗弃设施</locationnameformat.TLshipyard>
+  <locationnameformat.TLxue>同看雪后山</locationnameformat.TLxue>
+  <locationname.TLxue>彼岸花发源地，曾经的泰拉高级秘密科研设施，已经失联许久</locationname.TLxue>
+  <npctitle.TLarmory>泰拉科技外务商</npctitle.TLarmory>
+  <storename.TLarmory>泰拉科技工程部</storename.TLarmory>
+  <jobname.TLsafe>集团特战队</jobname.TLsafe>
+  <jobdescription.TLsafe>集团特战队是接受过集团特殊改造和训练的特种部队，拥有超乎常人的战斗能力，绝对是最强的安全保障</jobdescription.TLsafe>
+  <charactername.TLarmory>泰拉集团工程部负责人--HES</charactername.TLarmory>
+      
+  <!--特战队的诞生-->
+  <talentname.BeginofTLsafe>特战队的诞生</talentname.BeginofTLsafe>
+  <talentdescription.BeginofTLsafe>从现在开始，你已经成为特战队的一员：获得‖color:gui.green‖15‖end‖%经验加成。</talentdescription.BeginofTLsafe>
+  <!--常规1线-->
+  <!--格斗-->
+  <talentname.fightTrain>特训：格斗</talentname.fightTrain>
+  <talentdescription.fightTrain>通过击杀[amount1]个敌人以获得[amount2]点经验，[amount3]点武器技能以及[amount4]点最大生命值。</talentdescription.fightTrain>
+  <!--修复-->
+  <talentname.repairTrain>特训：修复</talentname.repairTrain>
+  <talentdescription.repairTrain>通过修复[amount1]个各类机械电气以获得[amount3]点经验，[amount1]点机械和电气技能以及[amount2]%维修速度奖励。</talentdescription.repairTrain>
+  <!--医疗-->
+  <talentname.yiliaoTrain>特训：医疗</talentname.yiliaoTrain>
+  <talentdescription.yiliaoTrain>通过制作[amount1]个医疗物品训练以获得[amount2]点经验，[amount3]点医疗技能以及[amount4]%医疗效果增强。</talentdescription.yiliaoTrain>
+  <!--舵手-->
+  <talentname.DuoshouTrain>特训：舵手</talentname.DuoshouTrain>
+  <talentdescription.DuoshouTrain>你获得[amount]驾驶技能奖励。</talentdescription.DuoshouTrain>
+  <!--常规2线-->
+  <talentname.olympian_TL>奥林匹克</talentname.olympian_TL>
+  <talentname.affiliation2>关系网络</talentname.affiliation2>
+  <talentdescription.affiliation2>在派系中的声望增加速度提高[amount]%。
+为所属派系完成任务时，获得的分数增加[amount2]%。
+注：声望最高为所属派系，且相同技能无法叠加。</talentdescription.affiliation2>
+  <talentname.yingji>应急程序</talentname.yingji>
+  <talentdescription.yingji>每当你的潜艇受到怪物的伤害时，移动速度增加[amount]%</talentdescription.yingji>
+  <!--严格学习-->
+  <talentname.StudyMore_TL>严格学习</talentname.StudyMore_TL>
+  <talentdescription.StudyMore_TL>增加技能获取速度[amount]%</talentdescription.StudyMore_TL>
+  <!--后勤线-->  
+  <talenttree.TLsafe_specialization>后勤处长</talenttree.TLsafe_specialization> 
+  <talentname.systemoverload>系统超载</talentname.systemoverload>
+  <talentdescription.systemoverload>制作台，解构仪器以及打印机的效率增加[amount]%，并解锁打印机，打印机内的部分物品制造更廉价。</talentdescription.systemoverload> 
+  <talentname.scavenger2>摸金校尉</talentname.scavenger2>
+  <talentdescription.scavenger2>搜索沉船容器有[amount]%的概率找到额外一个钢筋，钛铝合金，泰拉集团合金或者打印材料</talentdescription.scavenger2>
+  <talentname.tooloverload>工具超载</talentname.tooloverload>
+  <talentdescription.tooloverload>你的挖矿和维修速度提升[amount]%，并解锁二阶段工具。</talentdescription.tooloverload> 
+  <talentname.Deconstructer>拆解专精</talentname.Deconstructer>
+  <talentdescription.Deconstructer>每当你分解物品，都有[amount]%的机会获得三倍的产量。</talentdescription.Deconstructer>
+  <talentname.gongyi>精进工艺</talentname.gongyi>
+  <talentdescription.gongyi>制作物品增加[amount]品质，并解锁三阶段工具。（ps：该工具需在打印机内打印加工）</talentdescription.gongyi>
+  <!--医疗线-->
+  <talenttree.TLsafe_specialization2>医师</talenttree.TLsafe_specialization2>
+  <talentname.drsubmarinePRO>医疗制作</talentname.drsubmarinePRO>
+  <talentdescription.drsubmarinePRO>你的医疗制作台制作速度提升[amount]%，医疗技能提升[amount2]。</talentdescription.drsubmarinePRO> 
+  <talentname.miracleworkerPRO>奇迹行者</talentname.miracleworkerPRO>
+  <talentdescription.miracleworkerPRO>你和周围4米的队友不会死亡。</talentdescription.miracleworkerPRO>
+  <talentname.drsubmarinePRO2>医疗部门主任</talentname.drsubmarinePRO2>
+  <talentdescription.drsubmarinePRO2>当你完成任意任务你会获得[amount]个集团医学手册，[amount2]个血袋，[amount]个黄昏晓</talentdescription.drsubmarinePRO2>
+  <!--战斗线-->
+  <talenttree.TLsafe_specialization3>特战队</talenttree.TLsafe_specialization3>
+  <talentname.Shuigui_TL>水鬼</talentname.Shuigui_TL>
+  <talentdescription.Shuigui_TL>游泳速度提升[amount]%</talentdescription.Shuigui_TL>
+  <talentname.Rabbit_TL>脱兔</talentname.Rabbit_TL>
+  <talentdescription.Rabbit_TL>陆地移动速度提升[amount]%</talentdescription.Rabbit_TL>
+  <talentname.hurt_TL>铁骨</talentname.hurt_TL>
+  <talentdescription.hurt_TL>物理抗性提升[amount]%</talentdescription.hurt_TL>
+  <talentname.hurt2_TL>铜皮</talentname.hurt2_TL>
+  <talentdescription.hurt2_TL>烧伤抗性提升[amount]%</talentdescription.hurt2_TL>
+  <talentname.advancedattack>进阶作战</talentname.advancedattack>
+  <talentdescription.advancedattack>散步降低[amount]%，使用泰拉武器弹药伤害增加[amount2]%，并解锁‖color:gui.orange‖TL23‖end‖和‖color:gui.orange‖TL15改‖end‖。</talentdescription.advancedattack>
+  <talentname.lastfight>最终手段</talentname.lastfight>
+  <talentdescription.lastfight>提升[amount]最大生命，提升相当于武器操作[amount]%的伤害，并解锁‖color:gui.orange‖灭刃‖end‖和‖color:gui.orange‖黄鹤作战套装‖end‖。</talentdescription.lastfight>
+   <!--华强aff-->
+  <afflictioncauseofdeath.kill>被华强劈开了</afflictioncauseofdeath.kill>
+  <afflictioncauseofdeathself.kill>被华强砍死惹</afflictioncauseofdeathself.kill>
+  <afflictioncauseofdeathself.killself>你自杀了</afflictioncauseofdeathself.killself>
+  <!--侵蚀aff-->
+  <afflictiondescription.qinshi.low>一些细微的金属痕迹开始在你的身体上游走，虽然感受没有任何痛觉但是你感觉你的身体有什么不对劲</afflictiondescription.qinshi.low>
+  <afflictiondescription.qinshi.m>你开始感觉身体时不时过电一般，但是细细感受却只剩下麻木</afflictiondescription.qinshi.m>
+  <afflictiondescription.qinshi.h>你的表皮逐渐剥落，且开始剧烈的吐血，伴随咳嗽出的还有沾染着金属色泽的内脏碎块</afflictiondescription.qinshi.h>
+  <afflictiondescription.qinshi.d>你的身体愈发僵硬，血液不间断的从身体内大量的渗出……你已经没有任何感觉，意识也逐渐剥离</afflictiondescription.qinshi.d>
+</infotexts>
