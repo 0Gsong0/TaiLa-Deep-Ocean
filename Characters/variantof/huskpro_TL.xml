@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Charactervariant inherit="huskpro" SpeciesName="huskpro_TL" SpeciesTranslationOverride="" Group="TL" DisplayName="测试型画皮" DespawnContainer="">
+  <health vitality="2500" />
+  <attack damagemultiplier="1.75" />
+  <ai sight="4" hearing="4" />
+  <StatusEffect type="OnDeath" target="This" disabledeltatime="true" stackable="false" delay="3">
+     <removecharacter />
+  </StatusEffect>
+</Charactervariant>

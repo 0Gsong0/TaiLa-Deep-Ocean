@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Charactervariant inherit="lost2" SpeciesName="lost3" SpeciesTranslationOverride="" DisplayName="大型迷船" DespawnContainer="duffelbag_TL">
+  <health vitality="2200" />
+  <ragdoll scalemultiplier="1.75" />
+  <attack damagemultiplier="2.0" rangemultiplier="1.5" impactmultiplier="1.5" />
+  <Inventory Slots="Any, Any, Any, Any, Any, Any" AccessibleWhenAlive="False" Commonness="1">
+	<Item Identifier="titaniumaluminiumalloy" amount="3"/>
+	<Item Identifier="coalitioncommendation" amount="2"/>
+  </Inventory>
+  <StatusEffect type="OnDeath" target="This" disabledeltatime="true" stackable="false" delay="5">
+     <SpawnCharacter speciesname="LostLand" count="3" spread="10" />
+  </StatusEffect>
+  <StatusEffect type="OnDeath" target="This" >
+	 <SpawnItem identifiers="ZLPlocater_TL" spawnposition="ThisInventory" probability="1" />
+  </StatusEffect>
+</Charactervariant>

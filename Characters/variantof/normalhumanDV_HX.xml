@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <Charactervariant inherit="Human_TL" displayname="幻星水下作战小队进攻（普通）" speciesname="normalhumanDV_HX" group="HX" >
+    <health Vitality="140" />
+	<ai sight="100" hearing="100" />
+    <attack damagemultiplier="0" />
+    <inventory arrowslot="9" Slots="Card, Headset, Head, InnerClothes, OuterClothes, LeftHand, RightHand, Bag, Any, Any, Any, Any, Any, Any, Any, Any, Any, Any, HealthInterface" Accessiblewhenalive="True" Commonness="1">
+      <Item identifier="idcard" slot="Card" />
+      <Item identifier="ballistichelmet1" slot="Head" />
+      <Item identifier="cloth_HX" slot="InnerClothes" />
+      <Item identifier="respawndivingsuit" slot="OuterClothes" />
+      <Item identifier="XTZ_TLAI" slot="RightHand+LeftHand" />
+      <Item identifier="协调者弹匣" amount="2" />
+    </inventory>
+	<inventory arrowslot="9" Slots="Card, Headset, Head, InnerClothes, OuterClothes, LeftHand, RightHand, Bag, Any, Any, Any, Any, Any, Any, Any, Any, Any, Any, HealthInterface" Accessiblewhenalive="True" Commonness="1">
+      <Item identifier="idcard" slot="Card" />
+      <Item identifier="ballistichelmet1" slot="Head" />
+      <Item identifier="cloth_HX" slot="InnerClothes" />
+      <Item identifier="respawndivingsuit" slot="OuterClothes" />
+      <Item identifier="autoshotgun_TLAI" slot="RightHand+LeftHand" />
+      <Item identifier="shotgunshell" amount="12" />
+    </inventory>
+	<StatusEffect type="OnDeath" target="This">
+      <SpawnItem identifiers="coalitioncommendation" spawnposition="ThisInventory" probability="0.1" />
+    </StatusEffect>
+  </Charactervariant>
+</Override>

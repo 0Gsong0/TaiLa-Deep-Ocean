@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <Charactervariant inherit="Human2_TL" speciesname="sniperhuman_HX" displayname="幻星狙击手" group="HX" hideinsonar="True" >
+    <health Vitality="100" stunimmunity="true"/>
+    <attack damagemultiplier="0" />
+    <ai sight="10" hearing="10" />
+    <inventory arrowslot="9" Slots="Card, Headset, Head, InnerClothes, OuterClothes, LeftHand, RightHand, Bag, Any, Any, Any, Any, Any, Any, Any, Any, Any, Any, HealthInterface" Accessiblewhenalive="True" Commonness="1">
+      <Item identifier="idcard" slot="Card" />
+      <Item identifier="ballistichelmet1" slot="Head" />
+      <Item identifier="cloth_HX" slot="InnerClothes" />
+      <Item identifier="exosuit_HXAI" slot="OuterClothes" />
+      <Item identifier="TL_MR_TLAI" slot="RightHand+LeftHand" />
+	  <Item identifier="coalitioncommendation" amount="1" />
+    </inventory>
+	<StatusEffect type="OnDeath" target="This">
+      <SpawnItem identifiers="coalitioncommendation" spawnposition="ThisInventory" probability="0.5" />
+    </StatusEffect>
+  </Charactervariant>
+</Override>

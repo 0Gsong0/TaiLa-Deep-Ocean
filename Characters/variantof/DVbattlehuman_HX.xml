@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <Charactervariant inherit="Human_TL" displayname="幻星陆战队进攻"  speciesname="DVbattlehuman_HX" group="HX" >
+    <health Vitality="135" />
+	<ai sight="100" hearing="100" />
+    <attack damagemultiplier="0" />
+    <inventory arrowslot="9" Slots="Card, Headset, Head, InnerClothes, OuterClothes, LeftHand, RightHand, Bag, Any, Any, Any, Any, Any, Any, Any, Any, Any, Any, HealthInterface" Accessiblewhenalive="True" Commonness="7">
+      <Item identifier="idcard" slot="Card" />
+      <Item identifier="ballistichelmet1" slot="Head" />
+      <Item identifier="cloth_HX" slot="InnerClothes" />
+      <Item identifier="combatdivingsuit_HXAI" slot="OuterClothes" />
+      <Item identifier="XTZ_TLAI" slot="RightHand+LeftHand" />
+      <Item identifier="协调者弹匣" amount="2" />
+    </inventory>
+	<inventory arrowslot="9" Slots="Card, Headset, Head, InnerClothes, OuterClothes, LeftHand, RightHand, Bag, Any, Any, Any, Any, Any, Any, Any, Any, Any, Any, HealthInterface" Accessiblewhenalive="True" Commonness="4">
+      <Item identifier="idcard" slot="Card" />
+      <Item identifier="ballistichelmet1" slot="Head" />
+      <Item identifier="cloth_HX" slot="InnerClothes" />
+      <Item identifier="combatdivingsuit_HXAI" slot="OuterClothes" />
+      <Item identifier="autoshotgun_TLAI" slot="RightHand+LeftHand" />
+      <Item identifier="shotgunshell" amount="12" />
+    </inventory>
+	<inventory arrowslot="9" Slots="Card, Headset, Head, InnerClothes, OuterClothes, LeftHand, RightHand, Bag, Any, Any, Any, Any, Any, Any, Any, Any, Any, Any, HealthInterface" Accessiblewhenalive="True" Commonness="2">
+      <Item identifier="idcard" slot="Card" />
+      <Item identifier="ballistichelmet1" slot="Head" />
+      <Item identifier="cloth_HX" slot="InnerClothes" />
+      <Item identifier="combatdivingsuit_HXAI" slot="OuterClothes" />
+      <Item identifier="grenadelauncher_TLAI" slot="RightHand+LeftHand" />
+      <Item identifier="40mmgrenade" amount="4" />
+    </inventory>
+	<StatusEffect type="OnDeath" target="This">
+      <SpawnItem identifiers="coalitioncommendation" spawnposition="ThisInventory" probability="0.33" />
+    </StatusEffect>
+  </Charactervariant>
+</Override>

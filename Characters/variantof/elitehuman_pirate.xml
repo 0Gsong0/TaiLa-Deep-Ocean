@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <Charactervariant inherit="Human_TL" displayname="重装海盗进攻"  speciesname="elitehuman_pirate" group="pirate" >
+    <health Vitality="150" />
+	<ai sight="100" hearing="100" />
+    <attack damagemultiplier="0" />
+    <inventory arrowslot="9" Slots="Card, Headset, Head, InnerClothes, OuterClothes, LeftHand, RightHand, Bag, Any, Any, Any, Any, Any, Any, Any, Any, Any, Any, HealthInterface" Accessiblewhenalive="True" Commonness="1">
+      <Item identifier="idcard" slot="Card" />
+      <Item identifier="ballistichelmet1" slot="Head" />
+      <Item identifier="separatistcommoner1" slot="InnerClothes" />
+      <Item identifier="exosuit_AI" slot="OuterClothes" />
+      <Item identifier="XTZ_TLAI_JQ" slot="RightHand+LeftHand" />
+      <Item identifier="协调者弹匣" amount="3" />
+    </inventory>
+	<inventory arrowslot="9" Slots="Card, Headset, Head, InnerClothes, OuterClothes, LeftHand, RightHand, Bag, Any, Any, Any, Any, Any, Any, Any, Any, Any, Any, HealthInterface" Accessiblewhenalive="True" Commonness="1">
+      <Item identifier="idcard" slot="Card" />
+      <Item identifier="ballistichelmet1" slot="Head" />
+      <Item identifier="separatistcommoner1" slot="InnerClothes" />
+      <Item identifier="exosuit_AI" slot="OuterClothes" />
+      <Item identifier="hmg_TLAI" slot="RightHand" />
+      <Item identifier="hmgmagazine" amount="2" />
+    </inventory>
+	<StatusEffect type="OnDeath" target="This">
+      <SpawnItem identifiers="coalitioncommendation" spawnposition="ThisInventory" probability="0.75" />
+    </StatusEffect>
+  </Charactervariant>
+</Override>
