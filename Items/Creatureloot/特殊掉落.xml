@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <!--毒脓迅猛龙掉落-->
+  <Item name="毒脓龙爪" identifier="IchorClaw" category="Weapon" Tags="smallitem,weapon,mountableweapon,sharptool" description="毒脓迅猛龙上被剥离的上肢甲壳，仍然具有一定毒性" cargocontaineridentifier="metalcrate" scale="0.5" impactsoundtag="impact_metal_light" hideinmenus="true" allowasextracargo="true" RequireAimToUse="True">
+    <Price baseprice="600" sold="false" canbespecial="false" />
+    <Deconstruct time="8">
+      <Item identifier="iron" />
+      <Item identifier="hydroxyapatite" />
+      <Item identifier="paralyzant"  />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/Items/Creatureloot/毒脓龙爪.png" sourcerect="0,0,129,33" origin="0.5,0.5" />
+    <Sprite texture="%ModDir%/Items/Creatureloot/毒脓龙爪.png" sourcerect="0,0,129,33" depth="0.55" origin="0.5,0.5" />
+    <Body width="65" height="15" density="25" />
+    <!--单手可持-->
+    <MeleeWeapon canBeCombined="true" removeOnCombined="true" slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="0,0" holdangle="45" reload="0.6" range="75" combatPriority="30" msg="ItemMsgPickUpSelect" HitOnlyCharacters="true">
+      <Attack targetimpulse="3" severlimbsprobability="0.1" itemdamage="5" structuredamage="2" penetration="0.5" structuresoundtype="StructureSlash">
+        <!--攻击给予麻痹中毒-->
+        <Affliction identifier="lacerations" strength="20" />
+        <Affliction identifier="bleeding" strength="10" />
+        <Affliction identifier="stun" strength="0.5" />
+        <Affliction identifier="paralysis" strength="1.5" probability="0.22"/>
+		<Affliction identifier="bingdu_TL" strength="8" probability="0.22" />
+        <StatusEffect type="OnUse" target="UseTarget">
+          <Conditional entitytype="eq Character" />
+          <Sound file="Content/Sounds/Damage/LimbSlash1.ogg" selectionmode="random" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash2.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash3.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash4.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash5.ogg" range="500" />
+          <Sound file="Content/Sounds/Damage/LimbSlash6.ogg" range="500" />
+        </StatusEffect>
+      </Attack>
+    </MeleeWeapon>
+  </Item>
+  <!-- 格挡碰撞体
+  <Item name="格挡" identifier="blocker" damagedbyprojectiles="true" hideinmenus="true">
+    <Sprite texture="Content/Items/Weapons/weapons_new.png" sourcerect="0,0,1,1" />
+    <Body radius="20" bodytype="Static" />
+    <ItemComponent>
+      <StatusEffect type="OnSpawn" target="This" delay="0.02">
+        <Remove />
+      </StatusEffect>
+      <StatusEffect type="OnDamaged" target="This">
+        <Explosion range="10.0" force="1" camerashake="3.0" shockwave="false" smoke="false" flames="false" flash="false" sparks="false" underwaterbubble="false" />
+        <particleemitter particle="weldspark" particlespersecond="100" scalemin="0.45" scalemax="0.7" anglemin="-180" anglemax="180" velocitymin="200" velocitymax="1000" distancemin="1" distancemax="10" />
+        <Sound file="Content\Sounds\Impact\MetalImpactLight1.ogg" selectionmode="random" range="500" />
+        <Sound file="Content\Sounds\Impact\MetalImpactLight1.ogg" range="500" />
+        <Sound file="Content\Sounds\Impact\MetalImpactLight2.ogg" range="500" />
+        <Sound file="Content\Sounds\Impact\MetalImpactLight3.ogg" range="500" />
+        <Sound file="Content\Sounds\Impact\MetalImpactLight4.ogg" range="500" />
+        <Sound file="Content\Sounds\Impact\MetalImpactLight5.ogg" range="500" />
+      </StatusEffect>
+    </ItemComponent>
+  </Item>-->
+  <!--辐射蠕虫的脑珠-->
+  <Item name="脑珠" identifier="worm_fs_nz" tags="smallitem" maxstacksize="6" category="Misc" cargocontaineridentifier="metalcrate" pickdistance="150" scale="0.15" description="" HideConditionBar="true" isshootable="false">
+    <Body width="106" height="95" density="40" />
+    <Sprite texture="%ModDir%/Items/Creatureloot/脑珠.png" depth="0.75" sourcerect="0,0,411,401" origin="0.5,0.5" />
+    <Holdable selectkey="Select" pickkey="Use" slots="Any,RightHand,LeftHand" msg="ItemMsgDetach" PickingTime="1" aimpos="85,-10" handle1="0,0" attachable="true" aimable="false" />
+  </Item>
+</Items>

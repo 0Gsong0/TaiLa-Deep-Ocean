@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <!--配件-->
+  <!--瞄准镜-->
+  <Item name="全息瞄准镜[泰拉]" identifier="Tholographic_sight" subcategory="accessory" category="Weapon" maxstacksize="1" Tags="smallitem,sight_TL" canbepicked="true" description="提供1倍镜的全息瞄具&#xD;&#xA;‖color:gui.orange‖（-35%散布，+10%移动速度）‖end‖" cargocontaineridentifier="metalcrate" scale="0.20" impactsoundtag="impact_metal_light">
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="weapons" level="40" />
+      <RequiredItem identifier="fpgacircuit" />
+	  <RequiredItem identifier="fpgacircuit" />
+	  <RequiredItem identifier="plastic" amount="3"/>
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="fpgacircuit" />
+    </Deconstruct>
+    <InventoryIcon texture="sight.png" sourcerect="15,7,73,59" />
+    <Sprite texture="sight.png" sourcerect="15,7,73,59" depth="0.54" origin="0.5,0.5" />
+    <Body width="30" height="50" density="20" />
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnActive" target="Character">
+        <Affliction identifier="Tholographic_sight" strength="2" multiplybymaxvitality="true"/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <Item name="2倍瞄准镜[泰拉]" identifier="T2x_sight" subcategory="accessory" category="Weapon" maxstacksize="1" Tags="smallitem,sight_TL" canbepicked="true" description="提供2倍放大的瞄具，可让射手更容易击中要害&#xD;&#xA;‖color:gui.orange‖（-45%散布，-5%移速）‖end‖" cargocontaineridentifier="metalcrate" scale="0.18" impactsoundtag="impact_metal_light">
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="weapons" level="40" />
+	  <RequiredItem identifier="silicon" amount="2"/>
+      <RequiredItem identifier="fpgacircuit" />
+      <RequiredItem identifier="plastic" amount="2"/>
+	  <RequiredItem identifier="steel" amount="2"/>
+    </Fabricate>
+    <Deconstruct time="5">
+	  <Item identifier="steel" />
+      <Item identifier="fpgacircuit" />
+      <Item identifier="plastic" />
+    </Deconstruct>
+    <InventoryIcon texture="sight.png" sourcerect="16,76,156,54" />
+    <Sprite texture="sight.png" sourcerect="16,76,156,54" depth="0.54" origin="0.5,0.55" />
+    <Body width="30" height="50" density="20" />
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnActive" target="Character">
+        <Affliction identifier="T2x_sight" strength="2" multiplybymaxvitality="true"/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <Item name="3倍瞄准镜[泰拉]" identifier="T3x_sight" subcategory="accessory" category="Weapon" maxstacksize="1" Tags="smallitem,sight_TL" canbepicked="true" description="3倍镜提供更好的精度，使用这款瞄具可以更精准，不过会减速&#xD;&#xA;‖color:gui.orange‖（-60%散布，-20%移速）‖end‖" cargocontaineridentifier="metalcrate" scale="0.18" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="secarmcab" />
+    <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" minamount="1" maxamount="1" spawnprobability="0.05" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="weapons" level="50" />
+	  <RequiredItem identifier="steel" amount="5"/>
+      <RequiredItem identifier="fpgacircuit" amount="2"/>
+      <RequiredItem identifier="plastic" amount="2"/>
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="fpgacircuit" />
+      <Item identifier="plastic" amount="2"/>
+    </Deconstruct>
+    <InventoryIcon texture="sight.png" sourcerect="18,202,184,70" />
+    <Sprite texture="sight.png" sourcerect="18,202,184,70" depth="0.54" origin="0.5,0.55" />
+    <Body width="30" height="50" density="20" />
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
+      <!-- Remove the item when fully used -->
+      <StatusEffect type="OnActive" target="Character">
+        <Affliction identifier="T3x_sight" strength="2" multiplybymaxvitality="true"/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <!--手电-->
+  <Item name="战术手电筒[泰拉]" identifier="Tfocusingflashlight" category="Weapon" maxstacksize="1" Tags="smallitem,flashlight" canbepicked="true" description="" cargocontaineridentifier="metalcrate" subcategory="accessory" scale="0.12" impactsoundtag="impact_metal_light">
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="weapons" level="30" />
+      <RequiredItem identifier="uranium" amount="2"/>
+      <RequiredItem identifier="plastic" amount="2"/>
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="plastic" amount="2"/>
+    </Deconstruct>
+    <Sprite texture="accessory.png" sourcerect="40,408,188,48" depth="0.54" origin="0.5,0.5" />
+    <Body width="30" height="50" density="20" />
+    <Holdable slots="Any,RightHand,LeftHand,Head" holdpos="80,-50" aimpos="80,0" handle1="-20,0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="Always" targettype="This" Voltage="10.0" setvalue="true" />
+      <LightComponent LightColor="0.5,0.5,0.5,0.5" directional="true" Flicker="0" range="1500" powerconsumption="10" IsOn="true">
+        <LightTexture texture="Content/Lights/lightcone.png" origin="0.0, 0.5" size="1.5,1.5" />
+      </LightComponent>
+      <LightComponent LightColor="0.5,0.5,0.5,0.5" directional="true" range="1500" powerconsumption="10" IsOn="true" flicker="0" flickerspeed="0" pulsefrequency="0" pulseamount="0">
+        <LightTexture texture="Content/Lights/lightcone.png" origin="0.0, 0.5" size="1.5,1.5" />
+      </LightComponent>
+    </Holdable>
+    <Wearable slots="Any,Head" armorvalue="0" msg="ItemMsgPickUpSelect"></Wearable>
+  </Item>
+  <Item name="广域手电[泰拉]" identifier="Tspreadflashlight" category="Weapon" maxstacksize="1" Tags="smallitem,flashlight" canbepicked="true" description="" cargocontaineridentifier="metalcrate" subcategory="accessory" scale="0.12" impactsoundtag="impact_metal_light">
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="weapons" level="30" />
+      <RequiredItem identifier="uranium" amount="2"/>
+      <RequiredItem identifier="plastic" amount="2"/>
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="plastic" amount="2"/>
+    </Deconstruct>
+    <Sprite texture="accessory.png" sourcerect="43,469,162,84" depth="0.54" origin="0.5,0.5" />
+    <Body width="30" height="50" density="20" />
+    <Holdable slots="Any,RightHand,LeftHand,Head" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="Always" targettype="This" Voltage="10.0" setvalue="true" />
+      <LightComponent lightcolor="1.0,1.0,1.0,0.3" range="1200.0" powerconsumption="0">
+        <LightTexture texture="Content/Lights/pointlight_bounce.png" origin="0.5,0.5" />
+        <sprite texture="Content/Items/Electricity/signalcomp.png" sourcerect="784,528,64,96" />
+      </LightComponent>
+    </Holdable>
+    <Wearable slots="Any,Head" armorvalue="0" msg="ItemMsgPickUpSelect"></Wearable>
+  </Item>
+  <!--握把-->
+  <Item name="垂直握把[泰拉]" identifier="Tvertical_grip" category="Weapon" maxstacksize="1" Tags="smallitem" canbepicked="true" description="垂直握把使得射手更牢抓固枪械，提高武器性能&#xD;&#xA;‖color:gui.orange‖（-30%眩晕，-50%水流影响，-35%武器散布）‖end‖" cargocontaineridentifier="metalcrate" subcategory="accessory" scale="0.13" impactsoundtag="impact_metal_light">
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="weapons" level="60" />
+      <RequiredItem identifier="plastic" amount="3"/>
+	  <RequiredItem identifier="steel" amount="4"/>
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="plastic" />
+	  <Item identifier="steel" amount="3" />
+    </Deconstruct>
+    <Sprite texture="accessory.png" sourcerect="33,17,77,135" depth="0.54" origin="0.5,0.5" />
+    <Body width="30" height="50" density="20" />
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnActive" target="Character">
+        <Affliction identifier="Tvertical_grip" strength="2" multiplybymaxvitality="true"/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <Item name="直角握把[泰拉]" identifier="Tcorner_grip" category="Weapon" maxstacksize="1" Tags="smallitem" canbepicked="true" description="提供更舒适的持枪姿势&#xD;&#xA;‖color:gui.orange‖（+15%移动速度，+25武器操作）‖end‖" cargocontaineridentifier="metalcrate" subcategory="accessory" scale="0.09" impactsoundtag="impact_metal_light">
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="weapons" level="50" />
+      <RequiredItem identifier="plastic" amount="2"/>
+	  <RequiredItem identifier="steel" amount="2"/>
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="plastic" />
+	  <Item identifier="steel" />
+    </Deconstruct>
+	<InventoryIcon texture="accessory.png" sourcerect="40,164,244,104" />
+    <Sprite texture="accessory.png" sourcerect="40,164,244,104" depth="0.54" origin="0.5,0.9" />
+    <Body width="30" height="50" density="20" />
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnActive" target="Character">
+        <Affliction identifier="Tcorner_grip" multiplybymaxvitality="true" />
+      </StatusEffect>
+    </Holdable>
+  </Item>
+  <!--枪管-->
+  <Item name="重型枪管[泰拉]" identifier="Textended_barrel" category="Weapon" maxstacksize="1" Tags="smallitem" canbepicked="true" description="延长枪管配件可以提高基础伤害&#xD;&#xA;‖color:gui.orange‖（+12%伤害，-15%散布）‖end‖" cargocontaineridentifier="metalcrate" subcategory="accessory" scale="0.1" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="secarmcab" />
+    <PreferredContainer secondary="wrecksecarmcab,abandonedsecarmcab" minamount="1" maxamount="2" spawnprobability="0.05" />
+    <Fabricate suitablefabricators="fabricator" requiredtime="10">
+      <RequiredSkill identifier="weapons" level="80" />
+      <RequiredItem identifier="steel_TL" />
+	  <RequiredItem identifier="physicorium" />
+    </Fabricate>
+    <Deconstruct time="5">
+      <Item identifier="steel_TL" />
+    </Deconstruct>
+    <Sprite texture="accessory.png" sourcerect="39,340,259,43" depth="0.6" origin="0.5,0.5" />
+    <Body width="30" height="50" density="20" />
+    <Holdable slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect">
+      <StatusEffect type="OnActive" target="Character">
+        <Affliction identifier="Textended_barrel" strength="2" multiplybymaxvitality="true"/>
+      </StatusEffect>
+    </Holdable>
+  </Item>
+</Items>
