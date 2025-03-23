@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <!--幻化器示例-->
+  <Item name="豹" identifier="var_leopard" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="幻化为豹" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab" amount="1" spawnprobability="0.1" notcampaign="true" />
+    <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.1" />
+    <Price baseprice="1000">
+      <Price storeidentifier="merchantoutpost" minavailable="2" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="2" />
+      <Price storeidentifier="merchantresearch" minavailable="2" />
+      <Price storeidentifier="merchantmilitary" minavailable="2" />
+      <Price storeidentifier="merchantmine" minavailable="2" />
+    </Price>
+	<Fabricate suitablefabricators="fabricator" requiredtime="10" >
+      <RequiredItem identifier="var_leopard" amount="1" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/Clothing/head.png" sourcerect="165,0,182,222" origin="0.5,0.5" />
+    <Sprite name="Headset" texture="Content/Items/Jobgear/headgears.png" depth="0.6" sourcerect="28,321,49,62" origin="0.5,0.5" />
+    <WifiComponent range="50000.0" LinkToChat="true" MinChatMessageInterval="0.0">
+      <StatusEffect type="OnActive" targettype="This">
+        <Conditional JamTimer="gt 0" targetitemcomponent="WifiComponent" />
+        <sound file="Content/Sounds/RadioStatic.ogg" range="500.0" frequencymultiplier="0.7" loop="true" volume="0.5" />
+      </StatusEffect>
+    </WifiComponent>
+    <Body width="100" height="50" density="15" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,Headset" msg="ItemMsgPickUpSelect">
+      <sprite name="Maid's Uniform 1 Torso" texture="Maid1_male.png" limb="Torso" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Hand" texture="Maid1_male.png" limb="RightHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Hand" texture="Maid1_male.png" limb="LeftHand" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Lower Arm" texture="Maid1_male.png" limb="LeftForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Lower Arm" texture="Maid1_male.png" limb="RightForearm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Upper Arm" texture="Maid1_male.png" limb="LeftArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Upper Arm" texture="Maid1_male.png" limb="RightArm" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Waist" texture="Maid1_male.png" limb="Waist" hidelimb="true" inheritorigin="true" inherittexturescale="true" hideotherwearables="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Thigh" texture="Maid1_male.png" limb="RightThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Thigh" texture="Maid1_male.png" limb="LeftThigh" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Leg" texture="Maid1_male.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Leg" texture="Maid1_male.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Shoe" texture="Maid1_male.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Shoe" texture="Maid1_male.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" hideotherwearables="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="leopard Head" texture="head.png" limb="Head" sourcerect="165,0,182,222" inheritsourcerect="false" alphaclipotherwearables="True" hidelimb="true" hidewearablesoftype="Hair" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="false" Scale="1" hideotherwearables="false" inheritorigin="false" origin="0.5,0.4" />
+      <SkillModifier skillidentifier="electrical" skillvalue="10" />
+      <SkillModifier skillidentifier="helm" skillvalue="10" />
+      <SkillModifier skillidentifier="mechanical" skillvalue="10" />
+      <SkillModifier skillidentifier="medical" skillvalue="10" />
+      <SkillModifier skillidentifier="weapons" skillvalue="10" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations,bitewounds" damagemultiplier="0.95" />
+    </Wearable>
+  </Item>
+  <Item name="幻化实例" identifier="var_hes" hideinmenus="true" cargocontaineridentifier="tsm_metalcrate" tags="smallitem,mobileradio,sonar" description=" " variantof="autoinjectorheadset">
+    <InventoryIcon texture="%ModDir%/Clothing/Lerentin_heads.png" sourcerect="444,17,84,133" origin="0.5,0.5" />
+    <Sprite name="Headset" texture="Content/Items/Jobgear/headgears.png" depth="0.6" sourcerect="28,321,49,62" origin="0.5,0.5" />
+    <WifiComponent range="50000.0" LinkToChat="true" MinChatMessageInterval="0.0">
+      <StatusEffect type="OnActive" targettype="This">
+        <Conditional JamTimer="gt 0" targetitemcomponent="WifiComponent" />
+        <sound file="Content/Sounds/RadioStatic.ogg" range="500.0" frequencymultiplier="0.7" loop="true" volume="0.5" />
+      </StatusEffect>
+    </WifiComponent>
+    <Wearable>
+      <sprite name="AT Head" texture="head.png" limb="Head" sourcerect="0,0,128,136" inheritsourcerect="false" alphaclipotherwearables="false" hidelimb="true" hidewearablesoftype="moustache,beard,hair,faceattachment,husk,herpes" inheritlimbdepth="true" inheritscale="true" ignorelimbscale="false" Scale="1" hideotherwearables="false" inheritorigin="false" origin="0.47048324,0.48" />
+      <sprite name="AT Torso" texture="AT.png" limb="Torso" sourcerect="144,0,112,160" inheritsourcerect="false" hidelimb="true" inherittexturescale="true" inheritlimbdepth="true" inheritorigin="false" origin="0.49,0.545" />
+      <sprite name="AT Right Hand" texture="AT.png" limb="RightHand" sourcerect="256,151,64,57" inheritsourcerect="false" hidelimb="true" inherittexturescale="true" inheritlimbdepth="true" inheritorigin="false" origin="0.36,0.53" />
+      <sprite name="AT Left Hand" texture="AT.png" limb="LeftHand" sourcerect="320,151,64,57" inheritsourcerect="false" hidelimb="true" inherittexturescale="true" inheritlimbdepth="true" inheritorigin="false" origin="0.36,0.52" />
+      <sprite name="AT Left Lower Arm" texture="AT.png" limb="LeftForearm" sourcerect="320,80,64,72" inheritsourcerect="false" hidelimb="true" inherittexturescale="true" inheritlimbdepth="true" inheritorigin="false" origin="0.37812376,0.565" />
+      <sprite name="AT Right Lower Arm" texture="AT.png" limb="RightForearm" sourcerect="256,80,64,72" inheritsourcerect="false" hidelimb="true" inherittexturescale="true" inheritlimbdepth="true" inheritorigin="false" origin="0.41425222,0.565" />
+      <sprite name="AT Left Upper Arm" texture="AT.png" limb="LeftArm" sourcerect="320,0,64,80" inheritsourcerect="false" hidelimb="true" inherittexturescale="true" inheritlimbdepth="true" inheritorigin="false" origin="0.42934397,0.43" />
+      <sprite name="AT Right Upper Arm" texture="AT.png" limb="RightArm" sourcerect="256,0,64,80" inheritsourcerect="false" hidelimb="true" inherittexturescale="true" inheritlimbdepth="true" inheritorigin="false" origin="0.423565,0.43" />
+      <sprite name="AT Waist" texture="AT.png" limb="Waist" sourcerect="144,160,112,96" inheritsourcerect="false" hidelimb="true" inherittexturescale="true" inheritlimbdepth="false" depth="0.13" inheritorigin="false" origin="0.72,0.55" />
+      <sprite name="AT Right Thigh" texture="AT.png" limb="RightThigh" sourcerect="0,0,64,112" inheritsourcerect="false" hidelimb="true" inherittexturescale="true" inheritlimbdepth="true" inheritorigin="false" origin="0.38,0.48" />
+      <sprite name="AT Left Thigh" texture="AT.png" limb="LeftThigh" sourcerect="64,0,80,112" inheritsourcerect="false" hidelimb="true" inherittexturescale="true" inheritlimbdepth="true" inheritorigin="false" origin="0.49,0.48" />
+      <sprite name="AT Right Leg" texture="AT.png" limb="RightLeg" sourcerect="0,112,64,144" inheritsourcerect="false" inheritdepth="false" depth="0.121" hidelimb="true" inherittexturescale="true" inheritlimbdepth="true" inheritorigin="false" origin="0.35,0.415" />
+      <sprite name="AT Left Leg" texture="AT.png" limb="LeftLeg" sourcerect="64,112,80,144" inheritsourcerect="false" inheritdepth="false" depth="0.131" hidelimb="true" inherittexturescale="true" inheritlimbdepth="true" inheritorigin="false" origin="0.45,0.415" />
+      <sprite name="AT Right Shoe" texture="AT.png" limb="RightFoot" sourcerect="256,208,64,48" inheritsourcerect="false" inheritdepth="false" depth="0.122" hidelimb="true" inherittexturescale="true" inheritlimbdepth="true" inheritorigin="false" origin="0.5,0.475" />
+      <sprite name="AT Left Shoe" texture="AT.png" limb="LeftFoot" sourcerect="320,208,64,48" inheritsourcerect="false" inheritdepth="false" depth="0.132" hidelimb="true" inherittexturescale="true" inheritlimbdepth="true" inheritorigin="false" origin="0.45,0.475" />
+      <sprite name="AT Boobs" texture="痴.png" limb="Tail" hidelimb="true" inherittexturescale="true" sourcerect="0,0,1,1" inheritorigin="true" />
+      <sprite name="AT Boobs" texture="痴.png" limb="Jaw" hidelimb="true" inherittexturescale="true" sourcerect="0,0,1,1" inheritorigin="true" />
+    </Wearable>
+  </Item>
+  <!--衣物-->
+  <Item name="白丝作战服" identifier="Whitesilk1" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="常规的白丝女仆装" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab" amount="1" spawnprobability="0.1" notcampaign="true" />
+    <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.1" />
+    <Price baseprice="150">
+      <Price storeidentifier="merchantoutpost" minavailable="2" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="2" />
+      <Price storeidentifier="merchantresearch" minavailable="2" />
+      <Price storeidentifier="merchantmilitary" minavailable="2" />
+      <Price storeidentifier="merchantmine" minavailable="2" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <Sprite texture="Shigure_Cloth_Sprite7.png" sourcerect="3,12,127,59" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="15" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Maid's Uniform 1 Torso" texture="Maid1_male.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Hand" texture="Maid1_male.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Hand" texture="Maid1_male.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Lower Arm" texture="Maid1_male.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Lower Arm" texture="Maid1_male.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Upper Arm" texture="Maid1_male.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Upper Arm" texture="Maid1_male.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Waist" texture="Maid1_male.png" limb="Waist" hidelimb="false" inheritorigin="true" inherittexturescale="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Thigh" texture="Maid1_male.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Thigh" texture="Maid1_male.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Leg" texture="Maid1_male.png" limb="RightLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Leg" texture="Maid1_male.png" limb="LeftLeg" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Shoe" texture="Maid1_male.png" limb="RightFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Shoe" texture="Maid1_male.png" limb="LeftFoot" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <SkillModifier skillidentifier="electrical" skillvalue="5" />
+      <SkillModifier skillidentifier="helm" skillvalue="5" />
+      <SkillModifier skillidentifier="mechanical" skillvalue="5" />
+      <SkillModifier skillidentifier="medical" skillvalue="5" />
+      <SkillModifier skillidentifier="weapons" skillvalue="5" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations,bitewounds" damagemultiplier="0.95" />
+    </Wearable>
+  </Item>
+  <Item name="幻星常服" identifier="clothing1" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="幻星工业集团的普通短款女式制服。简约，精致。" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab" amount="1" spawnprobability="0.1" notcampaign="true" />
+    <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.1" />
+    <Price baseprice="150">
+      <Price storeidentifier="merchantoutpost" minavailable="2" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="2" />
+      <Price storeidentifier="merchantresearch" minavailable="2" />
+      <Price storeidentifier="merchantmilitary" minavailable="2" />
+      <Price storeidentifier="merchantmine" minavailable="2" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <InventoryIcon name="幻星常服Icon" texture="Shigure_Cloth_Sprite7.png" sourcerect="341,3,78,59" origin="0.5,0.5" />
+    <Sprite texture="Shigure_Cloth_Sprite7.png" sourcerect="3,12,127,59" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="15" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Maid's Uniform 1 Torso" texture="Shigure_Cloth_Sprite2.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Hand" texture="Shigure_Cloth_Sprite2.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Hand" texture="Shigure_Cloth_Sprite2.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Lower Arm" texture="Shigure_Cloth_Sprite2.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Lower Arm" texture="Shigure_Cloth_Sprite2.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Upper Arm" texture="Shigure_Cloth_Sprite2.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Upper Arm" texture="Shigure_Cloth_Sprite2.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Waist" texture="Shigure_Cloth_Sprite2.png" limb="Waist" hidelimb="false" inheritorigin="true" inherittexturescale="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Thigh" texture="Shigure_Cloth_Sprite2.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Thigh" texture="Shigure_Cloth_Sprite2.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Leg" texture="Shigure_Cloth_Sprite2.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Leg" texture="Shigure_Cloth_Sprite2.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Shoe" texture="Shigure_Cloth_Sprite2.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Shoe" texture="Shigure_Cloth_Sprite2.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="gunshotwound" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bleeding" damagemultiplier="0.95" />
+    </Wearable>
+    <ItemContainer capacity="3">
+      <Containable items="smallitem" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
+    </ItemContainer>
+  </Item>
+  <Item name="执政官" identifier="clothing2" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab" amount="1" spawnprobability="0.1" notcampaign="true" />
+    <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.1" />
+    <Price baseprice="150">
+      <Price storeidentifier="merchantoutpost" minavailable="2" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="2" />
+      <Price storeidentifier="merchantresearch" minavailable="2" />
+      <Price storeidentifier="merchantmilitary" minavailable="2" />
+      <Price storeidentifier="merchantmine" minavailable="2" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <InventoryIcon name="执政官Icon" texture="Shigure_Cloth_Sprite7.png" sourcerect="439,65,72,56" origin="0.52820766,0.52115095" />
+    <Sprite texture="Shigure_Cloth_Sprite7.png" sourcerect="129,72,127,59" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="15" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Maid's Uniform 1 Torso" texture="Shigure_Cloth_Sprite6.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Hand" texture="Shigure_Cloth_Sprite6.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Hand" texture="Shigure_Cloth_Sprite6.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Lower Arm" texture="Shigure_Cloth_Sprite6.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Lower Arm" texture="Shigure_Cloth_Sprite6.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Upper Arm" texture="Shigure_Cloth_Sprite6.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Upper Arm" texture="Shigure_Cloth_Sprite6.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Waist" texture="Shigure_Cloth_Sprite6.png" limb="Waist" hidelimb="false" inheritorigin="true" inherittexturescale="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Thigh" texture="Shigure_Cloth_Sprite6.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Thigh" texture="Shigure_Cloth_Sprite6.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Leg" texture="Shigure_Cloth_Sprite6.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Leg" texture="Shigure_Cloth_Sprite6.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Shoe" texture="Shigure_Cloth_Sprite6.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Shoe" texture="Shigure_Cloth_Sprite6.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <SkillModifier skillidentifier="helm" skillvalue="10" />
+      <SkillModifier skillidentifier="medical" skillvalue="5" />
+      <SkillModifier skillidentifier="weapons" skillvalue="15" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="gunshotwound" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bleeding" damagemultiplier="0.95" />
+    </Wearable>
+    <ItemContainer capacity="4">
+      <Containable items="smallitem" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
+    </ItemContainer>
+  </Item>
+  <Item name="杀手制服" identifier="clothing3" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="舞会设计的杀手套装，帮助融入群体的同时不影响肢体运动。对于专业人士来说反而会增加反应速度" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab" amount="1" spawnprobability="0.1" notcampaign="true" />
+    <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.1" />
+    <Price baseprice="150">
+      <Price storeidentifier="merchantoutpost" minavailable="2" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="2" />
+      <Price storeidentifier="merchantresearch" minavailable="2" />
+      <Price storeidentifier="merchantmilitary" minavailable="2" />
+      <Price storeidentifier="merchantmine" minavailable="2" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <InventoryIcon name="杀手制服Icon" texture="Shigure_Cloth_Sprite7.png" sourcerect="347,64,72,56" origin="0.52820766,0.52115095" />
+    <Sprite texture="Shigure_Cloth_Sprite7.png" sourcerect="4,72,127,59" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="15" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Maid's Uniform 1 Torso" texture="Shigure_Cloth_Sprite3.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Hand" texture="Shigure_Cloth_Sprite3.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Hand" texture="Shigure_Cloth_Sprite3.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Lower Arm" texture="Shigure_Cloth_Sprite3.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Lower Arm" texture="Shigure_Cloth_Sprite3.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Upper Arm" texture="Shigure_Cloth_Sprite3.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Upper Arm" texture="Shigure_Cloth_Sprite3.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Waist" texture="Shigure_Cloth_Sprite3.png" limb="Waist" hidelimb="false" inheritorigin="true" inherittexturescale="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Thigh" texture="Shigure_Cloth_Sprite3.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Thigh" texture="Shigure_Cloth_Sprite3.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Leg" texture="Shigure_Cloth_Sprite3.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Leg" texture="Shigure_Cloth_Sprite3.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Shoe" texture="Shigure_Cloth_Sprite3.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Shoe" texture="Shigure_Cloth_Sprite3.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <SkillModifier skillidentifier="medical" skillvalue="15" />
+      <SkillModifier skillidentifier="weapons" skillvalue="15" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="lacerations" damagemultiplier="0.8" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="gunshotwound" damagemultiplier="0.85" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bleeding" damagemultiplier="0.75" />
+      <StatusEffect type="OnWearing" target="Character" SpeedMultiplier="1.15" setvalue="true">
+        <Conditional skillrequirement="true" weapons="lt 45" />
+      </StatusEffect>
+    </Wearable>
+    <ItemContainer capacity="4">
+      <Containable items="smallitem" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
+    </ItemContainer>
+  </Item>
+  <Item name="初音未来" identifier="clothing4" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="一件古早但很精致的cos服，格格不入的设计风格似乎不应该出现在木卫二这种地方。据说是幻星第五星席的女儿曾经最喜欢的cos服……" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab" amount="1" spawnprobability="0.1" notcampaign="true" />
+    <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.1" />
+    <Price baseprice="150">
+      <Price storeidentifier="merchantoutpost" minavailable="2" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="2" />
+      <Price storeidentifier="merchantresearch" minavailable="2" />
+      <Price storeidentifier="merchantmilitary" minavailable="2" />
+      <Price storeidentifier="merchantmine" minavailable="2" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <InventoryIcon name="初音未来Icon" texture="Shigure_Cloth_Sprite7.png" sourcerect="346,127,72,56" origin="0.52820766,0.52115095" />
+    <Sprite texture="Shigure_Cloth_Sprite7.png" sourcerect="6,128,127,59" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="15" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Maid's Uniform 1 Torso" texture="Shigure_Cloth_Sprite4.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Hand" texture="Shigure_Cloth_Sprite4.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Hand" texture="Shigure_Cloth_Sprite4.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Lower Arm" texture="Shigure_Cloth_Sprite4.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Lower Arm" texture="Shigure_Cloth_Sprite4.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Upper Arm" texture="Shigure_Cloth_Sprite4.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Upper Arm" texture="Shigure_Cloth_Sprite4.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Waist" texture="Shigure_Cloth_Sprite4.png" limb="Waist" hidelimb="false" inheritorigin="true" inherittexturescale="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Thigh" texture="Shigure_Cloth_Sprite4.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Thigh" texture="Shigure_Cloth_Sprite4.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Leg" texture="Shigure_Cloth_Sprite4.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Leg" texture="Shigure_Cloth_Sprite4.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Shoe" texture="Shigure_Cloth_Sprite4.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Shoe" texture="Shigure_Cloth_Sprite4.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <SkillModifier skillidentifier="medical" skillvalue="10" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="gunshotwound" damagemultiplier="0.9" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="bleeding" damagemultiplier="0.95" />
+    </Wearable>
+    <ItemContainer capacity="2">
+      <Containable items="smallitem" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
+    </ItemContainer>
+  </Item>
+  <Item name="幻星作战服" identifier="clothing5" category="Equipment" tags="smallitem,clothing" fireproof="false" cargocontaineridentifier="metalcrate" description="幻星工业设计的特种紧身作战服，贴合设计可以使穿戴者更加自由的伸展身体而不会感到不适。额外的内衬层还保证了一定的防御能力" scale="0.5" impactsoundtag="impact_soft">
+    <PreferredContainer primary="crewcab" amount="1" spawnprobability="0.1" notcampaign="true" />
+    <PreferredContainer primary="outpostcrewcabinet" amount="1" spawnprobability="0.1" />
+    <Price baseprice="150">
+      <Price storeidentifier="merchantoutpost" minavailable="2" />
+      <Price storeidentifier="merchantcity" multiplier="0.9" minavailable="2" />
+      <Price storeidentifier="merchantresearch" minavailable="2" />
+      <Price storeidentifier="merchantmilitary" minavailable="2" />
+      <Price storeidentifier="merchantmine" minavailable="2" />
+    </Price>
+    <Deconstruct time="10">
+      <Item identifier="organicfiber" />
+    </Deconstruct>
+    <InventoryIcon name="幻星作战服Icon" texture="Shigure_Cloth_Sprite7.png" sourcerect="441,2,69,55" origin="0.52820766,0.52115095" />
+    <Sprite texture="Shigure_Cloth_Sprite7.png" sourcerect="131,10,127,59" depth="0.6" origin="0.5,0.5" />
+    <Body width="100" height="50" density="15" friction="0.8" restitution="0.01" />
+    <Wearable slots="Any,InnerClothes" msg="ItemMsgPickUpSelect">
+      <sprite name="Maid's Uniform 1 Torso" texture="Shigure_Cloth_Sprite5.png" limb="Torso" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Hand" texture="Shigure_Cloth_Sprite5.png" limb="RightHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Hand" texture="Shigure_Cloth_Sprite5.png" limb="LeftHand" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Lower Arm" texture="Shigure_Cloth_Sprite5.png" limb="LeftForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Lower Arm" texture="Shigure_Cloth_Sprite5.png" limb="RightForearm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Upper Arm" texture="Shigure_Cloth_Sprite5.png" limb="LeftArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Upper Arm" texture="Shigure_Cloth_Sprite5.png" limb="RightArm" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Waist" texture="Shigure_Cloth_Sprite5.png" limb="Waist" hidelimb="false" inheritorigin="true" inherittexturescale="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Thigh" texture="Shigure_Cloth_Sprite5.png" limb="RightThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Thigh" texture="Shigure_Cloth_Sprite5.png" limb="LeftThigh" hidelimb="false" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Leg" texture="Shigure_Cloth_Sprite5.png" limb="RightLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Leg" texture="Shigure_Cloth_Sprite5.png" limb="LeftLeg" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Right Shoe" texture="Shigure_Cloth_Sprite5.png" limb="RightFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <sprite name="Maid's Uniform 1 Left Shoe" texture="Shigure_Cloth_Sprite5.png" limb="LeftFoot" hidelimb="true" inherittexturescale="true" inheritorigin="true" inheritsourcerect="true" />
+      <SkillModifier skillidentifier="medical" skillvalue="8" />
+      <SkillModifier skillidentifier="weapons" skillvalue="20" />
+      <damagemodifier armorsector="0.0,360.0" afflictionidentifiers="alcellruin" damagemultiplier="0.75" />
+      <damagemodifier afflictionidentifiers="explosiondamage" armorsector="0.0,360.0" damagemultiplier="0.8" />
+    </Wearable>
+    <ItemContainer capacity="6">
+      <Containable items="smallitem" excludeditems="toolbelt,toolbox,bandolier,cargoscooter" />
+    </ItemContainer>
+  </Item>
+</Items>
