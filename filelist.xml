@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="泰拉渊洋" modversion="1.0.157" corepackage="False" steamworkshopid="3232587498" gameversion="1.7.7.0">
+<contentpackage name="泰拉渊洋" modversion="1.0.158" corepackage="False" steamworkshopid="3232587498" gameversion="1.7.7.0">
   <Structure file="%ModDir%/Outpost/StructurePrefabs.xml" />
   <LocationTypes file="%ModDir%/Outpost/LocationTypes.xml" />
   <OutpostConfig file="%ModDir%/Outpost/OutpostGenerationParameters.xml" />
@@ -9,15 +9,17 @@
   <Item file="%ModDir%/Items/Bossitem.xml" />
   <Item file="%ModDir%/Items/sundries.xml" />
   <Item file="%ModDir%/Items/Creatureloot/特殊掉落.xml" />
-  <UIStyle file="%ModDir%/UI/style.xml" />
-  <Sounds file="%ModDir%/Music/music.xml" />
-  <EnemySubmarine file="%ModDir%/Sub/鼬獾-海盗船版本.sub" />
   <Item file="%ModDir%/Items/weapons/weapons.xml" />
   <Item file="%ModDir%/Items/weapons/bullet.xml" />
   <Item file="%ModDir%/Items/weapons/magazine.xml" />
   <Item file="%ModDir%/Items/weapons/turrets.xml" />
   <Item file="%ModDir%/Clothing/clothings.xml" />
   <Item file="%ModDir%/Clothing/Armor.xml" />
+	<Item file="%ModDir%/Items/Machine/Sonar.xml" />
+	<Item file="%ModDir%/Items/Machine/Door.xml" />
+	<Item file="%ModDir%/Music/record.xml" />
+	<Item file="%ModDir%/Items/weapons/other.xml" />
+	<Item file="%ModDir%/Items/weapons/fittings/accessories.xml" />
   <Item file="%ModDir%/华强任务/Huaqiangitems.xml" />
   <Character file="%ModDir%/Characters/variantof/lost4.xml" />
   <Character file="%ModDir%/Characters/variantof/huskpro_TL.xml" />
@@ -59,6 +61,7 @@
   <Character file="%ModDir%/Characters/variantof/Lost3.xml" />
   <Character file="%ModDir%/Characters/LostLand/LostLand.xml" />
   <Character file="%ModDir%/Characters/行动小组(防守人员)/行动小组(防守人员).xml" />
+	<Character file="%ModDir%/Characters/四足防卫机器人/四足防卫机器人.xml" />
   <NPCSets file="%ModDir%/TL部门/NPCS/Npcs.xml" />
   <RandomEvents file="%ModDir%/TL部门/Events.xml" />
   <Missions file="%ModDir%/TL部门/Missions.xml" />
@@ -67,10 +70,6 @@
   <TalentTrees file="%ModDir%/TL部门/Job/TalentTrees.xml" />
   <Talents file="%ModDir%/TL部门/Job/TalentsTLsafe.xml" />
   <OutpostModule file="%ModDir%/Sub/test_HallwayModuleVerticalTL.sub" />
-  <Item file="%ModDir%/Items/Sonar.xml" />
-  <Item file="%ModDir%/Music/record.xml" />
-  <Item file="%ModDir%/Items/weapons/other.xml" />
-  <Item file="%ModDir%/Items/weapons/fittings/accessories.xml" />
   <Afflictions file="%ModDir%/Items/weapons/fittings/afflictions.xml" />
   <Submarine file="%ModDir%/Sub/失联研究所.sub" />
   <OutpostModule file="%ModDir%/Sub/泰拉造船厂.sub" />
@@ -78,7 +77,6 @@
   <EnemySubmarine file="%ModDir%/Sub/失联研究所.sub" />
   <BeaconStation file="%ModDir%/Sub/失联研究所.sub" />
   <Submarine file="%ModDir%/Sub/失联医疗舰.sub" />
-  <Character file="%ModDir%/Characters/四足防卫机器人/四足防卫机器人.xml" />
   <OutpostModule file="%ModDir%/Sub/全自动补给站AirLock.sub" />
   <Character file="%ModDir%/Characters/日蚀前锋/日蚀前锋.xml" />
   <OutpostModule file="%ModDir%/Sub/AdminModuleTL01R.sub" />
@@ -87,7 +85,6 @@
   <OutpostModule file="%ModDir%/Sub/MedicalModuleTL02.sub" />
   <OutpostModule file="%ModDir%/Sub/CrewModulTL01.sub" />
   <OutpostModule file="%ModDir%/Sub/DockingModuleTL1.sub" />
-  <Submarine file="%ModDir%/Sub/测试地.sub" />
   <OutpostModule file="%ModDir%/Sub/雪后山气闸.sub" />
   <EnemySubmarine file="%ModDir%/Sub/泰拉叛逃护卫舰.sub" />
   <OutpostModule file="%ModDir%/Sub/能源塔走廊.sub" />
@@ -99,4 +96,8 @@
   <EnemySubmarine file="%ModDir%/Sub/泰拉废弃矿井(sub).sub" />
   <Wreck file="%ModDir%/Sub/泰拉废弃矿井.sub" />
   <OutpostModule file="%ModDir%/Sub/能源塔(重置版).sub" />
+  <Submarine file="%ModDir%/Sub/测试地.sub" />
+	<UIStyle file="%ModDir%/UI/style.xml" />
+	<Sounds file="%ModDir%/Music/music.xml" />
+	<EnemySubmarine file="%ModDir%/Sub/鼬獾-海盗船版本.sub" />
 </contentpackage>
