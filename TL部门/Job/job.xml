@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<jobs>
+  <Job identifier="TLsafe" allowalways="true" minkarma="0" uicolor="0.7,0.5,0.43" pricemultiplier="1.25" idlebehavior="Patrol">
+    <Jobicon>
+      <sprite texture="%ModDir%/TL部门/Job/safe.png" sourcerect="0,0,489,489" origin="0.5,0.5" />
+    </Jobicon>
+    <JobiconSmall>
+      <sprite texture="%ModDir%/TL部门/Job/safe2.png" sourcerect="0,0,28,28" origin="0.5,0.5" />
+    </JobiconSmall>
+    <Skills>
+      <Skill identifier="weapons" level="55,65" primary="true" />
+      <Skill identifier="medical" level="25,35" />
+      <Skill identifier="mechanical" level="25,35" />
+      <Skill identifier="electrical" level="10,15" />
+      <Skill identifier="helm" level="10,15" />
+    </Skills>
+    <ItemSet>
+      <Item identifier="securityuniform1" equip="true" outfit="true" />
+      <Item identifier="bodyarmor_TLAI" equip="true"/>
+      <Item identifier="idcard" equip="true" showpreview="false" />
+      <Item identifier="headset" equip="true" showpreview="false" />
+	  <Item identifier="AKEMagazines" />
+      <Item identifier="AKEMagazines" />
+      <Item identifier="AKEMagazines" />
+      <Item identifier="AKEAssaultRifle">
+        <Item identifier="AKEMagazines" />
+      </Item>
+      <Item identifier="weldingtoolPRO1">
+        <Item identifier="batterycell" />
+      </Item>
+    </ItemSet>
+    <AutonomousObjectives>
+      <Order identifier="fightintruders" prioritymodifier="1" />
+      <Order identifier="rescue" prioritymodifier="1" />
+      <Order identifier="extinguishfires" prioritymodifier="0.75" />
+      <Order identifier="operatereactor" option="powerup" prioritymodifier="0.2" />
+      <Order identifier="fixleaks" prioritymodifier="0.1" />
+    </AutonomousObjectives>
+    <AppropriateOrders>
+      <Order identifier="operateweapons" />
+      <Order identifier="fightintruders" />
+    </AppropriateOrders>
+  </Job>
+</jobs>

@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Missions>
+  <MonsterMission name="花与死亡" identifier="hunting" type="Monster" tags="TL" description="在鲜花中离去吧" commonness="100" reward="4550" sonarlabel="迷失舰艇" maxsonarmarkerdistance="25000" successmessage="未知船只已击沉" missionfailure="海水淹过腰部你绝望吗" difficulty="2">
+    <Reputation identifier="location" amount="5" />
+    <Reputation identifier="huskcult" amount="3" />
+    <Reputation identifier="TLhui" amount="3" />
+    <monster character="Lost1" min="6" max="6" />
+    <monster character="Lost2" min="3" max="3" />
+	<monster character="Lost3" min="1" max="1" />
+    <Icon texture="%ModDir%/TL部门/Sprite/mizhi.png" sourcerect="0,0,1024,1024" />
+    <message header="花与..." text="在鲜花簇拥中离去吧" />
+  </MonsterMission>
+  <MonsterMission name="迅猛龙群" identifier="mudraptors" description="[location1]和[location2]之间发现迅猛龙抱团进攻。影响船只通行，事后[reward]mk奖励。" type="Monster" tags="TL" difficulty="3" commonness="100" reward="6500" sonarlabel="迅猛龙群" maxsonarmarkerdistance="10000" successmessage="迅猛龙群已被集团清除" missionfailure="船的维修费我们可不出">
+    <Reputation identifier="location" amount="3" />
+    <Reputation identifier="huskcult" amount="3" />
+    <Reputation identifier="TLhui" amount="2" />
+    <monster character="毒脓迅猛龙" min="7" max="9" />
+	<monster character="毒脓迅猛龙（远程）" min="3" max="4" />
+	<monster character="毒脓迅猛龙大号" min="2" max="3" />
+    <Icon texture="%ModDir%/TL部门/Sprite/zhuguang.png" sourcerect="0,0,1024,1024" />
+    <message header="目标已击杀" text="轻而易举呢~来前哨站拿钱吧" />
+  </MonsterMission>
+  <MonsterMission name="保密行动" identifier="TLceshiji" description="很抱歉不能透露更多，但是行动非常危险...事后[reward]mk,你们可以去捡一部分战利品...但残骸要留给我们" type="Monster" tags="TL" difficulty="3" commonness="100" reward="3000" sonarlabel="初代失控机" maxsonarmarkerdistance="10000" successmessage="失控测试机已被清除" missionfailure="我们会铭记你们的付出，是时候派出集团攻击舰了">
+    <Reputation identifier="location" amount="3" />
+    <Reputation identifier="huskcult" amount="3" />
+    <Reputation identifier="TLhui" amount="6" />
+    <monster character="Tl测试机" min="3" max="3" />
+    <Icon texture="%ModDir%/TL部门/Sprite/baomi.png" sourcerect="0,0,1024.1024" />
+    <message header="测试机已损毁" text="任何一项前沿技术的成功路上都布满荆棘，而我们只能赤脚踩过" />
+  </MonsterMission>
+  <MonsterMission name="烛光晚宴" identifier="TLhunting" type="Monster" tags="TL" spawntype="Abyss" description="别离的歌早已哼在嘴边  是你 为我 题词" commonness="100" reward="7400" sonarlabel="晚会嘉宾" maxsonarmarkerdistance="30000" successmessage="摇曳的烛火中映照出晚宴的主角，船员们，恭喜" missionfailure="很抱歉，船员们，你们的资历还不够"  difficulty="4">
+    <Reputation identifier="location" amount="10" />
+    <Reputation identifier="clowns" amount="3" />
+    <Reputation identifier="TLhui" amount="4" />
+    <monster character="辐射蠕虫" min="1" max="1" />
+    <Icon texture="%ModDir%/TL部门/Sprite/zhuguang.png" sourcerect="0,0,1024,1024" />
+    <message header="感谢你们杀死了这只辐射蠕虫" text="烛光中求生的勇士，你值得敬爱" />
+  </MonsterMission>
+  <PirateMission name="放弃船，或者放弃希望(叛逃锤头鲨级护卫舰)" type="Pirate" identifier="TLhaidao" tags="TLhaidao" difficulty="4" commonness="100" reward="10999" description="(此任务属于海盗任务，最好只接一个同类型任务，否则可能产生bug)万分火急，有一艘护卫舰运载着集团的大杀器，选择了叛逃，千万不要让这个东西落入联盟手中，我不管你们用何种方式，把他们留在海底！">
+    <Reputation identifier="coalition" amount="-4" />
+    <Reputation identifier="TLhui" amount="7" />
+    <SubmarineTypes>
+      <Submarine path="%ModDir%/Sub/泰拉叛逃护卫舰.sub" faction="separatists" preferreddifficulty="12" alternatereward="10999" />
+    </SubmarineTypes>
+    <Characters>
+      <Character typeidentifier="TLcaptain_PT" minamount="2" maxamount="2" />
+      <Character typeidentifier="TLsecurity_PT" minamount="12" maxamount="12" />
+      <Character typeidentifier="TLmechanic_PT" minamount="1" maxamount="1" />
+      <Character typeidentifier="TLengineer_PT" minamount="1" maxamount="1" />
+	  <Character typeidentifier="TLDoc_PT" minamount="1" maxamount="1" />
+	  <Character typeidentifier="TLSafe_PT" minamount="1" maxamount="1" />
+    </Characters>
+    <CharacterTypes>
+      <CharacterType typeidentifier="TLcaptain_PT">
+        <Character identifier="THnpc_Ship_Captain" from="THnpc" iscommander="true" />
+      </CharacterType>
+      <CharacterType typeidentifier="TLsecurity_PT">
+        <Character identifier="THnpc_PT_Security" from="THnpc" />
+      </CharacterType>
+      <CharacterType typeidentifier="TLmechanic_PT">
+        <Character identifier="THnpc_Ship_Assistant" from="THnpc" />
+      </CharacterType>
+      <CharacterType typeidentifier="TLengineer_PT">
+        <Character identifier="THnpc_Ship_Assistant" from="THnpc" />
+      </CharacterType>
+	  <CharacterType typeidentifier="TLDoc_PT">
+        <Character identifier="THnpc_Ship_Doc" from="THnpc" />
+      </CharacterType>
+	  <CharacterType typeidentifier="TLSafe_PT">
+        <Character identifier="THnpc_PT_TLSafe" from="THnpc" />
+      </CharacterType>
+    </CharacterTypes>
+    <Icon texture="%ModDir%/TL部门/Sprite/haidao.png" sourcerect="0,0,1024,1024" />
+    <message header="探测到彼岸花信号" text="该开始展示你们的实力了" />
+    <message header="任务完成" text="非常感谢，你们最好不要碰那东西，我们会派出人员来回收它" />
+    <LocationType from="AnyOutpost" to="AnyOutpost" />
+  </PirateMission>
+  <PirateMission name="放弃船，或者放弃希望" type="Pirate" identifier="TLhaidao2" tags="TLhaidao" difficulty="4" commonness="100" reward="7777" description="(此任务属于海盗任务，最好只接一个同类型任务，否则可能产生bug)当你开始同情海盗，你也就成为了海盗。">
+    <Reputation identifier="coalition" amount="5" amountforopposingfaction="-5" />
+    <Reputation identifier="TLhui" amount="2" />
+    <SubmarineTypes>
+      <Submarine path="%ModDir%/Sub/鼬獾-海盗船版本.sub" faction="separatists" preferreddifficulty="12" alternatereward="7777" />
+    </SubmarineTypes>
+    <Characters>
+      <Character typeidentifier="separatistcaptain" minamount="2" maxamount="2" />
+      <Character typeidentifier="separatistsecurity" minamount="9" maxamount="9" />
+      <Character typeidentifier="separatistmechanic" minamount="1" maxamount="2" />
+      <Character typeidentifier="separatistengineer" minamount="1" maxamount="2" />
+    </Characters>
+    <CharacterTypes>
+      <CharacterType typeidentifier="separatistcaptain">
+        <Character identifier="separatistcaptain" from="combatmissionseparatistnpcs" preferreddifficulty="50" iscommander="true" />
+        <Character identifier="separatistcaptainlord" from="combatmissionseparatistnpcs" preferreddifficulty="90" iscommander="true" />
+      </CharacterType>
+      <CharacterType typeidentifier="separatistsecurity">
+        <Character identifier="separatistsecurityrecruit" from="combatmissionseparatistnpcs" preferreddifficulty="40" />
+        <Character identifier="separatistsecuritygunner" from="combatmissionseparatistnpcs" preferreddifficulty="60" />
+        <Character identifier="separatistsecuritybrute" from="combatmissionseparatistnpcs" preferreddifficulty="70" />
+        <Character identifier="separatistsecurityelite" from="combatmissionseparatistnpcs" preferreddifficulty="100" />
+      </CharacterType>
+      <CharacterType typeidentifier="separatistmechanic">
+        <Character identifier="separatistmechanicrecruit" from="combatmissionseparatistnpcs" preferreddifficulty="40" />
+        <Character identifier="separatistmechanicveteran" from="combatmissionseparatistnpcs" preferreddifficulty="70" />
+      </CharacterType>
+      <CharacterType typeidentifier="separatistengineer">
+        <Character identifier="separatistengineerrecruit" from="combatmissionseparatistnpcs" preferreddifficulty="40" />
+        <Character identifier="separatistengineerveteran" from="combatmissionseparatistnpcs" preferreddifficulty="70" />
+      </CharacterType>
+    </CharacterTypes>
+    <Icon texture="%ModDir%/TL部门/Sprite/haidao.png" sourcerect="0,0,1024,1024" />
+    <message header="已发现敌方海盗" text="杀！！！" />
+    <message header="任务完成" text="十年航海，一日上岸" />
+    <LocationType from="AnyOutpost" to="AnyOutpost" />
+  </PirateMission>
+  <PirateMission name="运输阻断-联盟使者" type="Pirate" identifier="TLhaidao3" tags="TLhaidao" difficulty="4" commonness="100" reward="2000" description="(此任务属于海盗任务，最好只接一个同类型任务，否则可能产生bug)联盟联络员：该死的集团，处处和我们作对，根据探测器显示有一艘老掉牙的集团运输舰会通过前面的航路，给他们点颜色看看！虽然奖励不多，但沉船任你们处置！">
+    <Reputation identifier="TLhui" amount="-9" amountforopposingfaction="3" />
+    <SubmarineTypes>
+      <Submarine path="%ModDir%/Sub/泰拉集团摩洛克型运输舰.sub" faction="TLhui" preferreddifficulty="18" alternatereward="3000" />
+    </SubmarineTypes>
+    <Characters>
+      <Character typeidentifier="TLcaptain" minamount="2" maxamount="2" />
+      <Character typeidentifier="TLsecurity" minamount="7" maxamount="7" />
+      <Character typeidentifier="TLmechanic" minamount="1" maxamount="1" />
+      <Character typeidentifier="TLengineer" minamount="1" maxamount="1" />
+	  <Character typeidentifier="TLDoc" minamount="1" maxamount="1" />
+	  <Character typeidentifier="TLSafeP" minamount="4" maxamount="4" />
+    </Characters>
+    <CharacterTypes>
+      <CharacterType typeidentifier="TLcaptain">
+        <Character identifier="THnpc_Ship_captain" from="THnpc" iscommander="true" />
+      </CharacterType>
+      <CharacterType typeidentifier="TLsecurity">
+        <Character identifier="THnpc_Ship_Security" from="THnpc" />
+      </CharacterType>
+      <CharacterType typeidentifier="TLmechanic">
+        <Character identifier="THnpc_Ship_Assistant" from="THnpc" />
+      </CharacterType>
+      <CharacterType typeidentifier="TLengineer">
+        <Character identifier="THnpc_Ship_Assistant" from="THnpc" />
+      </CharacterType>
+	  <CharacterType typeidentifier="TLDoc">
+        <Character identifier="THnpc_Ship_Doc" from="THnpc" />
+      </CharacterType>
+	  <CharacterType typeidentifier="TLSafeP">
+        <Character identifier="THnpc_HY_TLsafe" from="THnpc" />
+      </CharacterType>
+    </CharacterTypes>
+    <Icon texture="%ModDir%/TL部门/Sprite/yunshu.png" sourcerect="0,0,1024,1024" />
+    <message header="集团运输舰：" text="你们真的疯了！联盟走狗！你们和该死的联盟终将受到应有的惩罚！" />
+    <message header="任务完成" text="可算结束了，我们切断了他们的一条补给线...仅仅一条..." />
+    <LocationType from="AnyOutpost" to="AnyOutpost" />
+  </PirateMission>
+  <MonsterMission name="华强买瓜" identifier="huaqiang_TL" description="航道管理员给了你一些瓜，这可不是什么好事；瓜，会引来一些奇怪的生物，如果我们...等下！有一群人前来买瓜！" type="Monster" tags="TL" difficulty="3" commonness="100" reward="6666" sonarlabel="电动车" maxsonarmarkerdistance="10000" successmessage="买瓜人终于被赶跑了！" missionfailure="萨日朗！萨日朗！">
+    <Reputation identifier="location" amount="2" />
+    <Reputation identifier="TLhui" amount="2" />
+	<monster character="huaqiangche" min="3" max="3" />
+    <Icon texture="%ModDir%/华强任务/GuaTan.png" sourcerect="0,0,400,400" />
+    <message header="电动车已击毁！" text="已经赶走所有买瓜人！" />
+  </MonsterMission>
+  <MonsterMission name="瓜摊找茬" identifier="Guatan_TL" description="听航道管理员说参观瓜摊会带来不幸：会有人来找茬。不过有些人出于好奇，还是去参观了，你看，不好的事情还不是没有发生？...是...吧...等下！有一群人前来找茬！" type="Monster" tags="TL" difficulty="4" commonness="100" reward="11111" sonarlabel="找茬的敌人" maxsonarmarkerdistance="10000" successmessage="找茬的人终于被赶跑了！" missionfailure="萨日朗！萨日朗！">
+    <Reputation identifier="location" amount="3" />
+    <Reputation identifier="TLhui" amount="3" />
+	<monster character="huaqiangche" min="3" max="3" />
+	<monster character="sanlun" min="2" max="2" />
+    <Icon texture="%ModDir%/华强任务/zhaocha.png" sourcerect="0,0,1000,1000" />
+    <message header="找茬者已被击退！" text="这是属于我们的胜利！" />
+  </MonsterMission>
+  <PirateMission name="废弃矿坑" type="Pirate" identifier="TLKuangkeng" tags="TLhaidao" difficulty="3" commonness="100" reward="100" description="(此任务属于海盗任务，并且有小概率堵路，可能产生bug，最好只接一个同类型任务则)附近发现了一个废弃矿坑，没有人敢去探索，你看你们是不是...">
+    <Reputation identifier="TLhui" amount="2" amountforopposingfaction="2" />
+    <SubmarineTypes>
+      <Submarine path="%ModDir%/Sub/泰拉废弃矿井(sub).sub" faction="TLhui" alternatereward="100" />
+    </SubmarineTypes>
+	<Characters>
+	  <Character typeidentifier="wreckp1" minamount="2" maxamount="2" />
+    </Characters>
+    <CharacterTypes>
+	  <CharacterType typeidentifier="wreckp1">
+        <Character identifier="wreckp1" from="THnpc" />
+      </CharacterType>
+    </CharacterTypes>
+    <Icon texture="Content/UI/MissionIcons2.png" sourcerect="0,512,256,256" color="49,93,233"/>
+    <message header="废弃矿坑已发现" text="废弃矿坑已经到达，准备开始探索！" />
+    <message header="劫掠者已清除" text="我们已经杀死了来捣乱的敌人！继续前进！" />
+    <LocationType from="AnyOutpost" to="AnyOutpost" />
+  </PirateMission>
+  <PirateMission name="失联医疗舰" type="Pirate" identifier="TLyiliaojian" tags="TLhaidao" difficulty="2" commonness="100" reward="100" description="(此任务属于海盗任务，最好只接一个同类型任务，否则可能产生bug)我们在附近发现了最近在能源站附近失联的医疗舰信号，我们得迅速侦查情况，打捞沉船!">
+    <Reputation identifier="TLhui" amount="2" amountforopposingfaction="2" />
+    <SubmarineTypes>
+      <Submarine path="%ModDir%/Sub/失联医疗舰(sub).sub" faction="TLhui" alternatereward="100" />
+    </SubmarineTypes>
+	<Characters>
+	  <Character typeidentifier="wreckp1" minamount="2" maxamount="3" />
+    </Characters>
+    <CharacterTypes>
+	  <CharacterType typeidentifier="wreckp1">
+        <Character identifier="wreckp1" from="THnpc" />
+      </CharacterType>
+    </CharacterTypes>
+    <Icon texture="%ModDir%/TL部门/Sprite/yiliao.png" sourcerect="0,0,1024,1024" />
+    <message header="已发现医疗舰" text="准备开始探索！" />
+    <message header="劫掠者已清除" text="我们已经击败了来捣乱的敌人！继续打捞！" />
+    <LocationType from="AnyOutpost" to="AnyOutpost" />
+  </PirateMission>
+  
+  <MonsterMission name="探索求救信号" identifier="TLrescue1" tags="TLrescue" spawntype="Cave" type="Monster" description="一支幻星科考队的自动求救系统被激活了，我们的雷达提前截获到了，请前去看看是否还有活人" difficulty="3" commonness="90" reward="5500" sonarlabel="自动求救信号" maxsonarmarkerdistance="10000" successmessage="果然是一帮只会缩在实验室的家伙...">
+    <monster character="HuskPro" min="4" max="5" />
+	<monster character="HuskPropro" min="4" max="5" />
+	<monster character="Husk_exosuitTL" min="1" max="1" />
+    <Reputation identifier="location" amount="1" />
+    <Reputation identifier="TLhui" amount="1" />
+    <Icon texture="%ModDir%/TL部门/Sprite/SOS.png" sourcerect="0,0,1024,1024" />
+    <LocationType from="AnyOutpost" to="AnyOutpost" />
+    <message header="果然是一帮只会缩在实验室的家伙..." text="我会上报这些事情的，去站点领取奖励吧，请记住，你们什么也没有找到" />
+  </MonsterMission>
+  <MonsterMission name="探索求救信号" identifier="TLrescue2" tags="TLrescue" spawntype="Cave" type="Monster" description="一支幻星科考队的自动求救系统被激活了，我们的雷达提前截获到了，请前去看看是否还有活人" difficulty="3" commonness="90" reward="5500" sonarlabel="自动求救信号" maxsonarmarkerdistance="10000" successmessage="果然是一帮只会缩在实验室的家伙...">
+    <monster character="sniperhuman_HX" min="1" max="1" />
+	<monster character="DVbattlehuman_HX" min="2" max="3" />
+	<monster character="normalhumanDV_HX" min="3" max="4" />
+    <Reputation identifier="location" amount="1" />
+    <Reputation identifier="TLhui" amount="1" />
+    <Icon texture="%ModDir%/TL部门/Sprite/SOS.png" sourcerect="0,0,1024,1024" />
+    <LocationType from="AnyOutpost" to="AnyOutpost" />
+    <message header="看来是预料之外的情况啊..." text="竟然被幻星捷足先登了...集团机密不保啊..." />
+  </MonsterMission>
+  <MonsterMission name="探索求救信号" identifier="TLrescue3" tags="TLrescue" spawntype="Cave" type="Monster" description="一支幻星科考队的自动求救系统被激活了，我们的雷达提前截获到了，请前去看看是否还有活人" difficulty="3" commonness="90" reward="5500" sonarlabel="自动求救信号" maxsonarmarkerdistance="10000" successmessage="果然是一帮只会缩在实验室的家伙...">
+    <monster character="elitehumanh_pirate" min="1" max="1" />
+	<monster character="humanboomer_pirate" min="1" max="1" />
+	<monster character="normalhumanDV_pirate" min="6" max="8" />
+    <Reputation identifier="location" amount="1" />
+    <Reputation identifier="TLhui" amount="1" />
+    <Icon texture="%ModDir%/TL部门/Sprite/SOS.png" sourcerect="0,0,1024,1024" />
+    <LocationType from="AnyOutpost" to="AnyOutpost" />
+    <message header="这是什么情况啊？" text="这里怎么还有海盗啊？真的好怪！" />
+  </MonsterMission>
+  <NestMission name="毒脓迅猛龙巢穴肃清" identifier="TLNest1" description="我们在附近探测到了毒脓迅猛龙的巢穴！这些迅猛龙肆虐航道，毁船无数！是时候重拳出击了！" tags="TLNest" type="Nest" spawntype="cave" reward="4000" itemspawnradius="1200" approachitemsradius="1200" monsterspawnradius="4000" nestobjectradius="1500" nestobjectamount="20" difficulty="3" commonness="100">
+    <Items>
+      <Item identifier="largemudraptoregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true"/>
+      </Item>
+      <Item identifier="largemudraptoregg">
+        <StatusEffectOnApproach target="This" Scale="1.0" setvalue="true" delay="9" />
+      </Item>
+      <Item identifier="smallmudraptoregg" />
+      <Item identifier="smallmudraptoregg" />
+      <Item identifier="smallmudraptoregg" />
+    </Items>
+	<monster character="毒脓迅猛龙（远程）" min="5" max="6" />
+	<monster character="毒脓迅猛龙大号" min="1" max="1" />
+	<Reputation identifier="TLhui" amount="1" />
+    <Reputation identifier="location" amount="2" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="256,256,256,256" color="214,50,48"/>
+    <LocationType from="AnyOutpost" to="AnyOutpost" />
+	<message header="肃清完毕" text="看来这片区域的航道更加安全了" />
+  </NestMission>
+ 
+  <AbandonedOutpostMission name="能源站回收" description="（本任务没有奖励，奖励都是物资） 请去清理集团能源站，请记住你的任务是清理一切有生力量，记得多带点皮虫净" identifier="TLEnergyTowers" tags="TLEnergyTowersoutpost" type="OutpostDestroy" achievementidentifier="huskcultrescuesubra" reward="0" difficulty="4" commonness="100" allowretry="true" unhideentitysubcategories="abandonedmonster">
+    <Reputation identifier="TLhui" amount="0" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,256,256,256" color="214,50,48" />
+    <LocationType identifier="TLEnergyTowers" />
+    <LocationTypeChange from="TLEnergyTowers" to="Abandoned" requireddurationrange="0,0" cooldownafterchange="5" />
+    <Characters>
+      <Character identifier="THnpc1" from="THnpc" asfaraspossible="true" requirekill="true" />
+      <Character identifier="THnpc1A" from="THnpc" asfaraspossible="true" requirekill="true" />
+    </Characters>
+    <TriggerEvent state="0" delay="5" eventidentifier="waytoascensionfoundsubra" campaignonly="true" />
+    <Metadata identifier="waytoascension" value="8" />
+    <message header="任务成功" text="已经清理前半部分，离开是一个选择；当然你想深入清理矿区和清扫实验机器人也可以。" />
+  </AbandonedOutpostMission>
+  <AbandonedOutpostMission name="造船厂（废案）" description=" " identifier="TLshipyard" tags="TLshipyard" type="OutpostDestroy" achievementidentifier="huskcultrescuesubra" reward="0" difficulty="4" commonness="100" allowretry="true" targetitem="reactor" unhideentitysubcategories="abandonedmonster">
+    <Reputation identifier="TLhui" amount="0" />
+    <Icon texture="Content/UI/MissionIcons.png" sourcerect="512,256,256,256" color="214,50,48" />
+    <LocationType identifier="TLshipyard" />
+    <LocationTypeChange from="TLshipyard" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
+    <Characters></Characters>
+    <TriggerEvent state="0" delay="5" eventidentifier="waytoascensionfoundsubra" campaignonly="true" />
+    <Metadata identifier="waytoascension" value="8" />
+    <message header="任务成功" text="成功引爆能源塔，是时候离开了，除非你们还想再深入" />
+  </AbandonedOutpostMission>
+  <AbandonedOutpostMission name="同看雪后山" description="雪后山间静谧多， 银装素裹映长河。 携手同行观美景， 却忆往昔泪婆娑。" identifier="TLxue" tags="TLxueoutpost" type="OutpostDestroy"  reward="4400" difficulty="3" commonness="160" allowretry="true" unhideentitysubcategories="abandonedmonster">
+    <Reputation identifier="TLhui" amount="10" />
+    <Icon texture="%ModDir%/TL部门/Sprite/shan.png" sourcerect="0,0,1024,1024" />
+    <LocationType identifier="TLxue" />
+    <LocationTypeChange from="TLxue" to="Abandoned" requireddurationrange="0,0" cooldownafterchange="5" />
+    <Characters>
+      <Character identifier="HXnpc2" from="HXnpc" requirekill="true" />
+      <Character identifier="HXnpc2A" from="HXnpc" requirekill="true" />
+      <Character identifier="HXnpc2" from="HXnpc" requirekill="true" />
+    </Characters>
+    <TriggerEvent state="0" delay="5" eventidentifier="waytoascensionfoundsubra" campaignonly="true" />
+    <Metadata identifier="waytoascension" value="8" />
+    <message header="任务成功" text="寒风吹尽旧时梦， 雪落无声人独愁。 山河虽美心难静， 空对银装泪自流。" />
+  </AbandonedOutpostMission>
+  <AbandonedOutpostMission name="风雪消霁" description="看来泰拉是在木卫二横行霸道惯了！那么是时候消一消他们的嚣张气焰了！想不想跟集团正面交锋？让他们知道联盟不是吃素的！（请引爆反应堆以结束任务）" identifier="TLAbandonedOutpostMission1" tags="abandonedoutpost" achievementidentifier="abandonedoutpostdestroyhumans" type="OutpostDestroy" reward="5500" difficulty="3" commonness="130" allowretry="true" targetitem="reactor" unhideentitysubcategories="abandonedhuman" maxleveldifficulty="65">
+    <Reputation identifier="TLhui" amount="-15" />
+    <Reputation identifier="coalition" amount="25" />
+    <Icon texture="%ModDir%/TL部门/Sprite/feng.png" sourcerect="0,0,1024,1024" />
+    <LocationType identifier="Abandoned" />
+    <LocationTypeChange from="Abandoned" to="Outpost" requireddurationrange="2,3" cooldownafterchange="5" />
+    <Characters>
+      <Character requirekill="true" moduleflags="crewmodule" identifier="THnpc_FX_Normal" from="THnpc" />
+	  <Character requirekill="true" moduleflags="crewmodule" identifier="THnpc_FX_Normal" from="THnpc" />
+	  <Character requirekill="true" moduleflags="crewmodule" identifier="THnpc_FX_elite" from="THnpc" multiplayeronly="true"/>
+	  <Character requirekill="true" moduleflags="crewmodule" identifier="THnpc_FX_elite" from="THnpc" />
+	  <Character requirekill="true" moduleflags="crewmodule" identifier="THnpc_FX_Doc" from="THnpc" />
+	  <Character requirekill="true" moduleflags="engineeringmodule" identifier="THnpc_FX_Normal" from="THnpc" />
+	  <Character requirekill="true" moduleflags="engineeringmodule" identifier="THnpc_FX_Normal" from="THnpc" />
+	  <Character requirekill="true" moduleflags="engineeringmodule" identifier="THnpc_FX_elite" from="THnpc" multiplayeronly="true"/>
+	  <Character requirekill="true" moduleflags="engineeringmodule" identifier="THnpc_FX_elite" from="THnpc" />
+	  <Character requirekill="true" moduleflags="engineeringmodule" identifier="THnpc_FX_Doc" from="THnpc" />
+	  <Character requirekill="true" moduleflags="securitymodule" identifier="THnpc_FX_Normal" from="THnpc" />
+	  <Character requirekill="true" moduleflags="securitymodule" identifier="THnpc_FX_Normal" from="THnpc" />
+	  <Character requirekill="true" moduleflags="securitymodule" identifier="THnpc_FX_Normal" from="THnpc" multiplayeronly="true"/>
+	  <Character requirekill="true" moduleflags="securitymodule" identifier="THnpc_FX_elite" from="THnpc" multiplayeronly="true"/>
+	  <Character requirekill="true" moduleflags="securitymodule" identifier="THnpc_FX_elite" from="THnpc" />
+	  <Character requirekill="true" moduleflags="securitymodule" identifier="THnpc_FX_elite" from="THnpc" />
+	  <Character requirekill="true" moduleflags="securitymodule" identifier="THnpc_FX_Doc" from="THnpc" />
+	  <Character requirekill="true" moduleflags="banditleader" identifier="THnpc_FX_XG" from="THnpc" asfaraspossible="true"/>
+    </Characters>
+	<TriggerEvent state="0" delay="5" eventidentifier="TL_indestructible_wall" campaignonly="true" />
+    <message header="岁寒过后终见暖，人生如斯自有情..." text="风雪消霁天地清， 梅花点点映寒冰。 遥望山川银装褪， 心随冬去盼春明。" />
+  </AbandonedOutpostMission>
+  
+  <CargoMission name="泰拉货物运输（矿石）" description="集团需要你帮助运输一些物资，我们会付出相应的报酬。" identifier="Cargo1_TL" difficulty="1" tags="Cargo_TL" type="Cargo" commonness="100">
+    <Items>
+      <Item identifier="Lootcrate_TL_Ore" reward="330" maxcount="12" />
+    </Items>
+    <Icon texture="%ModDir%/TL部门/Sprite/HY.png" sourcerect="0,0,1100,1100" color="255,255,255" />
+    <Reputation identifier="TLhui" amount="2" amountforopposingfaction="2" />
+  </CargoMission>
+  <CargoMission name="泰拉货物运输（材料）" description="集团需要你帮助运输一些物资，我们会付出相应的报酬。" identifier="Cargo2_TL" difficulty="1" tags="Cargo_TL" type="Cargo" commonness="100">
+    <Items>
+      <Item identifier="Lootcrate_TL_ammomaterial" reward="120" maxcount="12" />
+    </Items>
+    <Icon texture="%ModDir%/TL部门/Sprite/HY.png" sourcerect="0,0,1100,1100" color="255,255,255" />
+    <Reputation identifier="TLhui" amount="2" amountforopposingfaction="2" />
+  </CargoMission>
+  <CargoMission name="泰拉货物运输（医疗）" description="集团需要你帮助运输一些物资，我们会付出相应的报酬。" identifier="Cargo3_TL" difficulty="1" tags="Cargo_TL" type="Cargo" commonness="100">
+    <Items>
+      <Item identifier="Lootcrate_TL_medic" reward="180" maxcount="12" />
+    </Items>
+    <Icon texture="%ModDir%/TL部门/Sprite/yiliao.png" sourcerect="0,0,1024,1024" color="255,255,255" />
+    <Reputation identifier="TLhui" amount="2" amountforopposingfaction="2" />
+  </CargoMission>
+  <CargoMission name="泰拉货物运输（植物）" description="集团需要你帮助运输一些物资，我们会付出相应的报酬。" identifier="Cargo4_TL" difficulty="1" tags="Cargo_TL" type="Cargo" commonness="100">
+    <Items>
+      <Item identifier="Lootcrate_TL_plants" reward="175" maxcount="12" />
+    </Items>
+    <Icon texture="%ModDir%/TL部门/Sprite/HY.png" sourcerect="0,0,1100,1100" color="255,255,255" />
+    <Reputation identifier="TLhui" amount="2" amountforopposingfaction="2" />
+  </CargoMission>
+  <CargoMission name="泰拉武器运输（协调者）" description="集团需要你帮助运输一些武器，我们会付出相应的报酬。" identifier="Cargo5_TL" difficulty="1" tags="CargoWeapon_TL" type="Cargo" commonness="100">
+     <Items>
+      <Item identifier="securemetalcrate" reward="600" maxcount="4">
+         <Item identifier="协调者" amount="1"/>
+         <Item identifier="Lootcrate_TL_XTZmagezine" amount="1"/>
+         <Item identifier="fraggrenadepro" amount="2"/>
+      </Item>
+     </Items>
+    <Icon texture="%ModDir%/TL部门/Sprite/HY.png" sourcerect="0,0,1100,1100" color="255,255,255" />
+    <Reputation identifier="TLhui" amount="2" amountforopposingfaction="2" />
+  </CargoMission>
+  <CargoMission name="泰拉武器运输（幻星高级武器）" description="集团需要你帮助运输一些武器，我们会付出相应的报酬。" identifier="Cargo6_TL" difficulty="2" tags="CargoWeapon_TL" type="Cargo" commonness="25">
+     <Items>
+	   <Item identifier="securemetalcrate" reward="1750" maxcount="2">
+         <Item identifier="HX_rs" amount="1"/>
+         <Item identifier="Lootcrate_TL_HXmagazine" amount="1"/>
+         <Item identifier="fraggrenadepro" amount="2"/>
+       </Item>
+     </Items>
+    <Icon texture="%ModDir%/TL部门/Sprite/HY.png" sourcerect="0,0,1100,1100" color="255,255,255" />
+    <Reputation identifier="TLhui" amount="2" amountforopposingfaction="2" />
+  </CargoMission>
+  <CargoMission name="泰拉武器运输（泰拉霰弹）" description="集团需要你帮助运输一些武器，我们会付出相应的报酬。" identifier="Cargo7_TL" difficulty="1" tags="CargoWeapon_TL" type="Cargo" commonness="100">
+     <Items>
+      <Item identifier="securemetalcrate" reward="700" maxcount="4">
+         <Item identifier="TL13" amount="1"/>
+         <Item identifier="Lootcrate_TL_Tl13ammo" amount="1"/>
+         <Item identifier="fraggrenadepro" amount="2"/>
+      </Item>
+     </Items>
+    <Icon texture="%ModDir%/TL部门/Sprite/HY.png" sourcerect="0,0,1100,1100" color="255,255,255" />
+    <Reputation identifier="TLhui" amount="2" amountforopposingfaction="2" />
+  </CargoMission>
+  <CargoMission name="泰拉武器运输（泰拉步枪）" description="集团需要你帮助运输一些武器，我们会付出相应的报酬。" identifier="Cargo8_TL" difficulty="2" tags="CargoWeapon_TL" type="Cargo" commonness="75">
+     <Items>
+      <Item identifier="securemetalcrate" reward="1500" maxcount="3">
+         <Item identifier="TL14" amount="1"/>
+         <Item identifier="Lootcrate_TL_TLmagezine" amount="1"/>
+         <Item identifier="fraggrenadepro" amount="2"/>
+      </Item>
+     </Items>
+    <Icon texture="%ModDir%/TL部门/Sprite/HY.png" sourcerect="0,0,1100,1100" color="255,255,255" />
+    <Reputation identifier="TLhui" amount="2" amountforopposingfaction="2" />
+  </CargoMission>
+  
+  <EscortMission name="运送海盗俘虏" identifier="Escort0_TL" description="集团在和海盗的对抗中生擒了几名敌人，这将会是我们的筹码，现在我们要将他们转移！请确保他们的安全，不过也要小心他们挣脱镣铐搞事！" tags="TL_KeYun" type="Escort" commonness="100" reward="2000" difficulty="1" successmessage="转移成功！" missionfailure="哦不！有海盗俘虏趋势了！不过无伤大雅，集团并不惧怕海盗！但报酬你们拿不到了。">
+    <Characters>
+      <Character from="TL_mission_npcs" identifier="TL_Pirate_prisoner"  />
+      <Character from="TL_mission_npcs" identifier="TL_Pirate_prisoner"  />
+      <Character from="TL_mission_npcs" identifier="TL_Pirate_prisoner"  />
+    </Characters>
+    <Icon texture="%ModDir%/TL部门/Sprite/KY.png" sourcerect="0,0,700,700" color="243,146,55" />
+    <Reputation identifier="TLhui" amount="2" />
+  </EscortMission>
+  <EscortMission name="集团特战队运输" identifier="Escort1_TL" description="集团需要你们运送特战队，他们要去下个站点执行任务！当然你为我们提供运输工具，我们的优质战士也会保护你们！" tags="TL_KeYun" type="Escort" commonness="100" reward="1250" difficulty="1" successmessage="运送任务完成！" missionfailure="哦不！有特战队趋势了！你们真让我失望！报酬你们拿不到了！">
+    <Characters>
+      <Character from="TL_mission_npcs" identifier="TL_TLsafe_Escort" />
+      <Character from="TL_mission_npcs" identifier="TL_TLsafe_Escort" />
+      <Character from="TL_mission_npcs" identifier="TL_TLsafe_Escort" />
+    </Characters>
+    <Icon texture="%ModDir%/TL部门/Sprite/KY.png" sourcerect="0,0,700,700" color="100,255,100" />
+    <Reputation identifier="TLhui" amount="2" />
+  </EscortMission>
+  
+  <!--特殊-->
+ <!-- <PirateMission name="垃圾清理" description="眼中钉，肉中刺！你们竟敢与集团交恶！集团高层的眼中容不下杂草！" type="Pirate" identifier="TLattack1" tags="TLattack" showinmenus="true" showstartmessage="true" issideobjective="true" achievementidentifier="combatmissioncoalitionvsseparatists" difficulty="4" commonness="0" reward="0" addedmissiondifficultyperplayer="8">
+    <Reputation identifier="coalition" amount="10" amountforopposingfaction="-10" />
+    <SubmarineTypes>
+      <Submarine path="%ModDir%/Sub/泰拉旧型攻击舰.sub" faction="separatists" preferreddifficulty="70" alternatereward="10000" />
+    </SubmarineTypes>
+    <Characters>
+      <Character typeidentifier="separatistcaptain" minamount="1" maxamount="1" />
+      <Character typeidentifier="separatistsecurity" minamount="3" maxamount="6" />
+      <Character typeidentifier="separatistmechanic" minamount="3" maxamount="6" />
+      <Character typeidentifier="separatistengineer" minamount="3" maxamount="6" />
+    </Characters>
+    <CharacterTypes>
+      <CharacterType typeidentifier="separatistcaptain">
+        <Character identifier="THnpc4" from="THnpc" iscommander="true" />
+      </CharacterType>
+      <CharacterType typeidentifier="separatistsecurity">
+        <Character identifier="THnpc4" from="THnpc" />
+      </CharacterType>
+      <CharacterType typeidentifier="separatistmechanic">
+        <Character identifier="THnpc4" from="THnpc" />
+        <Character identifier="THnpc4" from="THnpc" />
+      </CharacterType>
+      <CharacterType typeidentifier="separatistengineer">
+        <Character identifier="THnpc4" from="THnpc" />
+        <Character identifier="THnpc4" from="THnpc" />
+      </CharacterType>
+    </CharacterTypes>
+    <Icon texture="%ModDir%/TL部门/Sprite/laji.png" sourcerect="0,0,1024,1024" />
+    <message header="清理行动开始" text="要么忠诚于集团，要么就死在集团手中" />
+  </PirateMission> -->
+</Missions>
