@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Override>
+  <sounds>
+    <music file="%ModDir%/Music/Musics/Pedro Macedo Camacho - First Light.ogg" type="menu" continuefromprevioustime="true" />
+    <music file="%ModDir%/Music/Musics/Pedro Macedo Camacho - First Light.ogg" type="editor" continuefromprevioustime="true" />
+  </sounds>
+</Override>
