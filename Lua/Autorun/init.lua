@@ -22,6 +22,9 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
         local hasSub, err = pcall(function()
             local Prefab = AfflictionPrefab.Prefabs["TLsub"]
         end)
+        local hasMissiles, err = pcall(function()
+            local Prefab = AfflictionPrefab.Prefabs["TLMissiles"]
+        end)
 
         -- No expansions
         runstring = runstring.."\n"
@@ -37,6 +40,14 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
         if not hasSurgical and not hasMusics and not hasSub then
             runstring = runstring.."- Not running any expansions\n 目前未运行任何附件\n  目前发布拓展有：附属舰艇包、附属音乐包"
         end
+        runstring = runstring.."\n开始读取测试包...\n"
+        if hasMissiles then
+            runstring = runstring.."--- Missile test package has been added \n     -泰拉渊洋 - 导弹测试包已添加\n    -Version ：0.0.1 \n"
+        end
+        if not hasMissiles then
+            runstring = runstring.."- Not running any test expansions\n 目前未运行任何测试包\n \n"
+        end
+        runstring = runstring.."///——————————泰拉渊洋已全部加载完毕——————————\\\\\\"
         print(package.path)
         print(runstring)
     end,3) end,6)
