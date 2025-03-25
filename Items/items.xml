@@ -65,7 +65,7 @@
       <RequiredItem identifier="ballisticfiber" amount="3" />
       <RequiredItem identifier="Armybag_TL" amount="1" />
     </Fabricate>
-	<Fabricate suitablefabricators="moneymaker" requiredtime="15" displayname="printcheap_TL">
+    <Fabricate suitablefabricators="moneymaker" requiredtime="15" displayname="printcheap_TL">
       <RequiredSkill identifier="mechanical" level="35" />
       <RequiredItem identifier="steel_Tl" amount="1" />
       <RequiredItem identifier="titaniumaluminiumalloy" amount="3" />
@@ -172,9 +172,8 @@
   </Item>
   <Item name="690战术核板砖" identifier="690" category="Weapon" Tags="mediumitem,mountableweapon,weapon,gunsmith" scale="0.5" allowasextracargo="true" requireaimtouse="true" impactsoundtag="impact_metal_light">
     <PreferredContainer primary="secarmcab" secondary="armcab" />
-    <Price baseprice="111" sold="false">
-    </Price>
-	<Fabricate suitablefabricators="fabricator" requiredtime="10" requiresrecipe="false">
+    <Price baseprice="111" sold="false"></Price>
+    <Fabricate suitablefabricators="fabricator" requiredtime="10" requiresrecipe="false">
       <RequiredItem identifier="FuelRod" amount="1" />
     </Fabricate>
     <Sprite texture="icon.png" sourcerect="553,48,100,40" depth="0.55" origin="0.5,0.5" />
@@ -203,13 +202,9 @@
     <Body width="110" height="15" density="25" />
     <MeleeWeapon slots="Any,RightHand,LeftHand" aimpos="50,0" handle1="-22,2" handle2="-32,5" holdangle="30" aimangle="10" reload="0.5" range="180" combatPriority="40" msg="ItemMsgPickUpSelect">
       <Attack targetimpulse="1500" severlimbsprobability="9" itemdamage="100" structuredamage="250">
-        <Affliction identifier="kill" strength="100" multiplybymaxvitality="true"/>
-        <Affliction identifier="lacerations" strength="100" multiplybymaxvitality="true"/>
-        <Affliction identifier="internaldamage" strength="100" multiplybymaxvitality="true"/>
-        <Affliction identifier="blunttrauma" strength="100" multiplybymaxvitality="true"/>
-        <Affliction identifier="bleeding" strength="100" multiplybymaxvitality="true"/>
         <StatusEffect type="OnUse" target="UseTarget">
           <Conditional entitytype="eq Character" />
+		  <LuaHook name="luahuaqiang.onUse" />
           <Sound file="%ModDir%/ogg/撒日朗.ogg" selectionmode="random" range="2000" />
           <Sound file="%ModDir%/ogg/故意找茬.ogg" range="2000" />
         </StatusEffect>
@@ -221,8 +216,7 @@
     <aitarget sightrange="500" soundrange="250" fadeouttime="1" />
   </Item>
   <Item name="自动修复护甲" identifier="luaarmor" category="Equipment" tags="smallitem,clothing" scale="0.35" cargocontaineridentifier="metalcrate" description="" impactsoundtag="impact_soft">
-    <Price baseprice="3500" sold="false">
-    </Price>
+    <Price baseprice="3500" sold="false"></Price>
     <Upgrade gameversion="0.9.3.0" scale="0.35" />
     <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="960,256,64,64" origin="0.5,0.5" />
     <Sprite name="Security Vest Item" texture="Content/Items/Jobgear/Mechanic/safetyharness.png" sourcerect="14,45,103,180" depth="0.6" origin="0.5,0.35" />
@@ -346,23 +340,23 @@
     <Body width="35" height="35" density="60" />
   </Item> -->
   <Item name="动力电池" identifier="Powerbattery" Category="Fuel" Tags="smallitem,TLbattery,reactorfuel,loadable" maxstacksize="2" cargocontaineridentifier="metalcrate" scale="0.5">
-    <Price baseprice="2499" displaynonempty="true" >
-      <Price storeidentifier="merchantoutpost" sold="false"/>	
+    <Price baseprice="2499" displaynonempty="true">
+      <Price storeidentifier="merchantoutpost" sold="false" />
       <Price storeidentifier="merchantcity" sold="false" />
-      <Price storeidentifier="merchantresearch" sold="false"/>
-      <Price storeidentifier="merchantmilitary" sold="false"/>
-      <Price storeidentifier="merchantmine" sold="false"/>
+      <Price storeidentifier="merchantresearch" sold="false" />
+      <Price storeidentifier="merchantmilitary" sold="false" />
+      <Price storeidentifier="merchantmine" sold="false" />
       <Price storeidentifier="merchantengineering" multiplier="0.9" minavailable="2" />
       <Price storeidentifier="merchanttutorial" multiplier="0.8" minavailable="1" />
     </Price>
-	<Fabricate suitablefabricators="fabricator" requiredtime="160">
+    <Fabricate suitablefabricators="fabricator" requiredtime="160">
       <RequiredSkill identifier="electrical" level="100" />
       <RequiredItem identifier="thoriumfuelrod" amount="3" />
       <RequiredItem identifier="fulguriumfuelrod" amount="2" />
       <RequiredItem identifier="fuelrod" amount="4" />
-	  <RequiredItem identifier="steel_TL" amount="1" />
+      <RequiredItem identifier="steel_TL" amount="1" />
     </Fabricate>
-	<Fabricate suitablefabricators="moneymaker" requiredtime="90" displayname="printcheap_TL">
+    <Fabricate suitablefabricators="moneymaker" requiredtime="90" displayname="printcheap_TL">
       <RequiredSkill identifier="mechanical" level="90" />
       <RequiredItem identifier="thoriumfuelrod" amount="3" />
       <RequiredItem identifier="fulguriumfuelrod" amount="2" />
@@ -370,8 +364,8 @@
     </Fabricate>
     <Deconstruct time="20">
       <Item identifier="steel" amount="8" />
-      <Item identifier="uranium" amount="4"/>
-	  <Item identifier="fulgurium" amount="4"/>
+      <Item identifier="uranium" amount="4" />
+      <Item identifier="fulgurium" amount="4" />
     </Deconstruct>
     <Sprite texture="icon.png" sourcerect="291,20,48,80" depth="0.55" origin="0.5,0.5" />
     <Body width="40" height="80" density="30" />
@@ -400,7 +394,7 @@
       <RequiredItem identifier="antidama2" amount="1" />
     </Fabricate>
     <Deconstruct time="20">
-      <Item identifier="opium" amount="4"/>
+      <Item identifier="opium" amount="4" />
       <Item identifier="alienblood" />
     </Deconstruct>
     <Sprite texture="Content/Items/Medical/Medicines.png" sourcerect="0,0,37,69" depth="0.6" origin="0.5,0.5" />
@@ -411,12 +405,12 @@
       <StatusEffect type="OnFailure" target="This" Condition="-100.0" setvalue="true" />
       <StatusEffect tags="medical" type="OnSuccess" target="UseTarget" disabledeltatime="true" targerlimb="torso">
         <Affliction identifier="last" amount="1500" />
-		<Affliction identifier="organdamage" amount="35" />
+        <Affliction identifier="organdamage" amount="35" />
         <ReduceAffliction type="stun" amount="999" />
       </StatusEffect>
       <StatusEffect tags="medical" type="OnFailure" target="UseTarget" disabledeltatime="true" targerlimb="torso">
         <Affliction identifier="last" amount="1500" />
-		<Affliction identifier="organdamage" amount="75" />
+        <Affliction identifier="organdamage" amount="75" />
         <ReduceAffliction type="stun" amount="999" />
       </StatusEffect>
       <StatusEffect type="OnSuccess" target="UseTarget">
@@ -448,7 +442,7 @@
       <Price storeidentifier="merchantengineering" multiplier="0.9" minavailable="5" />
       <Price storeidentifier="merchanttutorial" multiplier="0.8" minavailable="3" />
     </Price>
-	<Fabricate suitablefabricators="moneymaker" requiredtime="15" >
+    <Fabricate suitablefabricators="moneymaker" requiredtime="15">
       <RequiredSkill identifier="mechanical" level="35" />
       <RequiredItem identifier="plastic" amount="3" />
       <RequiredItem identifier="ballisticfiber" amount="1" />
@@ -618,7 +612,7 @@
       <Item identifier="plastic" amount="2" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="60" requiresrecipe="true">
-      <RequiredSkill identifier="mechanical" level="70" />
+      <RequiredSkill identifier="mechanical" level="80" />
       <RequiredItem identifier="steel" amount="4" />
       <RequiredItem identifier="steel_TL" amount="2" />
       <RequiredItem identifier="weldingtoolPRO1" amount="1" />
@@ -694,15 +688,10 @@
       <Item identifier="DYCL_TL" amount="2" />
     </Deconstruct>
     <Fabricate suitablefabricators="moneymaker" requiredtime="60" requiresrecipe="true">
-      <RequiredSkill identifier="mechanical" level="70" />
+      <RequiredSkill identifier="mechanical" level="100" />
       <RequiredItem identifier="steel" amount="4" />
-      <RequiredItem identifier="DYCL_TL" amount="1" />
+      <RequiredItem identifier="DYCL_TL" amount="2" />
       <RequiredItem identifier="weldingtoolPRO2" amount="1" />
-    </Fabricate>
-	<Fabricate suitablefabricators="moneymaker" requiredtime="60" requiresrecipe="true" displayname="ChongZhu_TL">
-      <RequiredSkill identifier="mechanical" level="70" />
-      <RequiredItem identifier="steel_TL" amount="1" />
-      <RequiredItem identifier="weldingtoolPRO3" amount="1" />
     </Fabricate>
     <!-- physics body -->
     <Body width="150" height="60" density="25" />
@@ -832,7 +821,7 @@
       <Item identifier="steel_TL" amount="2" />
     </Deconstruct>
     <Fabricate suitablefabricators="fabricator" requiredtime="60" requiresrecipe="true">
-      <RequiredSkill identifier="mechanical" level="70" />
+      <RequiredSkill identifier="mechanical" level="80" />
       <RequiredItem identifier="steel" amount="4" />
       <RequiredItem identifier="steel_TL" amount="2" />
       <RequiredItem identifier="plasmacutterPRO1" amount="1" />
@@ -888,15 +877,10 @@
       <Item identifier="steel_TL" amount="2" />
     </Deconstruct>
     <Fabricate suitablefabricators="moneymaker" requiredtime="60" requiresrecipe="true">
-      <RequiredSkill identifier="mechanical" level="70" />
+      <RequiredSkill identifier="mechanical" level="100" />
       <RequiredItem identifier="steel" amount="4" />
-      <RequiredItem identifier="DYCL_TL" amount="1" />
+      <RequiredItem identifier="DYCL_TL" amount="2" />
       <RequiredItem identifier="plasmacutterPRO2" amount="1" />
-    </Fabricate>
-	<Fabricate suitablefabricators="moneymaker" requiredtime="60" requiresrecipe="true" displayname="ChongZhu_TL">
-      <RequiredSkill identifier="mechanical" level="70" />
-      <RequiredItem identifier="steel_TL" amount="1" />
-      <RequiredItem identifier="plasmacutterPRO3" amount="1" />
     </Fabricate>
     <InventoryIcon texture="TLitem.png" sourcerect="221,349,127,111" origin="0.5,0.5" />
     <Sprite texture="icon.png" sourcerect="842,730,159,87" depth="0.55" origin="0.5,0.5" />
@@ -1005,11 +989,11 @@
       <Item identifier="carbon" mincondition="0.5" />
     </Deconstruct>
     <Growable growthspeed="0.076" pickingtime="3" maximumvines="18" maxhealth="500" hardiness="0.162" floodtolerance="0.2" seedrate="0" productrate="0.0056" flowerquantity="8" baseflowerscale="0.40" vinescale="0.25" vinetint="135,187,61,255" flowertint="240,180,17,255">
-      <ProducedItem identifier="fiberplant" probability="0.2"/>
-	  <ProducedItem identifier="elastinplant" probability="0.2"/>
-	  <ProducedItem identifier="aquaticpoppy" probability="0.2"/>
-	  <ProducedItem identifier="yeastshroom" probability="0.2"/>
-	  <ProducedItem identifier="slimebacteria" probability="0.2"/>
+      <ProducedItem identifier="fiberplant" probability="0.2" />
+      <ProducedItem identifier="elastinplant" probability="0.2" />
+      <ProducedItem identifier="aquaticpoppy" probability="0.2" />
+      <ProducedItem identifier="yeastshroom" probability="0.2" />
+      <ProducedItem identifier="slimebacteria" probability="0.2" />
       <VineSprites vineatlas="Content/Items/Gardening/branches.png" decayatlas="Content/Items/Gardening/branches_overlay.png">
         <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="0,512,256,256" />
         <LeafSprite texture="Content/Items/Gardening/GrowablePlants_Temp.png" sourcerect="256,512,256,256" />
@@ -1037,117 +1021,110 @@
     <Body radius="12" density="10.1" />
     <Holdable canBeCombined="false" slots="Any,RightHand,LeftHand" handle1="0,0" msg="ItemMsgPickUpSelect" />
     <Upgrade gameversion="0.15.22.0">
-      <Growable growthspeed="0.076" hardiness="0.162" floodtolerance="0.2" productrate="0.0056"/>
+      <Growable growthspeed="0.076" hardiness="0.162" floodtolerance="0.2" productrate="0.0056" />
     </Upgrade>
   </Item>
   <!--开盒器-->
-  <Item name="便携式存储箱开启器" identifier="cratedeconstructormini_TL" tags="mediumitem,Deconstructor,donttakeitems,dontsellitems" linkable="false" allowedlinks="" category="Machine" description="廉价的便携式补给箱开启器，可以用来拆开泰拉的各种存储箱。" scale="0.22" invulnerable="true" >
+  <Item name="便携式存储箱开启器" identifier="cratedeconstructormini_TL" tags="mediumitem,Deconstructor,donttakeitems,dontsellitems" linkable="false" allowedlinks="" category="Machine" description="廉价的便携式补给箱开启器，可以用来拆开泰拉的各种存储箱。" scale="0.22" invulnerable="true">
     <Fabricate suitablefabricators="fabricator,moneymaker" requiredtime="10" amount="1">
       <RequiredSkill identifier="mechanical" level="12" />
       <RequiredItem identifier="steel" amount="2" />
     </Fabricate>
-	<Sprite texture="Content/Items/Fabricators/FabricatorsAndDeconstructors.png" depth="0.55" sourcerect="0,304,256,320"/>
-	<Body width="120" height="150" density="25" />
-	<Holdable slots="RightHand,LeftHand" handle1="0,0" msg="itemmsgpickupuse" attachable="true" selectkey="Action" pickkey="Use" >
-	</Holdable  >
-	<Deconstructor canbeselected="true" powerconsumption="0.0" >
-      <GuiFrame relativesize="0.25,0.37" minsize="320,266" style="ItemUI" anchor="Center" >
-	   </GuiFrame  >
-      <sound file="Content/Items/Fabricators/Deconstructor.ogg" type="OnActive" range="1000.0" loop="true"/>
+    <Sprite texture="Content/Items/Fabricators/FabricatorsAndDeconstructors.png" depth="0.55" sourcerect="0,304,256,320" />
+    <Body width="120" height="150" density="25" />
+    <Holdable slots="RightHand,LeftHand" handle1="0,0" msg="itemmsgpickupuse" attachable="true" selectkey="Action" pickkey="Use"></Holdable>
+    <Deconstructor canbeselected="true" powerconsumption="0.0">
+      <GuiFrame relativesize="0.25,0.37" minsize="320,266" style="ItemUI" anchor="Center"></GuiFrame>
+      <sound file="Content/Items/Fabricators/Deconstructor.ogg" type="OnActive" range="1000.0" loop="true" />
     </Deconstructor>
-	<Upgrade gameversion="0.10.4.0">
-      <Repairable Msg="ItemMsgRepairWrench"/>
+    <Upgrade gameversion="0.10.4.0">
+      <Repairable Msg="ItemMsgRepairWrench" />
     </Upgrade>
-	<ConnectionPanel />
-	<Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.50" mindeteriorationdelay="60" maxdeteriorationdelay="120" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">
+    <ConnectionPanel />
+    <Repairable selectkey="Action" header="mechanicalrepairsheader" deteriorationspeed="0.50" mindeteriorationdelay="60" maxdeteriorationdelay="120" RepairThreshold="80" fixDurationHighSkill="5" fixDurationLowSkill="25" msg="ItemMsgRepairWrench" hudpriority="10">
       <GuiFrame relativesize="0.2,0.16" minsize="400,180" maxsize="480,280" anchor="Center" relativeoffset="0.0,0.27" style="ItemUI" />
       <RequiredSkill identifier="mechanical" level="15" />
       <RequiredItem items="wrench" type="equipped" />
       <ParticleEmitter particle="smoke" particlespersecond="2" scalemin="1" scalemax="2.5" anglemax="360" velocitymin="-50" velocitymax="50" mincondition="15.0" maxcondition="50.0" />
       <ParticleEmitter particle="heavysmoke" particlespersecond="2" scalemin="1.0" scalemax="2.5" anglemax="360" distancemax="60" mincondition="0.0" maxcondition="15.0" />
     </Repairable>
-    <ItemContainer  capacity="1" canbeselected="true" hideitems="true" hudpos="0.5, 0.4" slotsperrow="1" uilabel="" allowuioverlap="true" >
-	   <Containable items="storecrate_TL" />
-	</ItemContainer >
-    <ItemContainer  capacity="6" canbeselected="true" hideitems="true" hudpos="0.5, 0.8" slotsperrow="8" uilabel="" allowuioverlap="true" >
-	 <Containable items="smallitem,handheldammo" />
-	</ItemContainer >
-  </Item >
-  
+    <ItemContainer capacity="1" canbeselected="true" hideitems="true" hudpos="0.5, 0.4" slotsperrow="1" uilabel="" allowuioverlap="true">
+      <Containable items="storecrate_TL" />
+    </ItemContainer>
+    <ItemContainer capacity="6" canbeselected="true" hideitems="true" hudpos="0.5, 0.8" slotsperrow="8" uilabel="" allowuioverlap="true">
+      <Containable items="smallitem,handheldammo" />
+    </ItemContainer>
+  </Item>
   <!-- 超压火焰喷射器  -->
-  <Item name="超压火焰喷射器" identifier="FireBoom_TL" description="一件抽象的维修工具，压缩燃料然后超压喷出，能更快焊接船壳，但是会有超强反推力和更高的灼烧效果。" category="Equipment" Tags="mediumitem,weldingequipment"  cargocontaineridentifier="metalcrate" Scale="0.32" impactsoundtag="impact_metal_light">
-      <PreferredContainer primary="engcab,divingcab" />
-      <PreferredContainer primary="wreckstoragecab" minamount="0" maxamount="1" spawnprobability="0.02" />
-      <PreferredContainer primary="abandonedstoragecab" minamount="0" maxamount="1" spawnprobability="0.02" />
-      <Price baseprice="2000" sold="false">
-      </Price>
-      <Fabricate suitablefabricators="Moneymaker" requiredtime="20">
-        <RequiredSkill identifier="mechanical" level="50" />
-		 <RequiredItem identifier="titaniumaluminiumalloy" amount="1" />
-         <RequiredItem identifier="steel_TL" amount="2" />
-         <RequiredItem identifier="rubber" amount="2" />
-         <RequiredItem identifier="weldingtoolPRO1" amount="1" />
-      </Fabricate>
-      <Deconstruct time="10">
-	  	 <Item identifier="titaniumaluminiumalloy" amount="1" />
-         <Item identifier="steel_TL" amount="1" />
-         <Item identifier="rubber" amount="1" />
-      </Deconstruct>
-      <InventoryIcon texture="%ModDir%/Items/FireBoom.png" sourcerect="405,16,85,77" />
-      <Sprite texture="%ModDir%/Items/FireBoom.png" sourcerect="21,18,240,208" depth="0.55" origin="0.5,0.5" />
-      <Body width="180" height="85" density="20" />
-      <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="50,-10" aimpos="55,-10" handle1="-50,25" handle2="50,-15" msg="ItemMsgPickUpSelect" />
-      <RepairTool firedamage="50.0" structurefixamount="4.4" range="500" barrelpos="40,-10" repairmultiple="false" repairthroughwalls="false" combatpriority="0" levelwallfixamount="0" targetforce="40" >
-		<ParticleEmitter particle="weld" particlespersecond="50" copyentityangle="true" scalemin="1.5" scalemax="2" />
-		<ParticleEmitterHitStructure particle="weldspark" particlespersecond="200" anglemin="-40" anglemax="40" velocitymin="200" velocitymax="800" scalemin="1" scalemax="1.5" />
-        <ParticleEmitterHitStructure particle="MistSmoke" particlespersecond="20" anglemin="-10" anglemax="10" velocitymin="0" velocitymax="50" />
-        <ParticleEmitterHitItem identifiers="door,hatch,ductblock" particle="weldspark" particlespersecond="200" anglemin="-40" anglemax="40" velocitymin="200" velocitymax="800" />
-        <ParticleEmitterHitCharacter particle="fleshsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="0" velocitymax="50" />
-         <sound file="Content/Items/Weapons/FlameThrowerLoop.ogg" type="OnUse" range="750.0" loop="true" />
-        <!-- 使用時，所包含的焊接油罐會扣耐久 -->
-        <StatusEffect type="OnUse" targettype="Contained" Condition="-15" >
-		</StatusEffect >
-        <!-- 必須有焊接油罐 -->
-        <RequiredItems items="weldingtoolfuel" type="Contained" msg="ItemMsgWeldingFuelRequired" />
-        <!-- 使用時對接觸的目標造成傷害 -->
-        <StatusEffect type="OnUse" targettype="Limb" disabledeltatime="true" interval="0.1">
-          <Affliction identifier="burn" amount="7.5" />
-          <Affliction identifier="explosiondamage" amount="0.75" />
-		  <Affliction identifier="organdamage" amount="0.75" />
-        </StatusEffect>
-		<StatusEffect type="OnUse" targettype="Limb" disabledeltatime="true" interval="0.1">
-		  <Conditional Ishusk="true" />
-          <Affliction identifier="burn" amount="6" />
-          <Affliction identifier="explosiondamage" amount="0.5" />
-		  <Affliction identifier="organdamage" amount="0.5" />
-        </StatusEffect>
-        <Fixable identifier="structure" />
-        <NonFixable identifier="thalamus,ice" />
-        <LightComponent LightColor="255,200,175,75" range="400" Flicker="0.3" flickerspeed="0.6">
-          <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5" />
-        </LightComponent>
-      </RepairTool>
-      <!-- 在空氣中時加速 -->
-	  <CustomInterface canbeselected="true" drawhudwhenequipped="true" >
-       <GuiFrame relativesize="0.1,0.25" anchor="BottomLeft" absoluteoffset="20,128" style="ItemUI" />
-        <Button text="平稳喷射">
-		  <StatusEffect type="OnUse" targettype="This" setvalue="true" force="-65">
-		  </StatusEffect >
-        </Button>
-	    <Button text="极速喷射">
-          <StatusEffect type="OnUse" targettype="This" setvalue="true" force="-350">
-		  </StatusEffect >
-        </Button>
-       </CustomInterface >  
-      <Propulsion force="-65" target="this" >
-        <RequiredItems items="weldingtoolfuel" type="Contained" />
-      </Propulsion>
-      <aitarget sightrange="500" soundrange="500" fadeouttime="2" />
-      <ItemContainer autofill="True" capacity="1" maxstacksize="1" hideitems="false" itempos="-21,-73" itemrotation="90" containedspritedepth="0.56" containedstateindicatorstyle="tank">
-        <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
-        <Containable identifiers="weldingtoolfuel" />
-      </ItemContainer>
-    </Item>
+  <Item name="超压火焰喷射器" identifier="FireBoom_TL" description="一件抽象的维修工具，压缩燃料然后超压喷出，能更快焊接船壳，但是会有超强反推力和更高的灼烧效果。" category="Equipment" Tags="mediumitem,weldingequipment" cargocontaineridentifier="metalcrate" Scale="0.32" impactsoundtag="impact_metal_light">
+    <PreferredContainer primary="engcab,divingcab" />
+    <PreferredContainer primary="wreckstoragecab" minamount="0" maxamount="1" spawnprobability="0.02" />
+    <PreferredContainer primary="abandonedstoragecab" minamount="0" maxamount="1" spawnprobability="0.02" />
+    <Price baseprice="2000" sold="false"></Price>
+    <Fabricate suitablefabricators="Moneymaker" requiredtime="20">
+      <RequiredSkill identifier="mechanical" level="50" />
+      <RequiredItem identifier="titaniumaluminiumalloy" amount="1" />
+      <RequiredItem identifier="steel_TL" amount="2" />
+      <RequiredItem identifier="rubber" amount="2" />
+      <RequiredItem identifier="weldingtoolPRO1" amount="1" />
+    </Fabricate>
+    <Deconstruct time="10">
+      <Item identifier="titaniumaluminiumalloy" amount="1" />
+      <Item identifier="steel_TL" amount="1" />
+      <Item identifier="rubber" amount="1" />
+    </Deconstruct>
+    <InventoryIcon texture="%ModDir%/Items/FireBoom.png" sourcerect="405,16,85,77" />
+    <Sprite texture="%ModDir%/Items/FireBoom.png" sourcerect="21,18,240,208" depth="0.55" origin="0.5,0.5" />
+    <Body width="180" height="85" density="20" />
+    <Holdable slots="Any,RightHand+LeftHand" controlpose="true" holdpos="50,-10" aimpos="55,-10" handle1="-50,25" handle2="50,-15" msg="ItemMsgPickUpSelect" />
+    <RepairTool firedamage="50.0" structurefixamount="4.4" range="500" barrelpos="40,-10" repairmultiple="false" repairthroughwalls="false" combatpriority="0" levelwallfixamount="0" targetforce="40">
+      <ParticleEmitter particle="weld" particlespersecond="50" copyentityangle="true" scalemin="1.5" scalemax="2" />
+      <ParticleEmitterHitStructure particle="weldspark" particlespersecond="200" anglemin="-40" anglemax="40" velocitymin="200" velocitymax="800" scalemin="1" scalemax="1.5" />
+      <ParticleEmitterHitStructure particle="MistSmoke" particlespersecond="20" anglemin="-10" anglemax="10" velocitymin="0" velocitymax="50" />
+      <ParticleEmitterHitItem identifiers="door,hatch,ductblock" particle="weldspark" particlespersecond="200" anglemin="-40" anglemax="40" velocitymin="200" velocitymax="800" />
+      <ParticleEmitterHitCharacter particle="fleshsmoke" particlespersecond="3" anglemin="-5" anglemax="5" velocitymin="0" velocitymax="50" />
+      <sound file="Content/Items/Weapons/FlameThrowerLoop.ogg" type="OnUse" range="750.0" loop="true" />
+      <!-- 使用時，所包含的焊接油罐會扣耐久 -->
+      <StatusEffect type="OnUse" targettype="Contained" Condition="-15"></StatusEffect>
+      <!-- 必須有焊接油罐 -->
+      <RequiredItems items="weldingtoolfuel" type="Contained" msg="ItemMsgWeldingFuelRequired" />
+      <!-- 使用時對接觸的目標造成傷害 -->
+      <StatusEffect type="OnUse" targettype="Limb" disabledeltatime="true" interval="0.1">
+        <Affliction identifier="burn" amount="7.5" />
+        <Affliction identifier="explosiondamage" amount="0.75" />
+        <Affliction identifier="organdamage" amount="0.75" />
+      </StatusEffect>
+      <StatusEffect type="OnUse" targettype="Limb" disabledeltatime="true" interval="0.1">
+        <Conditional Ishusk="true" />
+        <Affliction identifier="burn" amount="6" />
+        <Affliction identifier="explosiondamage" amount="0.5" />
+        <Affliction identifier="organdamage" amount="0.5" />
+      </StatusEffect>
+      <Fixable identifier="structure" />
+      <NonFixable identifier="thalamus,ice" />
+      <LightComponent LightColor="255,200,175,75" range="400" Flicker="0.3" flickerspeed="0.6">
+        <sprite texture="Content/Items/Electricity/lightsprite.png" origin="0.5,0.5" />
+      </LightComponent>
+    </RepairTool>
+    <!-- 在空氣中時加速 -->
+    <CustomInterface canbeselected="true" drawhudwhenequipped="true">
+      <GuiFrame relativesize="0.1,0.25" anchor="BottomLeft" absoluteoffset="20,128" style="ItemUI" />
+      <Button text="平稳喷射">
+        <StatusEffect type="OnUse" targettype="This" setvalue="true" force="-65"></StatusEffect>
+      </Button>
+      <Button text="极速喷射">
+        <StatusEffect type="OnUse" targettype="This" setvalue="true" force="-350"></StatusEffect>
+      </Button>
+    </CustomInterface>
+    <Propulsion force="-65" target="this">
+      <RequiredItems items="weldingtoolfuel" type="Contained" />
+    </Propulsion>
+    <aitarget sightrange="500" soundrange="500" fadeouttime="2" />
+    <ItemContainer autofill="True" capacity="1" maxstacksize="1" hideitems="false" itempos="-21,-73" itemrotation="90" containedspritedepth="0.56" containedstateindicatorstyle="tank">
+      <SlotIcon slotindex="0" texture="Content/UI/StatusMonitorUI.png" sourcerect="64,448,64,64" origin="0.5,0.5" />
+      <Containable identifiers="weldingtoolfuel" />
+    </ItemContainer>
+  </Item>
   <override>
     <!--安全壁挂金属箱-->
     <Item name="安全壁挂金属箱（改良）" description="可以快捷放置在墙上的用于贮存物品的容器，防水防火。 现在经过改良，变得更便宜更大了。" identifier="safewallhangingmetalcrate" category="Equipment" tags="allowcleanup,mediumitem,toolbelt,toolbox,mobilecontainer" scale="0.5" linkable="true" pickdistance="150" showcontentsintooltip="true" impactsoundtag="impact_metal_heavy" fireproof="true" waterproof="true" canflipx="false">

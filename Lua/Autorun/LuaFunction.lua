@@ -38,7 +38,10 @@ Hook.Add("character.applyDamage", "BossLuaArmor.ApplyDamage", function (characte
     end
 end)
 
-
+Hook.Add("luahuaqiang.onUse", "examples.xmlHooks", function(effect, deltaTime, item, targets, worldPosition)
+    if targets[1] == nil then return end
+    targets[1].Kill(CauseOfDeathType.Unknown)
+end)
 
 --Hook.Add("examples.givemoney", "examples.givemoney", function ()
  --local MoneyAmount = 50000;
