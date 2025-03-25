@@ -182,7 +182,7 @@
 			<RequiredItem items="screwdriver" type="Equipped" />
 			<input name="activate" displayname="connection.activate">
 				<StatusEffect type="OnUse" target="This">
-					<Explosion range="150.0" ignorecover="true" ballastfloradamage="15" structuredamage="10" levelwalldamage="0" itemdamage="20" force="5" severlimbsprobability="0.2">
+					<Explosion range="150.0" ignorecover="true" ballastfloradamage="15" structuredamage="10" levelwalldamage="0" itemdamage="20" force="20" severlimbsprobability="0.2">
 						<Affliction identifier="burn" strength="5" />
 						<Affliction identifier="stun" strength="1" />
 						<Affliction identifier="explosiondamage" strength="3" />
