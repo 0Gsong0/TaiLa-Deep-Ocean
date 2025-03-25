@@ -47,6 +47,7 @@ if (Game.IsMultiplayer and SERVER) or not Game.IsMultiplayer then
         if not hasMissiles then
             runstring = runstring.."- Not running any test expansions\n 目前未运行任何测试包\n \n"
         end
+        runstring = runstring.."QQ群：860432216 \n"
         runstring = runstring.."///——————————泰拉渊洋已全部加载完毕——————————\\\\\\"
         print(package.path)
         print(runstring)
